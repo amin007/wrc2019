@@ -17,6 +17,9 @@ $bootstrapCSS_413 = 'https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstr
  $bootstrapJS_local = $sumber . 'bootstrap/3.3.7/js/bootstrap.min.js';
 $bootstrapCSS_local = $sumber . 'bootstrap/3.3.7/css/bootstrap.min.css';
  $fontawesome_local = $sumber . 'font-awesome/4.7.0/css/font-awesome.min.css';
+$datatablesCSS_local = $sumber . 'datatables/1.10.19/css/jquery.dataTables.min.css';
+$datatablesJSS_local = $sumber . 'datatables/1.10.19/js/jquery.dataTables.min.js';
+
 ## datatables
 $datatablesCSS = '//cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css';
 $jquery_cdn = '//code.jquery.com/jquery-3.3.1.js';
