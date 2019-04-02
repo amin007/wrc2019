@@ -14,9 +14,9 @@ include '../dibawah.php';
 <script type="text/javascript">
 $(document).ready(function() {
 $('#myTable').DataTable( {
-	"processing": true,
+	/*"processing": true,
 	"serverSide": true,
-	/*"ajax": "../server_side/scripts/server_processing.php"*/
+	"ajax": "../server_side/scripts/server_processing.php"*/
 	"ajax": "../../../../../cari/msicjson"
 });
 });
