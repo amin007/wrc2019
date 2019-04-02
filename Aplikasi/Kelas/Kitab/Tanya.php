@@ -223,7 +223,10 @@ class Tanya
 		//$result = $this->db->selectAll($sql,array(),\PDO::FETCH_NUM);
 		$result = $this->db->selectAll($sql);
 		//echo '<pre>$result::'; print_r($result); echo '</pre><br>';
-		$json = utf8_encode(json_encode($result)); //echo json_last_error_msg();
+		$options = 0;
+		//$json = utf8_encode(json_encode($result,$options));
+		//echo json_last_error();//echo json_last_error_msg();
+		$json = \Aplikasi\Kitab\JsonHandler::encode($result);
 		$kira = count($result);
 
 		return array($kira,$json);
