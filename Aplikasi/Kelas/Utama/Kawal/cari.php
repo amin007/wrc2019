@@ -497,10 +497,10 @@ class Cari extends \Aplikasi\Kitab\Kawal
 	{
 		$paparKes = str_replace('{', '[', $paparKes);
 		$paparKes = str_replace('}', ']', $paparKes);
-		//$paparKes = str_replace('null', '&nbsp;', $paparKes);
-		$buang = array('"s":','"msic":','"keterangan":',
+		$paparKes = str_replace('null', '&nbsp;', $paparKes);
+		$buang = array("\t","\n",'"s":','"msic":','"keterangan":',
 		'"msic2000":','"notakaki":');
-		$paparKes = str_replace($buang, '', $paparKes);
+		$paparKes = str_replace($buang, '', $paparKes);//*/
 
 		return $paparKes;
 	}
