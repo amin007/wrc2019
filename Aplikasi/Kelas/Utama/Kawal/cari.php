@@ -493,6 +493,18 @@ class Cari extends \Aplikasi\Kitab\Kawal
 #------------------------------------------------------------------------------------------
 ###########################################################################################
 #------------------------------------------------------------------------------------------
+	function buangdata($paparKes)
+	{
+		$paparKes = str_replace('{', '[', $paparKes);
+		$paparKes = str_replace('}', ']', $paparKes);
+		//$paparKes = str_replace('null', '&nbsp;', $paparKes);
+		$buang = array('"s":','"msic":','"keterangan":',
+		'"msic2000":','"notakaki":');
+		$paparKes = str_replace($buang, '', $paparKes);
+
+		return $paparKes;
+	}
+#------------------------------------------------------------------------------------------
 	public function msicjson()
 	{
 		//echo '<hr> Nama class : ' . __METHOD__ . '<hr>';
@@ -505,14 +517,11 @@ class Cari extends \Aplikasi\Kitab\Kawal
 
 		list($kira,$paparKes) = //$this->tanya->cariSql($myTable[1], $medan, $carian, $susun);
 		$this->tanya->cariDataJson($myTable[1], $medan, $carian, $susun);
+		$kira = 10;
+		$paparKes = $this->buangdata($paparKes);
 
-		$paparKes = str_replace('{', '[', $paparKes);
-		$paparKes = str_replace('}', ']', $paparKes);
-		$buang = array("\t","\n");
-		$paparKes = str_replace($buang, '', $paparKes);
-
-		echo '{ "draw": 1, "recordsTotal": ' . $kira . ', "recordsFiltered": ' . $kira . ',';
-		echo " \"data\":$paparKes }";
+		//echo '{ "draw": 1, "recordsTotal": ' . $kira . ', "recordsFiltered": ' . $kira . ',';
+		echo "{ \"data\":$paparKes }";
 	}
 #------------------------------------------------------------------------------------------
 #==========================================================================================
