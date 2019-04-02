@@ -491,5 +491,29 @@ class Cari extends \Aplikasi\Kitab\Kawal
 		return array($paparKes, $bilKes);
 	}
 #------------------------------------------------------------------------------------------
+###########################################################################################
+#------------------------------------------------------------------------------------------
+	public function msicjson()
+	{
+		//echo '<hr> Nama class : ' . __METHOD__ . '<hr>';
+		//list($myTable, $medan01) = dpt_senarai('msicbaru');
+		$myTable = dpt_senarai('msicbaru');
+		/*seksyen,bahagian,kumpulan,kelas,msic,keterangan,msic2000,notakaki*/
+		$medan = 'seksyen s,msic,keterangan,msic2000,notakaki';
+		$carian[] = null;
+		$susun[0]['max'] = 100;
+
+		list($kira,$paparKes) = //$this->tanya->cariSql($myTable[1], $medan, $carian, $susun);
+		$this->tanya->cariDataJson($myTable[1], $medan, $carian, $susun);
+
+		$paparKes = str_replace('{', '[', $paparKes);
+		$paparKes = str_replace('}', ']', $paparKes);
+		$buang = array("\t","\n");
+		$paparKes = str_replace($buang, '', $paparKes);
+
+		echo '{ "draw": 1, "recordsTotal": ' . $kira . ', "recordsFiltered": ' . $kira . ',';
+		echo " \"data\":$paparKes }";
+	}
+#------------------------------------------------------------------------------------------
 #==========================================================================================
 }
