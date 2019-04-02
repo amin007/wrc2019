@@ -220,13 +220,11 @@ class Tanya
 	{
 		///echo '<hr> Nama class : ' . __METHOD__ . '<hr>';
 		$sql = $this->sql->bentukSqlSelect($myTable, $medan, $carian, $susun);
+		//$result = $this->db->selectAll($sql,array(),\PDO::FETCH_NUM);
 		$result = $this->db->selectAll($sql);
-		//echo '<pre>$sql::' . htmlentities($sql) . '</pre><br>';
 		//echo '<pre>$result::'; print_r($result); echo '</pre><br>';
-		$json = json_encode($result);
+		$json = json_encode($result); //echo json_last_error_msg();
 		$kira = count($result);
-		//$error = json_last_error();
-		//echo '<pre>$json::' . $json . '</pre><br>';
 
 		return array($kira,$json);
 	}
