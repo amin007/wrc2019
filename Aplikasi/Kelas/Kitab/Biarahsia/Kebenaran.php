@@ -35,7 +35,7 @@ class Kebenaran
 		@session_start();
 		$kunci = \Aplikasi\Kitab\Sesi::get('bs_loggedIn');
 		$level = \Aplikasi\Kitab\Sesi::get('bs_levelPengguna');
-		$c1 = array('pelawat','user','fe','pegawai');
+		$c1 = array('pelawat','user','fe','kawal','pegawai');
 		$c2 = array('pentadbir','admin1home','admin2');
 		$c3 = array_merge($c1,$c2);
 
