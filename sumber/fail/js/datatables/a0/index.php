@@ -28,7 +28,7 @@ $urljs = array($jquery_cdn,$bootstrapJS_413,$datatablesJSS);
 include 'diatas.php';
 $tableID = 'myTable';
 //$tableClass = 'display';
-$tableClass = 'table';
+$tableClass = 'table table-striped table-bordered';
 include 'jadual.php';
 include 'dibawah.php';
 #############################################################################################################
