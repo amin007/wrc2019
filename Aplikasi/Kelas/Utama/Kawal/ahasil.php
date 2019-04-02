@@ -217,7 +217,7 @@ class Ahasil extends \Aplikasi\Kitab\Kawal
 #-------------------------------------------------------------------------------------------
 #===========================================================================================
 #-------------------------------------------------------------------------------------------
-	public function paparJadual()
+	function paparJadual()
 	{# untuk paparkan jadual sahaja
 		//echo '<hr>Nama class :' . __METHOD__ . '()<hr>';
 		# Set pembolehubah utama
