@@ -517,7 +517,6 @@ class Cari extends \Aplikasi\Kitab\Kawal
 
 		list($kira,$paparKes) = //$this->tanya->cariSql($myTable[1], $medan, $carian, $susun);
 		$this->tanya->cariDataJson($myTable[1], $medan, $carian, $susun);
-		$kira = 10;
 		$paparKes = $this->buangdata($paparKes);
 
 		//echo '{ "draw": 1, "recordsTotal": ' . $kira . ', "recordsFiltered": ' . $kira . ',';
