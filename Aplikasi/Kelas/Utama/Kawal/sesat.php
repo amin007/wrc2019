@@ -44,6 +44,17 @@ class Sesat extends \Aplikasi\Kitab\Kawal
 		//exit;
 	}
 #==========================================================================================
+	function kebarat()
+	{
+		//echo '<hr>Nama class :' . __METHOD__ . '<hr>';
+		# Set pemboleubah utama
+		$this->papar->mesej = 'Tidak pasti kenapa';
+
+		# Pergi papar kandungan
+		//$this->semakPembolehubah($this->papar->mesej,'mesej',0);# Semak data dulu
+		$this->paparKandungan($this->_folder, 'index');
+	}
+#-------------------------------------------------------------------------------------------
 	function parameter()
 	{
 		//echo '<hr>Nama class :' . __METHOD__ . '<hr>';
