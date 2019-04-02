@@ -497,7 +497,7 @@ class Cari extends \Aplikasi\Kitab\Kawal
 	{
 		$paparKes = str_replace('{', '[', $paparKes);
 		$paparKes = str_replace('}', ']', $paparKes);
-		$paparKes = str_replace('null', '&nbsp;', $paparKes);
+		//$paparKes = str_replace('null', '&nbsp;', $paparKes);
 		$buang = array("\t","\n",'"s":','"msic":','"keterangan":',
 		'"msic2000":','"notakaki":');
 		$paparKes = str_replace($buang, '', $paparKes);//*/
@@ -513,7 +513,7 @@ class Cari extends \Aplikasi\Kitab\Kawal
 		/*seksyen,bahagian,kumpulan,kelas,msic,keterangan,msic2000,notakaki*/
 		$medan = 'seksyen s,msic,keterangan,msic2000,notakaki';
 		$carian[] = null;
-		$susun[0]['max'] = 200;
+		$susun[0]['max'] = 205;
 
 		list($kira,$paparKes) =//$this->tanya->cariSql($myTable[1], $medan, $carian, $susun);
 		$this->tanya->cariDataJson($myTable[1], $medan, $carian, $susun);
