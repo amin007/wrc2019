@@ -217,7 +217,7 @@ class Ahasil extends \Aplikasi\Kitab\Kawal
 #-------------------------------------------------------------------------------------------
 #===========================================================================================
 #-------------------------------------------------------------------------------------------
-	function paparJadual()
+	public function paparJadual()
 	{# untuk paparkan jadual sahaja
 		//echo '<hr>Nama class :' . __METHOD__ . '()<hr>';
 		# Set pembolehubah utama
@@ -230,7 +230,7 @@ class Ahasil extends \Aplikasi\Kitab\Kawal
 		//$this->debugKandunganPaparan();//*/
 	}
 #-------------------------------------------------------------------------------------------
-	function jenis()
+	public function jenis()
 	{
 		//echo '<hr> Nama class : ' . __METHOD__ . '<hr>';
 		# Set pembolehubah utama
