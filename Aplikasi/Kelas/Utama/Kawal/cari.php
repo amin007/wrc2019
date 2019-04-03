@@ -500,7 +500,7 @@ class Cari extends \Aplikasi\Kitab\Kawal
 		$json = str_replace('\n', '<br>', $json);
 		//$json = str_replace('null', '&nbsp;', $json);
 		$buang = array(/*"\t","\n",*/
-		'"s":','"msic":','"keterangan":','"msic2000":',
+		'"no":','"s":','"msic":','"keterangan":','"msic2000":',
 		'"notakaki":','"no":','"v2013":','"v2008":','"jawatan":');
 		$json = str_replace($buang, '', $json);//*/
 
@@ -513,9 +513,9 @@ class Cari extends \Aplikasi\Kitab\Kawal
 		//list($myTable, $medan01) = dpt_senarai('msicbaru');
 		$myTable = dpt_senarai('msicbaru');
 		/*seksyen,bahagian,kumpulan,kelas,msic,keterangan,msic2000,notakaki*/
-		$medan = 'seksyen s,msic,keterangan,msic2000,notakaki';
+		$medan = '"" as no,seksyen s,msic,keterangan,msic2000,notakaki';
 		$carian[] = $t = null;
-		$susun[0]['max'] = 329;
+		$susun[0]['max'] = 328;
 
 		list($kira,$json) =//$this->tanya->cariSql($myTable[1], $medan, $carian, $susun);
 		$this->tanya->cariDataJson($myTable[1], $medan, $carian, $susun);
