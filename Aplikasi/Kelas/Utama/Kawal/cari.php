@@ -498,8 +498,8 @@ class Cari extends \Aplikasi\Kitab\Kawal
 		$json = str_replace('{', '[', $json);
 		$json = str_replace('}', ']', $json);
 		//$json = str_replace('null', '&nbsp;', $json);
-		$buang = array("\t","\n",'"s":','"msic":','"keterangan":',
-		'"msic2000":','"notakaki":');
+		$buang = array("\t","\n",'"s":','"msic":','"keterangan":','"msic2000":',
+		'"notakaki":','"no":','"v2013":','"v2008":','"jawatan":');
 		$json = str_replace($buang, '', $json);//*/
 
 		return $json;
@@ -530,13 +530,13 @@ class Cari extends \Aplikasi\Kitab\Kawal
 		$myTable = dpt_senarai('masco');
 		$medan = '*';
 		$carian[] = $t = null;
-		$susun[0]['max'] = 5500;
+		$susun[0]['max'] = 5500;//2530
 
 		list($kira,$json) =//$this->tanya->cariSql($myTable[1], $medan, $carian, $susun);
 		$this->tanya->cariDataJson($myTable[0], $medan, $carian, $susun);
 		$json = $this->buangdata($json);
 
-		$t = '"draw":1,"recordsTotal":' . $kira . ',"recordsFiltered":' . $kira . ',';
+		//$t = '"draw":1,"recordsTotal":' . $kira . ',"recordsFiltered":' . $kira . ',';
 		echo "{ $t \"data\":$json }";
 	}
 #------------------------------------------------------------------------------------------
