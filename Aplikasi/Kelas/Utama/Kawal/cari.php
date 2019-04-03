@@ -493,16 +493,16 @@ class Cari extends \Aplikasi\Kitab\Kawal
 #------------------------------------------------------------------------------------------
 ###########################################################################################
 #------------------------------------------------------------------------------------------
-	function buangdata($paparKes)
+	function buangdata($json)
 	{
-		$paparKes = str_replace('{', '[', $paparKes);
-		$paparKes = str_replace('}', ']', $paparKes);
-		//$paparKes = str_replace('null', '&nbsp;', $paparKes);
+		$json = str_replace('{', '[', $json);
+		$json = str_replace('}', ']', $json);
+		//$json = str_replace('null', '&nbsp;', $json);
 		$buang = array("\t","\n",'"s":','"msic":','"keterangan":',
 		'"msic2000":','"notakaki":');
-		$paparKes = str_replace($buang, '', $paparKes);//*/
+		$json = str_replace($buang, '', $json);//*/
 
-		return $paparKes;
+		return $json;
 	}
 #------------------------------------------------------------------------------------------
 	public function msicjson()
@@ -515,12 +515,12 @@ class Cari extends \Aplikasi\Kitab\Kawal
 		$carian[] = $t = null;
 		$susun[0]['max'] = 205;
 
-		list($kira,$paparKes) =//$this->tanya->cariSql($myTable[1], $medan, $carian, $susun);
+		list($kira,$json) =//$this->tanya->cariSql($myTable[1], $medan, $carian, $susun);
 		$this->tanya->cariDataJson($myTable[1], $medan, $carian, $susun);
-		$paparKes = $this->buangdata($paparKes);
+		$json = $this->buangdata($json);
 
 		//$t = '"draw":1,"recordsTotal":' . $kira . ',"recordsFiltered":' . $kira . ',';
-		echo "{ $t \"data\":$paparKes }";
+		echo "{ $t \"data\":$json }";
 	}
 #------------------------------------------------------------------------------------------
 	public function mascojson()
@@ -532,12 +532,12 @@ class Cari extends \Aplikasi\Kitab\Kawal
 		$carian[] = $t = null;
 		$susun[0]['max'] = 2530;
 
-		list($kira,$paparKes) =//$this->tanya->cariSql($myTable[1], $medan, $carian, $susun);
+		list($kira,$json) =//$this->tanya->cariSql($myTable[1], $medan, $carian, $susun);
 		$this->tanya->cariDataJson($myTable[0], $medan, $carian, $susun);
-		$paparKes = $this->buangdata($paparKes);
+		$json = $this->buangdata($json);
 
 		//$t = '"draw":1,"recordsTotal":' . $kira . ',"recordsFiltered":' . $kira . ',';
-		echo "{ $t \"data\":$paparKes }";
+		echo "{ $t \"data\":$json }";
 	}
 #------------------------------------------------------------------------------------------
 #==========================================================================================
