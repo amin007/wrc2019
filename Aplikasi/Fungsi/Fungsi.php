@@ -82,6 +82,8 @@ function dpt_senarai($pilih)
 		$jadual = unserialize(MSICBARU);
 	elseif ($pilih == 'produk') :
 		$jadual = unserialize(PRODUK);
+	elseif ($pilih == 'MASCO') :
+		$jadual = unserialize(MASCO);
 	elseif ($pilih == 'jadual_login') :
 		$jadual = unserialize(JADUAL_LOGIN);
 	elseif ($pilih == 'jadual_biodata') :
@@ -120,12 +122,6 @@ function dpt_senarai($pilih)
 		$jadual = unserialize(JADUAL_PETA);
 	elseif ($pilih == 'jadual_peta2') :
 		$jadual = unserialize(JADUAL_PETA2);
-	elseif ($pilih == 'jadual_salin01') :
-		$jadual = unserialize(JADUAL_SALIN01);
-	elseif ($pilih == 'jadual_salin02') :
-		$jadual = unserialize(JADUAL_SALIN02);
-	elseif ($pilih == 'jadual_salin03') :
-		$jadual = unserialize(JADUAL_SALIN03);
 	else : $jadual = array(); //unserialize()
 	endif;
 
