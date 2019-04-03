@@ -513,13 +513,13 @@ class Cari extends \Aplikasi\Kitab\Kawal
 		/*seksyen,bahagian,kumpulan,kelas,msic,keterangan,msic2000,notakaki*/
 		$medan = 'seksyen s,msic,keterangan,msic2000,notakaki';
 		$carian[] = $t = null;
-		$susun[0]['max'] = 205;
+		$susun[0]['max'] = 206;
 
 		list($kira,$json) =//$this->tanya->cariSql($myTable[1], $medan, $carian, $susun);
 		$this->tanya->cariDataJson($myTable[1], $medan, $carian, $susun);
 		$json = $this->buangdata($json);
 
-		//$t = '"draw":1,"recordsTotal":' . $kira . ',"recordsFiltered":' . $kira . ',';
+		$t = '"draw":1,"recordsTotal":' . $kira . ',"recordsFiltered":' . $kira . ',';
 		echo "{ $t \"data\":$json }";
 	}
 #------------------------------------------------------------------------------------------
