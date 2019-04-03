@@ -1,0 +1,2 @@
+https://wolf.university/goalkicker/PHPBook/PHPNotesForProfessionals.pdf
+PHP Fatal error: Uncaught RuntimeException: Stderr 5 in /Example.php:6 ...... JSON Error: Malformed UTF-8 characters, possibly incorrectly encoded.
