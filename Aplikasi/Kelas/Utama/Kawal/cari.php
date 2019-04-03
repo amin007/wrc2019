@@ -523,5 +523,22 @@ class Cari extends \Aplikasi\Kitab\Kawal
 		echo "{ \"data\":$paparKes }";
 	}
 #------------------------------------------------------------------------------------------
+	public function mascojson()
+	{
+		//echo '<hr> Nama class : ' . __METHOD__ . '<hr>';
+		//list($myTable, $medan01) = dpt_senarai('msicbaru');
+		$myTable = dpt_senarai('masco');
+		$medan = '*';
+		$carian[] = $t = null;
+		$susun[0]['max'] = 2530;
+
+		list($kira,$paparKes) =//$this->tanya->cariSql($myTable[1], $medan, $carian, $susun);
+		$this->tanya->cariDataJson($myTable[0], $medan, $carian, $susun);
+		$paparKes = $this->buangdata($paparKes);
+
+		$t = '"draw": 1, "recordsTotal": ' . $kira . ', "recordsFiltered": ' . $kira . ',';
+		echo "{ $t \"data\":$paparKes }";
+	}
+#------------------------------------------------------------------------------------------
 #==========================================================================================
 }
