@@ -218,14 +218,10 @@ class Tanya
 	#---------------------------------------------------------------------------------------------
 	public function cariDataJson($myTable, $medan, $carian, $susun)
 	{
-		///echo '<hr> Nama class : ' . __METHOD__ . '<hr>';
+		//echo '<hr> Nama class : ' . __METHOD__ . '<hr>';
 		$sql = $this->sql->bentukSqlSelect($myTable, $medan, $carian, $susun);
-		//$result = $this->db->selectAll($sql,array(),\PDO::FETCH_NUM);
 		$result = $this->db->selectAll($sql);
 		//echo '<pre>$result::'; print_r($result); echo '</pre><br>';
-		$options = 0;
-		//$json = utf8_encode(json_encode($result,$options));
-		//echo json_last_error();//echo json_last_error_msg();
 		$json = \Aplikasi\Kitab\JsonHandler::encode($result);
 		$kira = count($result);
 
