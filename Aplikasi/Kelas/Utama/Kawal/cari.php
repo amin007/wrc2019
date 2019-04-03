@@ -512,15 +512,15 @@ class Cari extends \Aplikasi\Kitab\Kawal
 		$myTable = dpt_senarai('msicbaru');
 		/*seksyen,bahagian,kumpulan,kelas,msic,keterangan,msic2000,notakaki*/
 		$medan = 'seksyen s,msic,keterangan,msic2000,notakaki';
-		$carian[] = null;
+		$carian[] = $t = null;
 		$susun[0]['max'] = 205;
 
 		list($kira,$paparKes) =//$this->tanya->cariSql($myTable[1], $medan, $carian, $susun);
 		$this->tanya->cariDataJson($myTable[1], $medan, $carian, $susun);
 		$paparKes = $this->buangdata($paparKes);
 
-		//echo '{ "draw": 1, "recordsTotal": ' . $kira . ', "recordsFiltered": ' . $kira . ',';
-		echo "{ \"data\":$paparKes }";
+		//$t = '"draw":1,"recordsTotal":' . $kira . ',"recordsFiltered":' . $kira . ',';
+		echo "{ $t \"data\":$paparKes }";
 	}
 #------------------------------------------------------------------------------------------
 	public function mascojson()
@@ -536,7 +536,7 @@ class Cari extends \Aplikasi\Kitab\Kawal
 		$this->tanya->cariDataJson($myTable[0], $medan, $carian, $susun);
 		$paparKes = $this->buangdata($paparKes);
 
-		$t = '"draw": 1, "recordsTotal": ' . $kira . ', "recordsFiltered": ' . $kira . ',';
+		//$t = '"draw":1,"recordsTotal":' . $kira . ',"recordsFiltered":' . $kira . ',';
 		echo "{ $t \"data\":$paparKes }";
 	}
 #------------------------------------------------------------------------------------------
