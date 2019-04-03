@@ -12,12 +12,12 @@ include '../dibawah.php';
 #############################################################################################################
 ?>
 <script type="text/javascript">
-$(document).ready(function() {
-$('#myTable').DataTable( {
+$(document).ready(function(){
+$('#myTable').DataTable({
 	/*"processing": true,
 	"serverSide": true,
 	"ajax": "../server_side/scripts/server_processing.php"*/
-	"ajax": "../../../../../cari/msicjson"
+	"ajax": "../../../../../cari/msicjson",
 });
 });
 </script>
