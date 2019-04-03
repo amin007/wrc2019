@@ -78,12 +78,20 @@ function dpt_senarai($pilih)
 		$jadual = unserialize(PEGAWAI);
 	elseif ($pilih == 'prosesan') :
 		$jadual = unserialize(PROSESAN);
+	elseif ($pilih == 'staf_prosesan') :
+		$jadual = unserialize(PROSESAN);
+	elseif ($pilih == 'staf_biasa') :
+		$jadual = unserialize(PEGAWAI);
+	# kod untuk prosesan
+	elseif ($pilih == 'jadual_msic') :
+		$jadual = unserialize(JADUAL_MSIC);
 	elseif ($pilih == 'msicbaru') :
 		$jadual = unserialize(MSICBARU);
 	elseif ($pilih == 'produk') :
 		$jadual = unserialize(PRODUK);
 	elseif ($pilih == 'MASCO') :
 		$jadual = unserialize(MASCO);
+	# kod login
 	elseif ($pilih == 'jadual_login') :
 		$jadual = unserialize(JADUAL_LOGIN);
 	elseif ($pilih == 'jadual_biodata') :
@@ -96,12 +104,7 @@ function dpt_senarai($pilih)
 		$jadual = unserialize(JADUAL_BIODATA4);
 	elseif ($pilih == 'jadual_biodata5') :
 		$jadual = unserialize(JADUAL_BIODATA5);
-	elseif ($pilih == 'staf_prosesan') :
-		$jadual = unserialize(PROSESAN);
-	elseif ($pilih == 'staf_biasa') :
-		$jadual = unserialize(PEGAWAI);
-	elseif ($pilih == 'jadual_msic') :
-		$jadual = unserialize(JADUAL_MSIC);
+	# kawalan
 	elseif ($pilih == 'jadual_kawalan') :
 		$jadual = unserialize(JADUAL_KAWALAN);
 	elseif ($pilih == 'jadual_kawalan2') :
@@ -112,6 +115,7 @@ function dpt_senarai($pilih)
 		$jadual = unserialize(JADUAL_KAWALAN4);
 	elseif ($pilih == 'jadual_kawalan5') :
 		$jadual = unserialize(JADUAL_KAWALAN5);
+	# rangka
 	elseif ($pilih == 'jadual_rangka') :
 		$jadual = unserialize(JADUAL_RANGKA);
 	elseif ($pilih == 'jadual_rangka2') :
