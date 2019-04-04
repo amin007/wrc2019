@@ -16,9 +16,9 @@ $(document).ready(function() {
 $('#myTable').DataTable( {
 	/*"processing": true,
 	"serverSide": true,
-	"ajax": "../server_side/scripts/server_processing.php"*/
-	"ajax": "../../../../../cari/mascojson"
-	/*"ajax": "mascojson.php"*/
+	"ajax": "../server_side/scripts/server_processing.php"
+	"ajax": "../../../../../cari/mascojson"*/
+	"ajax": "masco.json"
 });
 });
 </script>
