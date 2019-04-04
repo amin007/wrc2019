@@ -511,11 +511,13 @@ class Cari extends \Aplikasi\Kitab\Kawal
 	{
 		//echo '<hr> Nama class : ' . __METHOD__ . '<hr>';
 		//https://mysqlserverteam.com/row-numbering-ranking-how-to-use-less-user-variables-in-mysql-queries/
+		//https://stackoverflow.com/questions/50610990/php-json-encode-is-getting-malformed-utf-8-characters-possibly-incorrectly-e
+		//https://www.barberriley.com/web-development/php/solved-pdo-message-malformed-utf-8-characters-possibly-incorrectly-encoded <- selesai
 		$myTable = dpt_senarai('msicbaru');
 		/*seksyen,bahagian,kumpulan,kelas,msic,keterangan,msic2000,notakaki*/
 		$medan = '"" as no,seksyen s,msic,keterangan,msic2000,notakaki';
 		$carian[] = $t = null;
-		$susun[0]['max'] = 440;//329,357,379,404,431,440
+		$susun[0]['max'] = 1900;//329,357,379,404,431,440
 
 		list($kira,$json) =//$this->tanya->cariSql($myTable[1], $medan, $carian, $susun);
 		$this->tanya->cariDataJson($myTable[1], $medan, $carian, $susun);
