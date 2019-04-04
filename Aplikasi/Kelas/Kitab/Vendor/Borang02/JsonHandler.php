@@ -16,6 +16,7 @@ class JsonHandler
 	public static function encode($value, $options = 0)
 	{
 		$result = json_encode($value, $options);
+		//$result = \Aplikasi\Kitab\JsonHandler::semakdata($result);
 		if($result){return $result;}
 
 		throw new \RuntimeException(static::$_messages[json_last_error()]);
@@ -27,6 +28,33 @@ class JsonHandler
 		if($result){return $result;}
 
 		throw new \RuntimeException(static::$_messages[json_last_error()]);
+	}
+#------------------------------------------------------------------------------------------
+	public static function semakdata($result)
+	{
+		$my_encoding_list = array(
+			"UTF-8",
+			"UTF-7",
+			"UTF-16",
+			"UTF-32",
+			"ISO-8859-16",
+			"ISO-8859-15",
+			"ISO-8859-10",
+			"ISO-8859-1",
+			"Windows-1254",
+			"Windows-1252",
+			"Windows-1251",
+			"ASCII",
+			#add yours preferred
+		);
+
+		#remove unsupported encodings
+		$encoding_list = array_intersect($my_encoding_list, mb_list_encodings());
+
+		#detect 'finally' the encoding
+		$result = mb_detect_encoding($result,$encoding_list,true);
+
+		return $result;
 	}
 #------------------------------------------------------------------------------------------
 /*
