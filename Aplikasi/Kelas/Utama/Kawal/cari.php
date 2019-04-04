@@ -368,7 +368,7 @@ class Cari extends \Aplikasi\Kitab\Kawal
 	function sayaPilihOperasi($cari, $susun, $limit)
 	{
 		$jadual = array('kawalan_aes');
-		$medan = '*'; //echo '<pre>$susun->'; print_r($susun); echo '</pre>';
+		$medan = '*';
 		$susun[0]['max'] = $limit;
 		//echo '<pre>$susun->'; print_r($susun); echo '</pre>';
 
