@@ -510,7 +510,7 @@ class Cari extends \Aplikasi\Kitab\Kawal
 	public function msicjson()
 	{
 		//echo '<hr> Nama class : ' . __METHOD__ . '<hr>';
-		//list($myTable, $medan01) = dpt_senarai('msicbaru');
+		//https://mysqlserverteam.com/row-numbering-ranking-how-to-use-less-user-variables-in-mysql-queries/
 		$myTable = dpt_senarai('msicbaru');
 		/*seksyen,bahagian,kumpulan,kelas,msic,keterangan,msic2000,notakaki*/
 		$medan = '"" as no,seksyen s,msic,keterangan,msic2000,notakaki';
