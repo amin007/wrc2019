@@ -1,50 +1,80 @@
 <?php
+#-------------------------------------------------------------------------------------------------------------
+function getFileList($dir)
+{
+	# array to hold return value
+	$retval = [];
+	# add trailing slash if missing
+	if(substr($dir, -1) != "/") { $dir .= "/"; }
+	# open pointer to directory and read list of files
+	$d = @dir($dir) or die("getFileList: Failed opening directory {$dir} for reading");
+	while(FALSE !== ($entry = $d->read()))
+	{
+		# skip hidden files
+		if($entry{0} == ".") continue;
+		if(is_dir("{$dir}{$entry}"))
+		{
+			$retval[] = [
+			'name' => "{$dir}{$entry}/",
+			'type' => filetype("{$dir}{$entry}"),
+			'size' => 0,
+			'lastmod' => filemtime("{$dir}{$entry}")
+			];
+		}
+		elseif(is_readable("{$dir}{$entry}"))
+		{
+			$retval[] = [
+			'name' => "{$dir}{$entry}",
+			'type' => mime_content_type("{$dir}{$entry}"),
+			'size' => filesize("{$dir}{$entry}"),
+			'lastmod' => filemtime("{$dir}{$entry}")
+			];
+		}
+	}
+
+	$d->close();
+	return $retval;
+}
+#-------------------------------------------------------------------------------------------------------------
+function pautan($name,$web)
+{
+	return '<i class="far fa-folder fa-spin"></i>'
+	. '<a target="_blank" href="' . $web . '">'
+	. $name . '</a><hr>';
+}
+#-------------------------------------------------------------------------------------------------------------
+function list_files()
+{
+	$dirlist = getFileList("./");
+	//echo "<pre>",print_r($dirlist),"</pre>";
+	//echo '<tr><td> name</td><td> type</td><td> size</td><td> lastmod</td></tr>';
+	foreach($dirlist as $key02 => $value):
+		if ($value['type'] != 'dir'):
+			echo "\n\t" . pautan($value['name'],$value['name']);
+		else:echo '';endif;
+	endforeach;
+}
+#-------------------------------------------------------------------------------------------------------------
 #############################################################################################################
 include '../atas-set.php';
 include '../diatas.php';
-$tableID = 'myTable';
-$tableClass = 'table table-striped table-bordered';
-$tajuk = '<th>#</th><th>s</th><th>msic</th><th>keterangan</th><th>msic2000</th><th>notakaki</th>';
-echo "\n" . '<table id="' . $tableID . '" class="' . $tableClass . '" style="width:100%">'
-. "\n<thead><tr>$tajuk</tr></thead><tfoot><tr>$tajuk</tr></tfoot>\n"
-. "</table>\n";
-include '../dibawah.php';
-#############################################################################################################
 ?>
-<script type="text/javascript">
-$(document).ready(function(){
-///////////////////////////////////////////////////////////
-/*$('#myTable').DataTable({
-	/*"processing": true,
-	"serverSide": true,
-	"ajax": "../server_side/scripts/server_processing.php"
-	"ajax": "../../../../../cari/msicjson"
-});*/
-/////////////////////////////////////////////////////////////
-	var t = $('#myTable').DataTable({
-	"ajax": "../../../../../cari/msicjson",
-	"columnDefs": [{
-		"searchable": false,
-		"orderable": false,
-		"targets": 0
-	}],
-	"order": [[ 1, 'asc' ]]
-    });
+<!-- menu tengah atas -->
+<div class="container">
+<hr><h1>Contoh Latihan Programming</h1><hr>
+<div class="hero-unit">
+	<?php list_files(); ?>
 
-	t.on( 'order.dt search.dt', function (){
-		t.column(0, {search:'applied', order:'applied'}).nodes().
-		each( function (cell, i) {cell.innerHTML = i+1;});
-    }).draw();
-/////////////////////////////////////////////////////////////
-});
-</script>
+	<a class="btn btn-primary btn-large" href="#">Pergi Lebih Jauh<i class="fa fa-binoculars fa-2x"></i></a>
+	<a class="btn btn-success btn-large" href="#">Success</i></a>
+	<a class="btn btn-warning btn-large" href="#">Warning</a>
+	<a class="btn btn-info btn-large" href="#">Info</a>
+
+</div><!-- / class="hero-unit" -->
+</div><!-- / class="container" -->
+
+<!-- menu tengah bawah -->
+<?php include '../dibawah.php'; ?>
+
 </body>
-</html><?php
-	/*"columns": [
-		{ "data": "bil" },
-		{ "data": "s" },
-		{ "data": "msic" },
-		{ "data": "keterangan" },
-		{ "data": "msic2000" },
-		{ "data": "notakaki" }
-	]*/
+</html>
