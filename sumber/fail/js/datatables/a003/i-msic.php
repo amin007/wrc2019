@@ -6,7 +6,7 @@ $tableID = 'myTable';
 $tableClass = 'table table-striped table-bordered';
 $tajuk = '<th>#</th><th>s</th><th>msic</th><th>keterangan</th><th>msic2000</th><th>notakaki</th>';
 echo "\n" . '<table id="' . $tableID . '" class="' . $tableClass . '" style="width:100%">'
-. "\n<thead><tr>$tajuk</tr></thead><tfoot><tr>$tajuk</tr></tfoot>\n"
+. "\n<thead><tr>$tajuk</tr></thead>\n<tfoot><tr>$tajuk</tr></tfoot>\n"
 . "</table>\n";
 include '../dibawah.php';
 #############################################################################################################
