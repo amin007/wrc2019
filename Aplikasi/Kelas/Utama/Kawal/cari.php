@@ -515,7 +515,7 @@ class Cari extends \Aplikasi\Kitab\Kawal
 		/*seksyen,bahagian,kumpulan,kelas,msic,keterangan,msic2000,notakaki*/
 		$medan = '"" as no,seksyen s,msic,keterangan,msic2000,notakaki';
 		$carian[] = $t = null;
-		$susun[0]['max'] = 328;
+		$susun[0]['max'] = 440;//329,357,379,404,431,440
 
 		list($kira,$json) =//$this->tanya->cariSql($myTable[1], $medan, $carian, $susun);
 		$this->tanya->cariDataJson($myTable[1], $medan, $carian, $susun);
