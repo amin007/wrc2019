@@ -12,11 +12,23 @@ echo 'levelPengguna=' . $Sesi->get('bs_levelPengguna') . '';//*/
 
 	<a class="btn btn-primary btn-large" href="<?php echo URL ?>ruangtamu/logout">Pergi Lebih Jauh<i class="fa fa-binoculars fa-2x"></i></a>
 	<a class="btn btn-success btn-large" target="_blank" href="<?php echo URL ?>borang">Borang<i class="fa fa-binoculars fa-2x"></i></a>
-	<a class="btn btn-success btn-large" target="_blank" href="<?php echo URL ?>borang/industri">MSIC<i class="fa fa-binoculars fa-2x"></i></a>
+	<a class="btn btn-secondary btn-large" target="_blank" href="<?php echo URL ?>borang/industri">MSIC<i class="fa fa-binoculars fa-2x"></i></a>
 	<a class="btn btn-warning btn-large" target="_blank" href="<?php echo URL ?>qss">QSS<i class="fa fa-binoculars fa-2x"></i></a>
 	<a class="btn btn-info btn-large" target="_blank" href="<?php echo URL ?>ejob">EJOB<i class="fa fa-binoculars fa-2x"></i></a>
 
 </div><!-- / class="hero-unit" -->
 </div><!-- / class="container" -->
 
+<div class="container"><br>
+	<table class="table">
+	<tr class="table-primary"><td>table-primary</td></tr>
+	<tr class="table-secondary"><td>table-secondary</td></tr>
+	<tr class="table-success"><td>table-success</td></tr>
+	<tr class="table-danger"><td>table-danger</td></tr>
+	<tr class="table-warning"><td>table-warning</td></tr>
+	<tr class="table-info"><td>table-info</td></tr>
+	<tr class="table-light"><td>table-light</td></tr>
+	<tr class="table-dark"><td>table-dark</td></tr>
+	</table>
+</div><!-- / class="container" -->
 <?php //echo semakDataSesi(); ?>
