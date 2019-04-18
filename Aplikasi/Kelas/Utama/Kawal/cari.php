@@ -528,7 +528,6 @@ class Cari extends \Aplikasi\Kitab\Kawal
 	public function mascojson()
 	{
 		//echo '<hr> Nama class : ' . __METHOD__ . '<hr>';
-		//list($myTable, $medan01) = dpt_senarai('msicbaru');
 		$myTable = dpt_senarai('masco');
 		$medan = '*';
 		$carian[] = $t = null;
@@ -538,7 +537,8 @@ class Cari extends \Aplikasi\Kitab\Kawal
 		$this->tanya->cariDataJson($myTable[1], $medan, $carian, $susun);
 		$json = $this->buangdata($json);
 
-		//$t = '"draw":1,"recordsTotal":' . $kira . ',"recordsFiltered":' . $kira . ',';
+		$t = '"draw":1,"recordsTotal":' . $kira . ',"recordsFiltered":' . $kira . ',';
+		header("Content-Type: application/json;charset=utf-8");
 		echo "{ $t \"data\":$json }";
 	}
 #------------------------------------------------------------------------------------------
