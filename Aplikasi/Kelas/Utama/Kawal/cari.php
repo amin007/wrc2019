@@ -76,13 +76,9 @@ class Cari extends \Aplikasi\Kitab\Kawal
 		list($myJadual, $medan, $cariID, $susun) = $this->pembolehubah();
 
 		if (!empty($cariID))
-		{
 			$this->cariSyarikat($myJadual, $medan, $susun, $cariID);
-		}
 		else
-		{
-			$this->papar->carian[]='[id:0]'; //$this->papar->cariID = '[id:0]';
-		}
+			$this->papar->cariID = $this->papar->carian[] = '[id:0]';
 
 		//$this->papar->template = 'bootstrap';
 		$this->papar->template = 'biasa';
