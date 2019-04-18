@@ -431,8 +431,7 @@ class Cari extends \Aplikasi\Kitab\Kawal
 		$medan = 'newss,nama,nossm,operator,kp';
 		$carian[] = array('fix'=>'z%like%','atau'=>'WHERE',
 			'medan'=>'concat_ws(" ",newss,nossm,nama)','apa'=>$cari);
-		//$susun['dari'] = 10;
-		$susun[0]['dari'] = 10;
+		$susun[0]['dari'] = 10;//$susun['dari'] = 10;
 
 		$paparKes = //$this->tanya->cariSql($myTable, $medan, $carian, $susun);
 		$this->tanya->cariSemuaData($myTable, $medan, $carian, $susun);
@@ -480,8 +479,7 @@ class Cari extends \Aplikasi\Kitab\Kawal
 		$medan = 'seksyen s,msic,keterangan,msic2000,notakaki';
 		$carian[] = array('fix'=>'z%like%','atau'=>'WHERE',
 			'medan'=>'concat_ws(" ",msic,keterangan,notakaki)','apa'=>$cari);
-		//$susun['dari'] = 10;
-		$susun[0]['dari'] = 10;
+		$susun[0]['dari'] = 10;//$susun['dari'] = 10;
 
 		$paparKes = //$this->tanya->cariSql($myTable, $medan, $carian, $susun);
 		$this->tanya->cariSemuaData($myTable, $medan, $carian, $susun);
