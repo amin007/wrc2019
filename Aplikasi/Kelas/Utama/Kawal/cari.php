@@ -63,21 +63,21 @@ class Cari extends \Aplikasi\Kitab\Kawal
 		'`aes_perkhidmatan`','`aes_pertanian`');
 		$medan = '*';
 		# cari id berasaskan newss/ssm/sidap/nama
-		$id['nama'] = isset($_POST['cari']) ? bersih($_POST['cari']) : null;
+		$cariID = isset($_POST['cari']) ? bersih($_POST['cari']) : null;
 		$kumpulSusun = array('kumpul'=>null,'susun'=>'nama');
 		$susun = $this->menyusun($kumpulSusun);
-		return array($myJadual, $medan, $id, $susun); //*/
+		return array($myJadual, $medan, $cariID, $susun); //*/
 	}
 #------------------------------------------------------------------------------------------
 	public function idnama()
 	{
 		//echo '<hr>Nama class :' . __METHOD__ . '<hr>';
 		# senaraikan tatasusunan jadual
-		list($myJadual, $medan, $id, $susun) = $this->pembolehubah();
+		list($myJadual, $medan, $cariID, $susun) = $this->pembolehubah();
 
-		if (!empty($id['nama']))
+		if (!empty($cariID))
 		{
-			$this->cariSyarikat($myJadual, $medan, $susun, $id['nama']);
+			$this->cariSyarikat($myJadual, $medan, $susun, $cariID);
 		}
 		else
 		{
