@@ -77,10 +77,6 @@ class Cari extends \Aplikasi\Kitab\Kawal
 
 		if (!empty($id['nama']))
 		{
-			$carian[] = array('fix'=>'z%like%', # cari = atau %%
-				'atau'=>'WHERE', # WHERE / OR / AND
-				'medan' => 'concat_ws("",newss,nossm,nama)', # cari dalam medan apa
-				'apa' => $id['nama']); # benda yang dicari
 			$this->cariSyarikat($myJadual, $medan, $carian, $susun, $id['nama']);
 		}
 		else
@@ -99,6 +95,11 @@ class Cari extends \Aplikasi\Kitab\Kawal
 #------------------------------------------------------------------------------------------
 	function cariSyarikat($jadual, $medan, $carian, $susun, $cariID)
 	{
+		$carian[] = array('fix'=>'z%like%', # cari = atau %%
+			'atau'=>'WHERE', # WHERE / OR / AND
+			'medan' => 'concat_ws("",newss,nossm,nama)', # cari dalam medan apa
+			'apa' => $cariID); # benda yang dicari
+
 		foreach ($jadual as $key => $myTable)
 		{# mula ulang table
 			$this->papar->senarai[$myTable] = $this->tanya->
