@@ -77,7 +77,7 @@ class Cari extends \Aplikasi\Kitab\Kawal
 
 		if (!empty($id['nama']))
 		{
-			$this->cariSyarikat($myJadual, $medan, $carian, $susun, $id['nama']);
+			$this->cariSyarikat($myJadual, $medan, $susun, $id['nama']);
 		}
 		else
 		{
@@ -93,7 +93,7 @@ class Cari extends \Aplikasi\Kitab\Kawal
 		$this->paparKandungan($this->_folder, $fail[0], $noInclude=0); //*/
     }
 #------------------------------------------------------------------------------------------
-	function cariSyarikat($jadual, $medan, $carian, $susun, $cariID)
+	function cariSyarikat($jadual, $medan, $susun, $cariID)
 	{
 		$carian[] = array('fix'=>'z%like%', # cari = atau %%
 			'atau'=>'WHERE', # WHERE / OR / AND
