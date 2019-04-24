@@ -474,7 +474,7 @@ class Cari extends \Aplikasi\Kitab\Kawal
 #------------------------------------------------------------------------------------------
 	function msicDB($cari)
 	{
-		list($myTable, $medan01) = dpt_senarai('jadual_msic');
+		$myTable = dpt_senarai('msicbaru');
 		/*seksyen,bahagian,kumpulan,kelas,msic,keterangan,msic2000,notakaki*/
 		$medan = 'seksyen s,msic,keterangan,msic2000,notakaki';
 		$carian[] = array('fix'=>'z%like%','atau'=>'WHERE',
@@ -482,7 +482,7 @@ class Cari extends \Aplikasi\Kitab\Kawal
 		$susun[0]['dari'] = 10;//$susun['dari'] = 10;
 
 		$paparKes = //$this->tanya->cariSql($myTable, $medan, $carian, $susun);
-		$this->tanya->cariSemuaData($myTable, $medan, $carian, $susun);
+		$this->tanya->cariSemuaData($myTable[1], $medan, $carian, $susun);
 		$bilKes = count($paparKes); //echo $bilKes . '=>'; //print_r($paparKes);
 
 		return array($paparKes, $bilKes);
