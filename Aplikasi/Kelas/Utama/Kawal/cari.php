@@ -461,13 +461,13 @@ class Cari extends \Aplikasi\Kitab\Kawal
 	{
 		if($bilKes==0) {echo '<li>Takde Laa</li>';}
 		else
-		{	echo '<li>Jumpa ' . $bilKes . '</li>';
+		{	echo '<li>Jumpa ' . $bilKes . '</li>' . "\r";
 			foreach($paparKes as $key => $data)
 			{
 				echo '<li onClick="fill(\'' . $data['msic'] . '\');">'
 				. ($key+1) . '-' . $data['s'] . '|' . $data['msic']
 				. '|' .  $data['keterangan'] . '|' . $data['notakaki']
-				. '|' . $data['msic2000'] . '</li>';
+				. '|' . $data['msic2000'] . '</li>' . "\r";
 			}# tamat - foreach($paparKes as $key => $data)
 		}# tamat - $bilKes ==0
 	}
