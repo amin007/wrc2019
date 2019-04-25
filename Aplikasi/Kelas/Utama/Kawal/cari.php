@@ -516,7 +516,7 @@ class Cari extends \Aplikasi\Kitab\Kawal
 					. '-' .$data['x'] . '-' .$data['kod_kuantiti'];
 				$harga = 'aup=' . $data['aup-rm'] . '/min=' . $data['min-rm']
 					. '/max=' .$data['max-rm'];
-				echo '<li onClick="fill(\'' . $data['msic2008'] . '\');">'
+				echo '<li onClick="fill(\'' . $data['msic'] . '\');">'
 				. ($key+1) . '-(' . $mcpa . ')'
 				. '|' .  $data['keterangan']
 				. '|(' . $harga . ')</li>' . "\r";
@@ -529,7 +529,7 @@ class Cari extends \Aplikasi\Kitab\Kawal
 		$myTable = dpt_senarai('mcpabaru');
 		$medan = '*';
 		$carian[] = array('fix'=>'z%like%','atau'=>'WHERE',
-			'medan'=>'concat_ws(" ",msic2008,keterangan)','apa'=>$cari);
+			'medan'=>'concat_ws(" ",msic,keterangan)','apa'=>$cari);
 		$susun[0]['dari'] = 10;//$susun['dari'] = 10;
 
 		$paparKes = //$this->tanya->cariSql($myTable[0], $medan, $carian, $susun);
