@@ -585,7 +585,7 @@ class Cari extends \Aplikasi\Kitab\Kawal
 		$carian[] = $t = null;
 		$susun[0]['max'] = 2152;
 
-		list($kira,$json) =//$this->tanya->cariSql($myTable[1], $medan, $carian, $susun);
+		list($kira,$json) =//$this->tanya->cariSql($myTable[0], $medan, $carian, $susun);
 		$this->tanya->cariDataJson($myTable[0], $medan, $carian, $susun);
 		$json = $this->buangdata($json);
 
