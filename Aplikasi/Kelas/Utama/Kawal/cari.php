@@ -578,8 +578,9 @@ class Cari extends \Aplikasi\Kitab\Kawal
 	public function produkmmjson()
 	{
 		//echo '<hr> Nama class : ' . __METHOD__ . '<hr>';
+		//concat_ws("-",m6,kod_commodity,x,kod_kuantiti) as kodx
 		$myTable = dpt_senarai('mcpabaru');
-		$medan = '"" as no,msic,concat_ws("-",m6,kod_commodity,x,kod_kuantiti) as kodx,'
+		$medan = '"" as no,msic,xx,'
 			. 'keterangan,concat_ws("|","aup=",`aup-rm`,`min-rm`,`max-rm`) as harga';
 		$carian[] = $t = null;
 		$susun[0]['max'] = 2152;
