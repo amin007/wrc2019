@@ -576,6 +576,23 @@ class Cari extends \Aplikasi\Kitab\Kawal
 		echo "{ $t \"data\":$json }";
 	}
 #------------------------------------------------------------------------------------------
+	public function produkmmjson()
+	{
+		//echo '<hr> Nama class : ' . __METHOD__ . '<hr>';
+		$myTable = dpt_senarai('mcpabaru');
+		$medan = '*';
+		$carian[] = $t = null;
+		$susun[0]['max'] = 2152;
+
+		list($kira,$json) =//$this->tanya->cariSql($myTable[1], $medan, $carian, $susun);
+		$this->tanya->cariDataJson($myTable[0], $medan, $carian, $susun);
+		$json = $this->buangdata($json);
+
+		$t = '"draw":1,"recordsTotal":' . $kira . ',"recordsFiltered":' . $kira . ',';
+		header("Content-Type: application/json;charset=utf-8");
+		echo "{ $t \"data\":$json }";
+	}
+#------------------------------------------------------------------------------------------
 	public function mascojson()
 	{
 		//echo '<hr> Nama class : ' . __METHOD__ . '<hr>';
