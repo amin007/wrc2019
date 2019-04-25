@@ -548,7 +548,7 @@ class Cari extends \Aplikasi\Kitab\Kawal
 		//$json = str_replace('null', '&nbsp;', $json);
 		$buang = array(/*"\t","\n",*/
 		'"no":','"s":','"msic":','"keterangan":','"msic2000":',
-		'"kodx":','"harga":','"notakaki":','"v2013":','"v2008":','"jawatan":');
+		'"xx":','"harga":','"notakaki":','"v2013":','"v2008":','"jawatan":');
 		$json = str_replace($buang, '', $json);//*/
 
 		return $json;
