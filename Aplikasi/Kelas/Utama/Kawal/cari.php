@@ -549,7 +549,7 @@ class Cari extends \Aplikasi\Kitab\Kawal
 		//$json = str_replace('null', '&nbsp;', $json);
 		$buang = array(/*"\t","\n",*/
 		'"no":','"s":','"msic":','"keterangan":','"msic2000":',
-		'"notakaki":','"no":','"v2013":','"v2008":','"jawatan":');
+		'"kodx":','"harga":','"notakaki":','"v2013":','"v2008":','"jawatan":');
 		$json = str_replace($buang, '', $json);//*/
 
 		return $json;
@@ -581,7 +581,7 @@ class Cari extends \Aplikasi\Kitab\Kawal
 		//echo '<hr> Nama class : ' . __METHOD__ . '<hr>';
 		$myTable = dpt_senarai('mcpabaru');
 		$medan = '"" as no,msic,concat_ws("-",m6,kod_commodity,x,kod_kuantiti) as kodx,'
-			. 'keterangan,concat_ws("-",`aup-rm`,`min-rm`,`max-rm`) as harga';
+			. 'keterangan,concat_ws("|","aup=",`aup-rm`,`min-rm`,`max-rm`) as harga';
 		$carian[] = $t = null;
 		$susun[0]['max'] = 2152;
 
