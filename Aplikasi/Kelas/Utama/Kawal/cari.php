@@ -397,7 +397,7 @@ class Cari extends \Aplikasi\Kitab\Kawal
 #------------------------------------------------------------------------------------------
 	public function syarikat($carilah = null)
 	{
-		$cari = bersih($_GET['cari']);
+		$cari = isset($_GET['cari']) ? bersih($_GET['cari']) : '';
 		//echo "URL \$cari = $cari <br> GET \$cari = $carilah";
 		if($cari == null) echo '<li>Kosong Laa</li>';
 		elseif (isset($cari))
@@ -444,7 +444,7 @@ class Cari extends \Aplikasi\Kitab\Kawal
 #------------------------------------------------------------------------------------------
 	public function msic($carilah = null)
 	{
-		$cari = bersih($_GET['cari']);
+		$cari = isset($_GET['cari']) ? bersih($_GET['cari']) : '';
 		//echo "URL \$cari = $cari <br> GET \$cari = $carilah";
 		if($cari == null) echo '<li>Kosong Laa</li>';
 		elseif (isset($cari))
@@ -492,7 +492,7 @@ class Cari extends \Aplikasi\Kitab\Kawal
 #------------------------------------------------------------------------------------------
 	public function kodprodukmm($carilah = null)
 	{
-		$cari = bersih($_GET['cari']);
+		$cari = isset($_GET['cari']) ? bersih($_GET['cari']) : '';
 		//echo "URL \$cari = $cari <br> GET \$cari = $carilah";
 		if($cari == null) echo '<li>Kosong Laa</li>';
 		elseif (isset($cari))
