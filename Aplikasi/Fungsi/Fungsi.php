@@ -89,6 +89,8 @@ function dpt_senarai($pilih)
 		$jadual = unserialize(MSICBARU);
 	elseif ($pilih == 'produk') :
 		$jadual = unserialize(PRODUK);
+	elseif ($pilih == 'mcpabaru') :
+		$jadual = unserialize(MCPABARU);
 	elseif ($pilih == 'masco') :
 		$jadual = unserialize(MASCO);
 	# kod login
