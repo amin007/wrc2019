@@ -528,7 +528,7 @@ class Cari extends \Aplikasi\Kitab\Kawal
 		$myTable = dpt_senarai('mcpabaru');
 		$medan = '*';
 		$carian[] = array('fix'=>'z%like%','atau'=>'WHERE',
-			'medan'=>'concat_ws(" ",msic,keterangan)','apa'=>$cari);
+			'medan'=>'concat_ws(" ",msic,xx,keterangan)','apa'=>$cari);
 		$susun[0]['dari'] = 10;//$susun['dari'] = 10;
 
 		$paparKes = //$this->tanya->cariSql($myTable[0], $medan, $carian, $susun);
