@@ -490,6 +490,57 @@ class Cari extends \Aplikasi\Kitab\Kawal
 #------------------------------------------------------------------------------------------
 ###########################################################################################
 #------------------------------------------------------------------------------------------
+	public function kodprodukmm($carilah = null)
+	{
+		$cari = bersih($_GET['cari']);
+		//echo "URL \$cari = $cari <br> GET \$cari = $carilah";
+		if($cari == null) echo '<li>Kosong Laa</li>';
+		elseif (isset($cari))
+		{
+			if(strlen($cari) > 0)
+			{
+				list($paparKes, $bilKes) = $this->produkMmDB($cari);
+				$this->produkMmPapar($paparKes, $bilKes);
+			}# tamat - strlen($cari) > 0
+		}# tamat - isset($cari)//*/
+	}
+#------------------------------------------------------------------------------------------
+	function produkMmPapar($paparKes, $bilKes)
+	{
+		if($bilKes==0) {echo '<li>Takde Laa</li>';}
+		else
+		{	echo '<li>Jumpa ' . $bilKes . '</li>' . "\r";
+			foreach($paparKes as $key => $data)
+			{
+				$mcpa = $data['m6'] . '-' . $data['kod_commodity']
+					. '-' .$data['x'] . '-' .$data['kod_kuantiti'];
+				$harga = 'aup=' . $data['aup-rm'] . '/min=' . $data['min-rm']
+					. '/max=' .$data['max-rm'];
+				echo '<li onClick="fill(\'' . $data['msic2008'] . '\');">'
+				. ($key+1) . '-(' . $mcpa . ')'
+				. '|' .  $data['keterangan']
+				. '|(' . $harga . ')</li>' . "\r";
+			}# tamat - foreach($paparKes as $key => $data)
+		}# tamat - $bilKes ==0
+	}
+#------------------------------------------------------------------------------------------
+	function produkMmDB($cari)
+	{
+		$myTable = dpt_senarai('mcpabaru');
+		$medan = '*';
+		$carian[] = array('fix'=>'z%like%','atau'=>'WHERE',
+			'medan'=>'concat_ws(" ",msic2008,keterangan)','apa'=>$cari);
+		$susun[0]['dari'] = 10;//$susun['dari'] = 10;
+
+		$paparKes = //$this->tanya->cariSql($myTable[0], $medan, $carian, $susun);
+		$this->tanya->cariSemuaData($myTable[0], $medan, $carian, $susun);
+		$bilKes = count($paparKes); //echo $bilKes . '=>'; //print_r($paparKes);
+
+		return array($paparKes, $bilKes);
+	}
+#------------------------------------------------------------------------------------------
+###########################################################################################
+#------------------------------------------------------------------------------------------
 	function buangdata($json)
 	{
 		$json = str_replace('{', '[', $json);
