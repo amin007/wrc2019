@@ -580,7 +580,8 @@ class Cari extends \Aplikasi\Kitab\Kawal
 	{
 		//echo '<hr> Nama class : ' . __METHOD__ . '<hr>';
 		$myTable = dpt_senarai('mcpabaru');
-		$medan = '*';
+		$medan = '"" as no,msic,concat_ws("-",m6,kod_commodity,x,kod_kuantiti) as kodx,'
+			. 'keterangan,concat_ws("-",`aup-rm`,`min-rm`,`max-rm`) as harga';
 		$carian[] = $t = null;
 		$susun[0]['max'] = 2152;
 
