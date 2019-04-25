@@ -512,13 +512,12 @@ class Cari extends \Aplikasi\Kitab\Kawal
 		{	echo '<li>Jumpa ' . $bilKes . '</li>' . "\r";
 			foreach($paparKes as $key => $data)
 			{
-				$mcpa = $data['m6'] . '-' . $data['kod_commodity']
-					. '-' .$data['x'] . '-' .$data['kod_kuantiti'];
+				$mcpa = $data['m6'] . ' ' . $data['kod_commodity']
+					. ' ' .$data['x'] . ' ' .$data['kod_kuantiti'];
 				$harga = 'aup=' . $data['aup-rm'] . '/min=' . $data['min-rm']
 					. '/max=' .$data['max-rm'];
 				echo '<li onClick="fill(\'' . $data['msic'] . '\');">'
-				. ($key+1) . '-(' . $mcpa . ')'
-				. '|' .  $data['keterangan']
+				. ($key+1) . '-(' . $mcpa . ')' . '|' .  $data['keterangan']
 				. '|(' . $harga . ')</li>' . "\r";
 			}# tamat - foreach($paparKes as $key => $data)
 		}# tamat - $bilKes ==0
