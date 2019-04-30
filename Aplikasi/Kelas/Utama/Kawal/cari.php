@@ -578,7 +578,7 @@ class Cari extends \Aplikasi\Kitab\Kawal
 		list($kira,$json) =//$this->tanya->cariSql($myTable[1], $medan, $carian, $susun);
 		$this->tanya->cariDataJson($myTable[1], $medan, $carian, $susun);
 
-		$this->paparJsondaa($json);
+		$this->paparJsondaa($json,$kira,$t);
 	}
 #------------------------------------------------------------------------------------------
 	public function produkmmjson()
@@ -593,11 +593,8 @@ class Cari extends \Aplikasi\Kitab\Kawal
 
 		list($kira,$json) =//$this->tanya->cariSql($myTable[0], $medan, $carian, $susun);
 		$this->tanya->cariDataJson($myTable[0], $medan, $carian, $susun);
-		$json = $this->buangdata($json);
 
-		$t = '"draw":1,"recordsTotal":' . $kira . ',"recordsFiltered":' . $kira . ',';
-		header("Content-Type: application/json;charset=utf-8");
-		echo "{ $t \"data\":$json }";
+		$this->paparJsondaa($json,$kira,$t);
 	}
 #------------------------------------------------------------------------------------------
 	public function mascojson()
@@ -610,11 +607,8 @@ class Cari extends \Aplikasi\Kitab\Kawal
 
 		list($kira,$json) =//$this->tanya->cariSql($myTable[1], $medan, $carian, $susun);
 		$this->tanya->cariDataJson($myTable[1], $medan, $carian, $susun);
-		$json = $this->buangdata($json);
 
-		$t = '"draw":1,"recordsTotal":' . $kira . ',"recordsFiltered":' . $kira . ',';
-		header("Content-Type: application/json;charset=utf-8");
-		echo "{ $t \"data\":$json }";
+		$this->paparJsondaa($json,$kira,$t);
 	}
 #------------------------------------------------------------------------------------------
 #==========================================================================================
