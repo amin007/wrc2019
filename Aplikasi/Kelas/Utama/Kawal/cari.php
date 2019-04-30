@@ -540,6 +540,15 @@ class Cari extends \Aplikasi\Kitab\Kawal
 #------------------------------------------------------------------------------------------
 ###########################################################################################
 #------------------------------------------------------------------------------------------
+	function paparJsondaa($json)
+	{
+		$json = $this->buangdata($json);
+
+		$t = '"draw":1,"recordsTotal":' . $kira . ',"recordsFiltered":' . $kira . ',';
+		header("Content-Type: application/json;charset=utf-8");
+		echo "{ $t \"data\":$json }";
+	}
+#------------------------------------------------------------------------------------------
 	function buangdata($json)
 	{
 		$json = str_replace('{', '[', $json);
@@ -568,11 +577,8 @@ class Cari extends \Aplikasi\Kitab\Kawal
 
 		list($kira,$json) =//$this->tanya->cariSql($myTable[1], $medan, $carian, $susun);
 		$this->tanya->cariDataJson($myTable[1], $medan, $carian, $susun);
-		$json = $this->buangdata($json);
 
-		$t = '"draw":1,"recordsTotal":' . $kira . ',"recordsFiltered":' . $kira . ',';
-		header("Content-Type: application/json;charset=utf-8");
-		echo "{ $t \"data\":$json }";
+		$this->paparJsondaa($json);
 	}
 #------------------------------------------------------------------------------------------
 	public function produkmmjson()
