@@ -4,7 +4,8 @@ include '../atas-set-001.php';
 include '../diatas.php';
 $tableID = 'myTable';
 $tableClass = 'table table-striped table-bordered';
-$tajuk = '<th>#</th><th>v2013</th><th>v2008</th><th>jawatan</th>';
+//$tajuk = '<th>#</th><th>v2013</th><th>v2008</th><th>jawatan</th>';
+$tajuk = '<th>#</th><th>kumpulan</th><th>kod_masco</th><th>jawatan</th>';
 echo "\n" . '<table id="' . $tableID . '" class="' . $tableClass . '" style="width:100%">'
 . "\n<thead><tr>$tajuk</tr></thead>\n<tfoot><tr>$tajuk</tr></tfoot>\n"
 . "</table>\n";
