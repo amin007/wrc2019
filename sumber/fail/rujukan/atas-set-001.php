@@ -1,16 +1,16 @@
 <?php
 # setkan jquery, bootstrap dan font awesome sama ada local atau cdn
 ## cdn
-//      $jquery_cdn = 'https://code.jquery.com/jquery-2.2.3.min.js';
- $bootstrapJS_cdn = 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js';
-$bootstrapCSS_cdn = 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css';
- $ceruleanCSS_cdn = 'https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/cerulean/bootstrap.min.css';
- $fontawesome_cdn = 'https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css';
+//      $jquery_cdn = '//code.jquery.com/jquery-2.2.3.min.js';
+ $bootstrapJS_cdn = '//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js';
+$bootstrapCSS_cdn = '//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css';
+ $ceruleanCSS_cdn = '//maxcdn.bootstrapcdn.com/bootswatch/3.3.7/cerulean/bootstrap.min.css';
+ $fontawesome_cdn = '//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css';
 ## 4.1
- $bootstrapJS_413 = 'https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js';
-$bootstrapCSS_413 = 'https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css';
- $ceruleanCSS_413 = 'https://maxcdn.bootstrapcdn.com/bootswatch/4.1.3/cerulean/bootstrap.min.css';
- $fontawesome_510 = 'https://use.fontawesome.com/releases/v5.1.0/css/all.css';
+ $bootstrapJS_413 = '//maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js';
+$bootstrapCSS_413 = '//maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css';
+ $ceruleanCSS_413 = '//maxcdn.bootstrapcdn.com/bootswatch/4.1.3/cerulean/bootstrap.min.css';
+ $fontawesome_510 = '//use.fontawesome.com/releases/v5.1.0/css/all.css';
 ## local
             $sumber = 'sumber/utama/';
       $jquery_local = $sumber . 'jquery/jquery-2.2.3.min.js';
