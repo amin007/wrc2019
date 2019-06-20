@@ -228,6 +228,18 @@ class Tanya
 		return array($kira,$json);
 	}
 	#---------------------------------------------------------------------------------------------
+	public function cariDataJson2($myTable, $medan, $carian, $susun)
+	{
+		//echo '<hr> Nama class : ' . __METHOD__ . '<hr>';
+		$sql = $this->sql->bentukSqlSelect($myTable, $medan, $carian, $susun);
+		$result = $this->db->selectAll($sql);
+		echo '<pre>$result::'; print_r($result); echo '</pre><br>';
+		$json = null;
+		$kira = count($result);
+
+		return array($kira,$json);
+	}
+	#---------------------------------------------------------------------------------------------
 	public function cariSemuaData($myTable, $medan, $carian, $susun)
 	{
 		$sql = $this->sql->bentukSqlSelect($myTable, $medan, $carian, $susun);
