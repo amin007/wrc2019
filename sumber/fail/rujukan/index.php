@@ -62,10 +62,11 @@ $tajuk = 'Kod Rujukan Utama';
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="">
 <meta name="author" content="">
 <title><?php echo $tajuk ?></title>
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
 <link href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" rel="stylesheet" type="text/css">
 <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" rel="stylesheet" type="text/css">
 
