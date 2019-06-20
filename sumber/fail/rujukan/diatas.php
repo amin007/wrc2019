@@ -20,3 +20,5 @@ if (isset($urlcss))
 echo "\n"; ?>
 </head>
 <body>
+
+<a class="btn btn-primary" href="../">Kembali<i class="fa fa-binoculars"></i></a><hr>
