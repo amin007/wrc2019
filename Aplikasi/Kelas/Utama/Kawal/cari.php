@@ -557,6 +557,7 @@ class Cari extends \Aplikasi\Kitab\Kawal
 		//$json = str_replace('null', '&nbsp;', $json);
 		$buang = array(/*"\t","\n",*/
 		'"no":','"s":','"msic":','"keterangan":','"msic2000":',
+		'"kod1":','"kod2":','"kod3":',
 		'"xx":','"harga":','"notakaki":','"v2013":','"v2008":','"jawatan":',
 		'"kumpulan":','"pecahan":','"kod_masco":','"nama jawatan":');
 		$json = str_replace($buang, '', $json);//*/
@@ -609,6 +610,21 @@ class Cari extends \Aplikasi\Kitab\Kawal
 
 		list($kira,$json) =//$this->tanya->cariSql($myTable[1], $medan, $carian, $susun);
 		$this->tanya->cariDataJson($myTable[1], $medan, $carian, $susun);
+
+		$this->paparJsondaa($json,$kira,$t);
+	}
+#------------------------------------------------------------------------------------------
+	public function coicopjson()
+	{
+		//echo '<hr> Nama class : ' . __METHOD__ . '<hr>';
+		$myTable = dpt_senarai('masco');
+		$medan = '*';
+		$carian[] = $t = null;
+		$susun[0]['max'] = 2000;//702-5500
+		//$susun[0]['susun'] = '';
+
+		list($kira,$json) =//$this->tanya->cariSql($myTable[4], $medan, $carian, $susun);
+		$this->tanya->cariDataJson($myTable[4], $medan, $carian, $susun);
 
 		$this->paparJsondaa($json,$kira,$t);
 	}
