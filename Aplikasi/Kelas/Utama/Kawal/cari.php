@@ -625,6 +625,7 @@ class Cari extends \Aplikasi\Kitab\Kawal
 
 		list($kira,$json) =//$this->tanya->cariSql($myTable[4], $medan, $carian, $susun);
 		$this->tanya->cariDataJson($myTable[4], $medan, $carian, $susun);
+		//$this->tanya->cariDataJson2($myTable[4], $medan, $carian, $susun);
 
 		$this->paparJsondaa($json,$kira,$t);
 	}
