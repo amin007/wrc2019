@@ -65,7 +65,8 @@ $f1.'18',$f1.'23',$f1.'25',$f1.'30',$f1.'32',$f1.'33',$f1.'37',$f1.'50',$f1.'51'
 		<input type="text" class="form-control" id="<?php echo $kiraF0[$key] ?>" placeholder="<?php echo $kiraF0[$key] ?>">
 	</div>
 	<div class="form-group col-md-4">
-		<input type="text" class="form-control" id="<?php echo $kiraF1[$key] ?>" placeholder="<?php echo $kiraF1[$key] ?>">
+		<input type="text" class="form-control" id="<?php echo $kiraF1[$key] ?>" placeholder="<?php echo $kiraF1[$key] ?>"<?php
+		echo ( $kiraF1[$key] == 'F1418xb') ? ' readonly':''?>>
 	</div>
 </div>
 <?php endforeach; ?>
