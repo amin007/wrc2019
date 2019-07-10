@@ -113,6 +113,25 @@ echo "\n\n"; ?>
 
 	.suggestionList li:hover {background-color: #659CD8;}
 </style>
+<?php elseif ( isset($dataURL[1]) && $dataURL[1]=='io') : echo "\n";
+	// output
+	$kiraF = array('01','02','03','04','05','06','07','11','12');
+?>
+<script>
+$('#F1318xa').keyup(function(){
+<?php foreach ($kiraF as $ff):?>
+	var F1318<?php echo $ff ?>; F1318<?php echo $ff ?> = parseFloat($('#F1318<?php echo $ff ?>').val());
+<?php endforeach; ?>
+	var F880499; F880499 = parseFloat($('#F880499').val());
+	var F141801; F141801 = parseFloat($('#F141801').val());
+
+//	var result = F00<?php echo $ff ?>a + F00<?php echo $ff ?>b + F00<?php echo $ff ?>c;
+	var resultT = F131801 + F131802 + F131803 + F131804 + F131805 + F131806 + F131807
+	+ F131811 + F131812 + F880499;
+	var result = resultT - F141801;
+	$('#F1318xa').val(result.toFixed(0));
+});
+</script>
 <?php elseif ( isset($dataURL[1]) && $dataURL[1]=='laporan') : echo "\n";?>
 <script>
 
