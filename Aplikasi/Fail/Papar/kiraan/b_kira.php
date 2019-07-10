@@ -1,4 +1,5 @@
 <div class="container">
+<h1>Komponen Output</h1>
 <form>
 <?php
 // output
