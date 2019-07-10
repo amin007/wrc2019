@@ -10,11 +10,12 @@ $labelF = array('Jualan barang-barang','Jualan kenderaan bermotor','Jualan alat 
 'Pendapatan daripada sewa Lain-lain',
 'Pendapatan operasi lain pindahan wang',
 'Jumlah membuat/membina sendiri (soalan aset)',
-'Kos barangan yang dijual');
+'Kos barangan yang dijual',
+'Output');
 $f0 = 'F1317';
-$kiraF0 = array($f0.'01',$f0.'02',$f0.'03',$f0.'04',$f0.'05',$f0.'06',$f0.'07',$f0.'11',$f0.'12','F870499','F141701');
+$kiraF0 = array($f0.'01',$f0.'02',$f0.'03',$f0.'04',$f0.'05',$f0.'06',$f0.'07',$f0.'11',$f0.'12','F870499','F141701','F1317xa');
 $f1 = 'F1318';
-$kiraF1 = array($f1.'01',$f1.'02',$f1.'03',$f1.'04',$f1.'05',$f1.'06',$f1.'07',$f1.'11',$f1.'12','F880499','F141801');
+$kiraF1 = array($f1.'01',$f1.'02',$f1.'03',$f1.'04',$f1.'05',$f1.'06',$f1.'07',$f1.'11',$f1.'12','F880499','F141801','F1318xa');
 ?>
 <?php foreach ($labelF as $key => $ff):?>
 <div class="form-row">
@@ -69,3 +70,5 @@ $f1.'18',$f1.'23',$f1.'25',$f1.'30',$f1.'32',$f1.'33',$f1.'37',$f1.'50',$f1.'51'
 <?php endforeach; ?>
 </form>
 </div><!-- / class="container" -->
+
+<?php include 'komponen-io.php'; ?>
