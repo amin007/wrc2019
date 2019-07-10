@@ -145,6 +145,12 @@ $('#F1418xb').keyup(function(){
 	+ F141830 + F141832 + F141833 + F141837 + F141850 + F141851 + F141852;
 	$('#F1418xb').val(result.toFixed(0));
 });
+
+$('#IO2018').keyup(function(){
+	var io = (F1318xa / F1418xb);
+	$('#IO2018').val(io.toFixed(2));
+});
+
 </script>
 
 <?php elseif ( isset($dataURL[1]) && $dataURL[1]=='laporan') : echo "\n";?>
