@@ -47,13 +47,14 @@ $labelF = array('Kos pembaikan','Penbelian bahan dan bekalan','kos pencetakan',
 'Perbelanjaan operasi lain',
 'Kos perkerjaan:bayaran kepada pengarah tidak bekerja',
 'Kos perkerjaan:nilai pakaian percuma',
-'Kos perkerjaan:kos latihan kpd pekerja');
+'Kos perkerjaan:kos latihan kpd pekerja',
+'Input');
 $f0 = 'F1417';
 $kiraF0 = array($f0.'02',$f0.'03',$f0.'04',$f0.'05',$f0.'06',$f0.'07',
-$f0.'18',$f0.'23',$f0.'25',$f0.'30',$f0.'32',$f0.'33',$f0.'37',$f0.'50',$f0.'51',$f0.'52');
+$f0.'18',$f0.'23',$f0.'25',$f0.'30',$f0.'32',$f0.'33',$f0.'37',$f0.'50',$f0.'51',$f0.'52','F1417xb');
 $f1 = 'F1418';
 $kiraF1 = array($f1.'02',$f1.'03',$f1.'04',$f1.'05',$f1.'06',$f1.'07',
-$f1.'18',$f1.'23',$f1.'25',$f1.'30',$f1.'32',$f1.'33',$f1.'37',$f1.'50',$f1.'51',$f1.'52');
+$f1.'18',$f1.'23',$f1.'25',$f1.'30',$f1.'32',$f1.'33',$f1.'37',$f1.'50',$f1.'51',$f1.'52','F1418xb');
 ?>
 <?php foreach ($labelF as $key => $ff):?>
 <div class="form-row">
