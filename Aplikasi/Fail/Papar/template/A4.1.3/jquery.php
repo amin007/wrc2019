@@ -130,9 +130,7 @@ $('#F1318xa').keyup(function(){
 	var result = resultT - F141801;
 	$('#F1318xa').val(result.toFixed(0));
 });
-</script>
 
-<script>
 $('#F1418xb').keyup(function(){
 <?php
 	// input
@@ -148,7 +146,7 @@ $('#F1418xb').keyup(function(){
 
 $('#IO2018').keyup(function(){
 <?php
-	// input
+	// input/output
 	$kiraF = array('1318xa','1418xb');
 	foreach ($kiraF as $ff):?>
 	var F<?php echo $ff ?> = parseFloat($('#F<?php echo $ff ?>').val()) || 0;
