@@ -22,11 +22,11 @@ $kiraF1 = array($f1.'01',$f1.'02',$f1.'03',$f1.'04',$f1.'05',$f1.'06',$f1.'07',$
 	<div class="form-group col-md-4">
 		<label for="inputZip"><?php echo ($key+1) . '|' . $ff ?></label>
 	</div>
-	<div class="form-group col-md-4">
+	<div class="form-group col-md-3">
 		<input type="text" class="form-control form-control-sm" id="<?php echo $kiraF0[$key] ?>" placeholder="<?php echo $kiraF0[$key] ?>"<?php
 		echo ( $kiraF1[$key] == 'F1317xa') ? ' readonly':''?>>
 	</div>
-	<div class="form-group col-md-4">
+	<div class="form-group col-md-3">
 		<input type="text" class="form-control form-control-sm" id="<?php echo $kiraF1[$key] ?>" placeholder="<?php echo $kiraF1[$key] ?>"<?php
 		echo ( $kiraF1[$key] == 'F1318xa') ? ' readonly':''?>>
 	</div>
@@ -63,11 +63,11 @@ $f1.'18',$f1.'23',$f1.'25',$f1.'30',$f1.'32',$f1.'33',$f1.'37',$f1.'50',$f1.'51'
 	<div class="form-group col-md-4">
 		<label for="inputZip"><?php echo ($key+1) . '|' . $ff ?></label>
 	</div>
-	<div class="form-group col-md-4">
+	<div class="form-group col-md-3">
 		<input type="text" class="form-control form-control-sm" id="<?php echo $kiraF0[$key] ?>" placeholder="<?php echo $kiraF0[$key] ?>"<?php
 		echo ( $kiraF1[$key] == 'F1417xb') ? ' readonly':''?>>
 	</div>
-	<div class="form-group col-md-4">
+	<div class="form-group col-md-3">
 		<input type="text" class="form-control form-control-sm" id="<?php echo $kiraF1[$key] ?>" placeholder="<?php echo $kiraF1[$key] ?>"<?php
 		echo ( $kiraF1[$key] == 'F1418xb') ? ' readonly':''?>>
 	</div>
