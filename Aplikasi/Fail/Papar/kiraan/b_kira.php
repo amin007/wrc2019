@@ -71,4 +71,4 @@ $f1.'18',$f1.'23',$f1.'25',$f1.'30',$f1.'32',$f1.'33',$f1.'37',$f1.'50',$f1.'51'
 </form>
 </div><!-- / class="container" -->
 
-<?php include 'komponen-io.php'; ?>
+<?php //include 'komponen-io.php'; ?>
