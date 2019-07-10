@@ -10,12 +10,11 @@ $labelF = array('Jualan barang2','Jualan kenderaan bermotor','Jualan alat ganti 
 'Pdptn drpd sewa Lain-lain',
 'Pdptn operasi lain pindahan wang',
 'Jum membuat/membina sendiri (soalan aset)',
-'Kos barangan yg dijual',
-'Output');
+'Kos barangan yg dijual');
 $f0 = 'F1317';
-$kiraF0 = array($f0.'01',$f0.'02',$f0.'03',$f0.'04',$f0.'05',$f0.'06',$f0.'07',$f0.'11',$f0.'12','F870499','F141701','F1317xa');
+$kiraF0 = array($f0.'01',$f0.'02',$f0.'03',$f0.'04',$f0.'05',$f0.'06',$f0.'07',$f0.'11',$f0.'12','F870499','F141701');
 $f1 = 'F1318';
-$kiraF1 = array($f1.'01',$f1.'02',$f1.'03',$f1.'04',$f1.'05',$f1.'06',$f1.'07',$f1.'11',$f1.'12','F880499','F141801','F1318xa');
+$kiraF1 = array($f1.'01',$f1.'02',$f1.'03',$f1.'04',$f1.'05',$f1.'06',$f1.'07',$f1.'11',$f1.'12','F880499','F141801');
 ?>
 <?php foreach ($labelF as $key => $ff):?>
 <div class="form-row">
@@ -50,13 +49,13 @@ $labelF = array('Kos pembaikan','Penbelian bahan & bekalan','kos pencetakan',
 'Kos perkerjaan:bayaran kpd pengarah tak bekerja',
 'Kos perkerjaan:nilai pakaian percuma',
 'Kos perkerjaan:kos latihan kpd pekerja',
-'Input','IO');
+'Input','Output','IO');
 $f0 = 'F1417';
 $kiraF0 = array($f0.'02',$f0.'03',$f0.'04',$f0.'05',$f0.'06',$f0.'07',
-$f0.'18',$f0.'23',$f0.'25',$f0.'30',$f0.'32',$f0.'33',$f0.'37',$f0.'50',$f0.'51',$f0.'52','F1417xb','IO2017');
+$f0.'18',$f0.'23',$f0.'25',$f0.'30',$f0.'32',$f0.'33',$f0.'37',$f0.'50',$f0.'51',$f0.'52','F1417xb','F1317xa','IO2017');
 $f1 = 'F1418';
 $kiraF1 = array($f1.'02',$f1.'03',$f1.'04',$f1.'05',$f1.'06',$f1.'07',
-$f1.'18',$f1.'23',$f1.'25',$f1.'30',$f1.'32',$f1.'33',$f1.'37',$f1.'50',$f1.'51',$f1.'52','F1418xb','IO2018');
+$f1.'18',$f1.'23',$f1.'25',$f1.'30',$f1.'32',$f1.'33',$f1.'37',$f1.'50',$f1.'51',$f1.'52','F1418xb','F1318xa','IO2018');
 ?>
 <?php foreach ($labelF as $key => $ff):?>
 <div class="form-row">
