@@ -26,7 +26,8 @@ $kiraF1 = array($f1.'01',$f1.'02',$f1.'03',$f1.'04',$f1.'05',$f1.'06',$f1.'07',$
 		<input type="text" class="form-control" id="<?php echo $kiraF0[$key] ?>" placeholder="<?php echo $kiraF0[$key] ?>">
 	</div>
 	<div class="form-group col-md-4">
-		<input type="text" class="form-control" id="<?php echo $kiraF1[$key] ?>" placeholder="<?php echo $kiraF1[$key] ?>">
+		<input type="text" class="form-control" id="<?php echo $kiraF1[$key] ?>" placeholder="<?php echo $kiraF1[$key] ?>"<?php
+		echo ( $kiraF1[$key] == 'F1318xa') ? ' readonly':''?>>
 	</div>
 </div>
 <?php endforeach; ?>
