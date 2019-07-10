@@ -3,14 +3,14 @@
 <form>
 <?php
 // output
-$labelF = array('Jualan barang-barang','Jualan kenderaan bermotor','Jualan alat ganti dan aksesori',
+$labelF = array('Jualan barang2','Jualan kenderaan bermotor','Jualan alat ganti & aksesori',
 'Jualan petrol dan gas','Komisen, brokeraj dan yuran yang diterima',
-'Pendapatan dari perkhidmatan pembaikan,pemasangan dab penyelenggaraan',
-'Royalti, hakcipta,pelesenan dan yuran francais',
-'Pendapatan daripada sewa Lain-lain',
-'Pendapatan operasi lain pindahan wang',
-'Jumlah membuat/membina sendiri (soalan aset)',
-'Kos barangan yang dijual',
+'Pdptn drpd perkhidmatan pembaikan,pemasangan & penyelenggaraan',
+'Royalti, hakcipta,pelesenan & yuran francais',
+'Pdptn drpd sewa Lain-lain',
+'Pdptn operasi lain pindahan wang',
+'Jum membuat/membina sendiri (soalan aset)',
+'Kos barangan yg dijual',
 'Output');
 $f0 = 'F1317';
 $kiraF0 = array($f0.'01',$f0.'02',$f0.'03',$f0.'04',$f0.'05',$f0.'06',$f0.'07',$f0.'11',$f0.'12','F870499','F141701','F1317xa');
@@ -38,16 +38,16 @@ $kiraF1 = array($f1.'01',$f1.'02',$f1.'03',$f1.'04',$f1.'05',$f1.'06',$f1.'07',$
 <form>
 <?php
 // input
-$labelF = array('Kos pembaikan','Penbelian bahan dan bekalan','kos pencetakan',
-'Air yg dibeli','Tenaga elektrik yg dibeli','Bahan pembakar,pelincir dan gas',
+$labelF = array('Kos pembaikan','Penbelian bahan & bekalan','kos pencetakan',
+'Air yg dibeli','Tenaga elektrik yg dibeli','Bahan pembakar,pelincir & gas',
 'Pembelian perkhidmatan pengangkutan',
 'Bayaran telekomunikasi (cth telefon,internet)',
-'Pengiklanan dan promosi',
+'Pengiklanan & promosi',
 'Bayaran sewa Sewaan operasi lain',
 'Bayaran royalti kerajaan/badan berkanun',
 'Bayaran royalti ngo/tajaan korporat',
 'Perbelanjaan operasi lain',
-'Kos perkerjaan:bayaran kepada pengarah tidak bekerja',
+'Kos perkerjaan:bayaran kpd pengarah tak bekerja',
 'Kos perkerjaan:nilai pakaian percuma',
 'Kos perkerjaan:kos latihan kpd pekerja',
 'Input');
