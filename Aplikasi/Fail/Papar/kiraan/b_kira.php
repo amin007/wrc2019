@@ -22,10 +22,10 @@ $kiraF1 = array($f1.'01',$f1.'02',$f1.'03',$f1.'04',$f1.'05',$f1.'06',$f1.'07',$
 		<label for="inputZip"><?php echo ($key+1) . '|' . $ff ?></label>
 	</div>
 	<div class="form-group col-md-4">
-		<input type="text" class="form-control" placeholder="<?php echo $kiraF0[$key] ?>">
+		<input type="text" class="form-control" id="<?php echo $kiraF0[$key] ?>" placeholder="<?php echo $kiraF0[$key] ?>">
 	</div>
 	<div class="form-group col-md-4">
-		<input type="text" class="form-control" placeholder="<?php echo $kiraF1[$key] ?>">
+		<input type="text" class="form-control" id="<?php echo $kiraF1[$key] ?>" placeholder="<?php echo $kiraF1[$key] ?>">
 	</div>
 </div>
 <?php endforeach; ?>
@@ -60,10 +60,10 @@ $f1.'18',$f1.'23',$f1.'25',$f1.'30',$f1.'32',$f1.'33',$f1.'37',$f1.'50',$f1.'51'
 		<label for="inputZip"><?php echo ($key+1) . '|' . $ff ?></label>
 	</div>
 	<div class="form-group col-md-4">
-		<input type="text" class="form-control" placeholder="<?php echo $kiraF0[$key] ?>">
+		<input type="text" class="form-control" id="<?php echo $kiraF0[$key] ?>" placeholder="<?php echo $kiraF0[$key] ?>">
 	</div>
 	<div class="form-group col-md-4">
-		<input type="text" class="form-control" placeholder="<?php echo $kiraF1[$key] ?>">
+		<input type="text" class="form-control" id="<?php echo $kiraF1[$key] ?>" placeholder="<?php echo $kiraF1[$key] ?>">
 	</div>
 </div>
 <?php endforeach; ?>
