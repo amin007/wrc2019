@@ -13,6 +13,7 @@ echo 'levelPengguna=' . $Sesi->get('bs_levelPengguna') . '';//*/
 	<a class="btn btn-primary btn-large" href="<?php echo URL ?>ruangtamu/logout">Pergi Lebih Jauh<i class="fas fa-door-open fa-2x"></i></a>
 	<a class="btn btn-dark btn-large" href="<?php echo URL ?>sumber">Sumber<i class="fas fa-mosque fa-2x"></i></a>
 	<a class="btn btn-success btn-large" target="_blank" href="<?php echo URL ?>borang">Borang<i class="fas fa-hand-holding-heart fa-2x"></i></a>
+	<a class="btn btn-success btn-large" target="_blank" href="<?php echo URL ?>kiraan">Kiraan<i class="fas fa-hand-holding-heart fa-2x"></i></a>
 	<a class="btn btn-secondary btn-large" target="_blank" href="<?php echo URL ?>borang/industri">MSIC<i class="fa fa-binoculars fa-2x"></i></a>
 	<a class="btn btn-warning btn-large" target="_blank" href="<?php echo URL ?>qss">QSS<i class="fa fa-binoculars fa-2x"></i></a>
 	<a class="btn btn-info btn-large" target="_blank" href="<?php echo URL ?>ejob">EJOB<i class="fa fa-binoculars fa-2x"></i></a>
