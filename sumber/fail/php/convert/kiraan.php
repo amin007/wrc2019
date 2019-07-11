@@ -201,12 +201,12 @@ table.excel tbody td
 <div class="form-row">
 	<div class="form-group col-md-5"><label for="inputZip">18|Output</label></div>
 	<div class="form-group col-md-3"><input type="text" class="form-control form-control-sm" id="F1317xa" placeholder="F1317xa"></div>
-	<div class="form-group col-md-3"><input type="text" class="form-control form-control-sm" id="F1318xa" placeholder="F1318xa"></div>
+	<div class="form-group col-md-3"><input type="text" class="form-control form-control-sm" id="F1318xa" placeholder="F1318xa" readonly></div>
 </div>
 <div class="form-row">
 	<div class="form-group col-md-5"><label for="inputZip">19|IO</label></div>
-	<div class="form-group col-md-3"><input type="text" class="form-control form-control-sm" id="IO2017" placeholder="IO2017"></div>
-	<div class="form-group col-md-3"><input type="text" class="form-control form-control-sm" id="IO2018" placeholder="IO2018"></div>
+	<div class="form-group col-md-3"><input type="text" class="form-control form-control-sm" id="IO2017" placeholder="IO2017" readonly></div>
+	<div class="form-group col-md-3"><input type="text" class="form-control form-control-sm" id="IO2018" placeholder="IO2018" readonly></div>
 </div>
 </form>
 </div><!-- / class="container" -->
@@ -268,11 +268,16 @@ $('#F1418xb').keyup(function(){
 	$('#F1418xb').val(result.toFixed(0));
 });
 
-$('#IO2018').keyup(function(){
-	var F1318xa = parseFloat($('#F1318xa').val()) || 0;
-	var F1418xb = parseFloat($('#F1418xb').val()) || 0;
-	var io = (F1318xa / F1418xb);
-	$('#IO2018').val(io.toFixed(2));
+$('#IO2017').keyup(function(){
+	//var F1318xa = parseFloat($('#F1318xa').val()) || 0;
+	var output = parseFloat($('#F1318xa').val()) || 0;
+	//var F1418xb = parseFloat($('#F1418xb').val()) || 0;
+	var input = parseFloat($('#F1418xb').val()) || 0;
+	var io00 = (5 / 45);
+	//var io01 = (F1318xa / F1418xb);
+	var io01 = (input / output);
+	$('#IO2017').val(io00.toFixed(2));
+	$('#IO2018').val(io01.toFixed(2));
 });
 </script>
 
