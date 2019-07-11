@@ -195,12 +195,12 @@ table.excel tbody td
 </div>
 <div class="form-row">
 	<div class="form-group col-md-5"><label for="inputZip">17|Input</label></div>
-	<div class="form-group col-md-3"><input type="text" class="form-control form-control-sm" id="F1417xb" placeholder="F1417xb"></div>
+	<div class="form-group col-md-3"><input type="text" class="form-control form-control-sm" id="F1417xb" placeholder="F1417xb" readonly></div>
 	<div class="form-group col-md-3"><input type="text" class="form-control form-control-sm" id="F1418xb" placeholder="F1418xb" readonly></div>
 </div>
 <div class="form-row">
 	<div class="form-group col-md-5"><label for="inputZip">18|Output</label></div>
-	<div class="form-group col-md-3"><input type="text" class="form-control form-control-sm" id="F1317xa" placeholder="F1317xa"></div>
+	<div class="form-group col-md-3"><input type="text" class="form-control form-control-sm" id="F1317xa" placeholder="F1317xa" readonly></div>
 	<div class="form-group col-md-3"><input type="text" class="form-control form-control-sm" id="F1318xa" placeholder="F1318xa" readonly></div>
 </div>
 <div class="form-row">
