@@ -53,9 +53,9 @@ $f1.'18',$f1.'23',$f1.'25',$f1.'30',$f1.'32',$f1.'33',$f1.'37',$f1.'50',$f1.'51'
 <div class="form-row">
 	<div class="form-group col-md-5"><label for="inputZip"><?php echo ($key+1) . '|' . $ff ?></label></div>
 	<div class="form-group col-md-3"><input type="text" class="form-control form-control-sm" id="<?php echo $kiraF0[$key] ?>" placeholder="<?php echo $kiraF0[$key] ?>"<?php
-		echo ( $kiraF0[$key] == 'F1418xb') ? ' readonly':''?>></div>
+		echo ( in_array($kiraF0[$key],array('F1417xb','F1317xa','IO2017'))) ? ' readonly':''?>></div>
 	<div class="form-group col-md-3"><input type="text" class="form-control form-control-sm" id="<?php echo $kiraF1[$key] ?>" placeholder="<?php echo $kiraF1[$key] ?>"<?php
-		echo ( $kiraF1[$key] == 'F1418xb') ? ' readonly':''?>></div>
+		echo ( in_array($kiraF1[$key],array('F1418xb','F1318xa','IO2018'))) ? ' readonly':''?>></div>
 </div>
 <?php endforeach; ?>
 </form>
