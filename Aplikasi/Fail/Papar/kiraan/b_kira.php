@@ -19,7 +19,7 @@ $kiraF1 = array($f1.'01',$f1.'02',$f1.'03',$f1.'04',$f1.'05',$f1.'06',$f1.'07',$
 <?php foreach ($labelF as $key => $ff):?>
 <div class="form-row">
 	<div class="form-group col-md-5"><label for="inputZip"><?php echo ($key+1) . '|' . $ff ?></label></div>
-	<div class="form-group col-md-3"><input type="text" class="form-control form-control-sm" id="<?php echo $kiraF0[$key] ?>" placeholder="<?php echo $kiraF0[$key] ?>"></div>
+	<div class="form-group col-md-3"><input type="text" class="form-control form-control-sm" id="<?php echo $kiraF0[$key] ?>" value="4" placeholder="<?php echo $kiraF0[$key] ?>"></div>
 	<div class="form-group col-md-3"><input type="text" class="form-control form-control-sm" id="<?php echo $kiraF1[$key] ?>" value="5" placeholder="<?php echo $kiraF1[$key] ?>"></div>
 </div>
 <?php endforeach; ?>
