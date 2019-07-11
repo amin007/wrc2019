@@ -156,6 +156,7 @@ $('#F1418xb').keyup(function(){
 	foreach ($kiraF as $ff):?>
 	var F1418<?php echo $ff ?> = parseFloat($('#F1418<?php echo $ff ?>').val()) || 0;
 <?php endforeach; ?>
+
 	var result = F141802 + F141803 + F141804 + F141805 + F141806 + F141807 + F141818 + F141823 + F141825
 	+ F141830 + F141832 + F141833 + F141837 + F141850 + F141851 + F141852;
 	$('#F1418xb').val(result.toFixed(0));
