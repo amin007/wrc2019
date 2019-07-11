@@ -227,6 +227,25 @@ table.excel tbody td
 <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
 
 <script>
+$('#F1317xa').keyup(function(){
+	var F131701 = parseFloat($('#F131701').val()) || 0;
+	var F131702 = parseFloat($('#F131702').val()) || 0;
+	var F131703 = parseFloat($('#F131703').val()) || 0;
+	var F131704 = parseFloat($('#F131704').val()) || 0;
+	var F131705 = parseFloat($('#F131705').val()) || 0;
+	var F131706 = parseFloat($('#F131706').val()) || 0;
+	var F131707 = parseFloat($('#F131707').val()) || 0;
+	var F131711 = parseFloat($('#F131711').val()) || 0;
+	var F131712 = parseFloat($('#F131712').val()) || 0;
+	var F870499 = parseFloat($('#F870499').val()) || 0;
+	var F141701 = parseFloat($('#F141701').val()) || 0;
+
+	var resultT = F131701 + F131702 + F131703 + F131704 + F131705 + F131706 + F131707
+		+ F131711 + F131712 + F880499;
+	var result = resultT - F141801;
+	$('#F1317xa').val(result.toFixed(0));
+});
+
 $('#F1318xa').keyup(function(){
 	var F131801 = parseFloat($('#F131801').val()) || 0;
 	var F131802 = parseFloat($('#F131802').val()) || 0;
@@ -244,6 +263,28 @@ $('#F1318xa').keyup(function(){
 		+ F131811 + F131812 + F880499;
 	var result = resultT - F141801;
 	$('#F1318xa').val(result.toFixed(0));
+});
+
+$('#F1417xb').keyup(function(){
+	var F141702 = parseFloat($('#F141702').val()) || 0;
+	var F141703 = parseFloat($('#F141703').val()) || 0;
+	var F141704 = parseFloat($('#F141704').val()) || 0;
+	var F141705 = parseFloat($('#F141705').val()) || 0;
+	var F141706 = parseFloat($('#F141706').val()) || 0;
+	var F141707 = parseFloat($('#F141707').val()) || 0;
+	var F141718 = parseFloat($('#F141718').val()) || 0;
+	var F141723 = parseFloat($('#F141723').val()) || 0;
+	var F141725 = parseFloat($('#F141725').val()) || 0;
+	var F141730 = parseFloat($('#F141730').val()) || 0;
+	var F141732 = parseFloat($('#F141732').val()) || 0;
+	var F141733 = parseFloat($('#F141733').val()) || 0;
+	var F141737 = parseFloat($('#F141737').val()) || 0;
+	var F141750 = parseFloat($('#F141750').val()) || 0;
+	var F141751 = parseFloat($('#F141751').val()) || 0;
+	var F141752 = parseFloat($('#F141752').val()) || 0;
+	var result = F141702 + F141703 + F141704 + F141705 + F141706 + F141707 + F141718 + F141723 + F141725
+	+ F141730 + F141732 + F141733 + F141737 + F141750 + F141751 + F141752;
+	$('#F1417xb').val(result.toFixed(0));
 });
 
 $('#F1418xb').keyup(function(){
@@ -270,14 +311,17 @@ $('#F1418xb').keyup(function(){
 
 $('#IO2017').keyup(function(){
 	//var F1318xa = parseFloat($('#F1318xa').val()) || 0;
-	var output = parseFloat($('#F1318xa').val()) || 0;
 	//var F1418xb = parseFloat($('#F1418xb').val()) || 0;
-	var input = parseFloat($('#F1418xb').val()) || 0;
-	var io00 = (5 / 45);
+	var outputA = parseFloat($('#F1317xa').val()) || 0;
+	var inputA = parseFloat($('#F1417xb').val()) || 0;
+	var outputB = parseFloat($('#F1318xa').val()) || 0;
+	var inputB = parseFloat($('#F1418xb').val()) || 0;
+	//var io00 = (5 / 45);
 	//var io01 = (F1318xa / F1418xb);
-	var io01 = (input / output);
-	$('#IO2017').val(io00.toFixed(2));
-	$('#IO2018').val(io01.toFixed(2));
+	var ioA = (inputA / outputA);
+	var ioB = (inputB / outputB);
+	$('#IO2017').val(ioA.toFixed(2));
+	$('#IO2018').val(ioB.toFixed(2));
 });
 </script>
 
