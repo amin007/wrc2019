@@ -120,7 +120,7 @@ $('#F1317xa').keyup(function(){
 	// output - https://stackoverflow.com/questions/29233886/jquery-automatic-add-two-numbers-from-text-fields
 	$kiraF = array('01','02','03','04','05','06','07','11','12');
 	foreach ($kiraF as $ff):?>
-	var F1318<?php echo $ff ?> = parseFloat($('#F1317<?php echo $ff ?>').val()) || 0;
+	var F1317<?php echo $ff ?> = parseFloat($('#F1317<?php echo $ff ?>').val()) || 0;
 <?php endforeach; ?>
 	var F870499 = parseFloat($('#F870499').val()) || 0;
 	var F141701 = parseFloat($('#F141701').val()) || 0;
