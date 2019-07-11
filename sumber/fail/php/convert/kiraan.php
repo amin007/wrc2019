@@ -282,6 +282,7 @@ $('#F1417xb').keyup(function(){
 	var F141750 = parseFloat($('#F141750').val()) || 0;
 	var F141751 = parseFloat($('#F141751').val()) || 0;
 	var F141752 = parseFloat($('#F141752').val()) || 0;
+
 	var result = F141702 + F141703 + F141704 + F141705 + F141706 + F141707 + F141718 + F141723 + F141725
 	+ F141730 + F141732 + F141733 + F141737 + F141750 + F141751 + F141752;
 	$('#F1417xb').val(result.toFixed(0));
@@ -304,6 +305,7 @@ $('#F1418xb').keyup(function(){
 	var F141850 = parseFloat($('#F141850').val()) || 0;
 	var F141851 = parseFloat($('#F141851').val()) || 0;
 	var F141852 = parseFloat($('#F141852').val()) || 0;
+
 	var result = F141802 + F141803 + F141804 + F141805 + F141806 + F141807 + F141818 + F141823 + F141825
 	+ F141830 + F141832 + F141833 + F141837 + F141850 + F141851 + F141852;
 	$('#F1418xb').val(result.toFixed(0));
