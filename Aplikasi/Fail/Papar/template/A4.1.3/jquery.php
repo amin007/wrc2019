@@ -131,7 +131,6 @@ $('#F1317xa').keyup(function(){
 	$('#F1317xa').val(result.toFixed(0));
 });
 
-
 $('#F1318xa').keyup(function(){
 <?php
 	// output - https://stackoverflow.com/questions/29233886/jquery-automatic-add-two-numbers-from-text-fields
