@@ -147,6 +147,20 @@ $('#F1318xa').keyup(function(){
 	$('#F1318xa').val(result.toFixed(0));
 });
 
+$('#F1417xb').keyup(function(){
+<?php
+	// input
+	$kiraF = array('02','03','04','05','06','07',
+	'18','23','25','30','32','33','37','50','51','52');
+	foreach ($kiraF as $ff):?>
+	var F1417<?php echo $ff ?> = parseFloat($('#F1417<?php echo $ff ?>').val()) || 0;
+<?php endforeach; ?>
+
+	var result = F141702 + F141703 + F141704 + F141705 + F141706 + F141707 + F141718 + F141723 + F141725
+	+ F141730 + F141732 + F141733 + F141737 + F141750 + F141751 + F141752;
+	$('#F1417xb').val(result.toFixed(0));
+});
+
 $('#F1418xb').keyup(function(){
 <?php
 	// input
