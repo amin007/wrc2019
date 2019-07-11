@@ -241,8 +241,8 @@ $('#F1317xa').keyup(function(){
 	var F141701 = parseFloat($('#F141701').val()) || 0;
 
 	var resultT = F131701 + F131702 + F131703 + F131704 + F131705 + F131706 + F131707
-		+ F131711 + F131712 + F880499;
-	var result = resultT - F141801;
+		+ F131711 + F131712 + F870499;
+	var result = resultT - F141701;
 	$('#F1317xa').val(result.toFixed(0));
 });
 
