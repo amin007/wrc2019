@@ -16,10 +16,10 @@ class Kiraan extends \Aplikasi\Kitab\Kawal
 	public function index()
 	{
 		//echo '<hr> Nama class : ' . __METHOD__ . '<hr>';
-		//$this->paparJadual(); # Set pembolehubah utama
+		$this->paparHeader($this->_folder . '/io');
 
 		# Pergi papar kandungan
-		//$this->_folder = 'cari';
+		/*$this->_folder = 'cari';
 		$fail = array('1cari','index','b_ubah','b_kira');
 		//echo '<br>$this->_folder = ' . $this->_folder . '<hr>';
 		//echo '<br>$fail = ' . $fail[3] . '<hr>';
