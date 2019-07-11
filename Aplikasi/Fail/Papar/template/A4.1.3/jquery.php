@@ -178,12 +178,17 @@ $('#F1418xb').keyup(function(){
 $('#IO2018').keyup(function(){
 <?php
 	// input/output
-	$kiraF = array('1318xa','1418xb');
-	foreach ($kiraF as $ff):?>
-	var F<?php echo $ff ?> = parseFloat($('#F<?php echo $ff ?>').val()) || 0;
+	$kiraF = array('outputA'=>'1317xa','outputB'=>'1318xa',
+	'inputA'=>'1417xb','inputB'=>'1418xb');
+	foreach ($kiraF as $key => $ff):?>
+	var <?php echo $key ?> = parseFloat($('#F<?php echo $ff ?>').val()) || 0;
 <?php endforeach; ?>
-	var io = (F1318xa / F1418xb);
-	$('#IO2018').val(io.toFixed(2));
+
+	//var io = (F1318xa / F1418xb);
+	var ioA = (inputA / outputA);
+	var ioB = (inputB / outputB);
+	$('#IO2017').val(ioA.toFixed(2));
+	$('#IO2018').val(ioB.toFixed(2));
 });
 
 </script>
