@@ -86,6 +86,11 @@ table.excel tbody td
 </div>
 </form>
 </div><!-- / class="container" -->
+<hr>
+<div class="container">
+	<div class="numbers">1000</div>
+	<div class="numbers">2000000</div>
+</div><!-- / class="container" -->
 
 <!-- menu tengah bawah -->
 <!-- Footer
@@ -101,6 +106,15 @@ table.excel tbody td
 ================================================== -->
 <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
 <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+
+<script>
+//https://stackoverflow.com/questions/1990512/add-comma-to-numbers-every-three-digits
+$(document).ready(function() {
+	$(".numbers").each(function() {
+		$(this).format({format:"#,###", locale:"us"});
+	});
+});
+</script>
 
 <script>
 $.fn.digits = function(){
