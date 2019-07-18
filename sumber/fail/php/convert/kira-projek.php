@@ -103,23 +103,16 @@ table.excel tbody td
 <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
 
 <script>
-$('#F1317xa').keyup(function(){
-	var F131701 = parseFloat($('#F131701').val()) || 0;
-	var F131702 = parseFloat($('#F131702').val()) || 0;
-	var F131703 = parseFloat($('#F131703').val()) || 0;
-	var F131704 = parseFloat($('#F131704').val()) || 0;
-	var F131705 = parseFloat($('#F131705').val()) || 0;
-	var F131706 = parseFloat($('#F131706').val()) || 0;
-	var F131707 = parseFloat($('#F131707').val()) || 0;
-	var F131711 = parseFloat($('#F131711').val()) || 0;
-	var F131712 = parseFloat($('#F131712').val()) || 0;
-	var F870499 = parseFloat($('#F870499').val()) || 0;
-	var F141701 = parseFloat($('#F141701').val()) || 0;
+$('#st3B').keyup(function(){
+	var st3A = parseFloat($('#st3A').val()) || 0;
+	//var st3B = parseFloat($('#st3B').val()) || 0;
+	var nilaiProjek = parseFloat($('#nilaiProjek').val()) || 0;
+	//var nilaiProjekSt3 = parseFloat($('#nilaiProjekSt3').val()) || 0;
 
-	var resultT = F131701 + F131702 + F131703 + F131704 + F131705 + F131706 + F131707
-		+ F131711 + F131712 + F870499;
-	var result = resultT - F141701;
-	$('#F1317xa').val(result.toFixed(0));
+	var st3B = st3A;
+	var result = st3B * nilaiProjek;
+	$('#nilaiProjekSt3').val(result.toFixed(0));
+	$('#st3B').val(st3B.toFixed(4));
 });
 
 $('#F1318xa').keyup(function(){
