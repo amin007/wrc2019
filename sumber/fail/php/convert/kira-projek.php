@@ -137,7 +137,8 @@ $('#st3B').keyup(function(){
 
 	var st3B = st3A;
 	var result = st3B * nilaiProjek;
-	$('#nilaiProjekSt3').val(result.toFixed(0));
+	//var resultT = result.replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+	$('#nilaiProjekSt3').val(result.digits().toFixed(0));
 	$('#st3B').val(st3B.toFixed(4));
 });
 
@@ -151,7 +152,7 @@ $('#st4B').keyup(function(){
 
 	var st4B = st4A - st3A;
 	var result = st4B * nilaiProjek;
-	//$('#nilaiProjekSt4').val(result.toFixed(0));
+	$('#nilaiProjekSt4').val(result.toFixed(0));
 	$('#st4B').val(st4B.toFixed(4));
 });
 
