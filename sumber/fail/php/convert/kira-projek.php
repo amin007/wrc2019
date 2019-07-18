@@ -156,7 +156,7 @@ $('#st4B').keyup(function(){
 	//var nilaiProjekSt3 = parseFloat($('#nilaiProjekSt3').val()) || 0;
 
 	var st4B = st4A - st3A;
-	var result = st4B * nilaiProjek;
+	var result = st4A * nilaiProjek;
 	$('#nilaiProjekSt4').val(result.toFixed(0));
 	$('#st4B').val(st4B.toFixed(4));
 });
@@ -172,7 +172,7 @@ $('#bezaRM').keyup(function(){
 	//var io01 = (F1318xa / F1418xb);
 	var jumRM = (nilaiProjekSt3 + nilaiProjekSt4 + nilaiProjekSt1 + nilaiProjekSt2);
 	var bezaRM = nilaiProjek - jumRM;
-	$('#nilaiProjekDaa').val(nilaiProjek.toFixed(2));
+	//$('#nilaiProjekDaa').val(nilaiProjek.toFixed(2));
 	$('#jumRM').val(jumRM.toFixed(2));
 	$('#bezaRM').val(bezaRM.toFixed(2));
 });
