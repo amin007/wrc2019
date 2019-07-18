@@ -161,6 +161,34 @@ $('#st4B').keyup(function(){
 	$('#nilaiProjekSt4').val(result.toFixed(0));
 	$('#st4B').val(st4B.toFixed(4));
 });
+
+$('#st1B').keyup(function(){
+	var st4A = parseFloat($('#st3A').val()) || 0;
+	//var st4B = parseFloat($('#st3B').val()) || 0;
+	var st1A = parseFloat($('#st3A').val()) || 0;
+	//var st1B = parseFloat($('#st3B').val()) || 0;
+	var nilaiProjek = parseFloat($('#nilaiProjek').val()) || 0;
+	//var nilaiProjekSt3 = parseFloat($('#nilaiProjekSt3').val()) || 0;
+
+	var st1B = st1A - st4A;
+	var result = st1A * nilaiProjek;
+	$('#nilaiProjekSt1').val(result.toFixed(0));
+	$('#st1B').val(st1B.toFixed(4));
+});
+
+$('#st2B').keyup(function(){
+	var st1A = parseFloat($('#st3A').val()) || 0;
+	//var st1B = parseFloat($('#st3B').val()) || 0;
+	var st2A = parseFloat($('#st3A').val()) || 0;
+	//var st2B = parseFloat($('#st3B').val()) || 0;
+	var nilaiProjek = parseFloat($('#nilaiProjek').val()) || 0;
+	//var nilaiProjekSt3 = parseFloat($('#nilaiProjekSt3').val()) || 0;
+
+	var st2B = st2A - st1A;
+	var result = st2A * nilaiProjek;
+	$('#nilaiProjekSt1').val(result.toFixed(0));
+	$('#st2B').val(st2B.toFixed(4));
+});
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 $('#bezaRM').keyup(function(){
 	//var F1318xa = parseFloat($('#F1318xa').val()) || 0;
