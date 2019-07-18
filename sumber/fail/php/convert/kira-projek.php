@@ -117,7 +117,7 @@ $(document).ready(function() {
 </script>
 
 <script>
-$.fn.digits = function(){
+/*$.fn.digits = function(){
 	return this.each(function(){
 		$(this).text( $(this).text().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,") );
 	})
@@ -127,7 +127,7 @@ function numberWithCommas(number) {
 	var parts = number.toString().split(".");
 	parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 	return parts.join(".");
-}
+}*/
 
 $('#st3B').keyup(function(){
 	var st3A = parseFloat($('#st3A').val()) || 0;
@@ -137,8 +137,7 @@ $('#st3B').keyup(function(){
 
 	var st3B = st3A;
 	var result = st3B * nilaiProjek;
-	//var resultT = result.replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-	$('#nilaiProjekSt3').val(result.digits().toFixed(0));
+	$('#nilaiProjekSt3').val(result.toFixed(0));
 	$('#st3B').val(st3B.toFixed(4));
 });
 
