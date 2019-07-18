@@ -157,7 +157,7 @@ $('#st4B').keyup(function(){
 	//var nilaiProjekSt3 = parseFloat($('#nilaiProjekSt3').val()) || 0;
 
 	var st4B = st4A - st3A;
-	var result = st4A * nilaiProjek;
+	var result = 0; result = st4B * nilaiProjek;
 	$('#nilaiProjekSt4').val(result.toFixed(0));
 	$('#st4B').val(st4B.toFixed(4));
 });
@@ -171,7 +171,7 @@ $('#st1B').keyup(function(){
 	//var nilaiProjekSt3 = parseFloat($('#nilaiProjekSt3').val()) || 0;
 
 	var st1B = st1A - st4A;
-	var result = st1A * nilaiProjek;
+	var result = 0; result = st1B * nilaiProjek;
 	$('#nilaiProjekSt1').val(result.toFixed(0));
 	$('#st1B').val(st1B.toFixed(4));
 });
@@ -185,7 +185,7 @@ $('#st2B').keyup(function(){
 	//var nilaiProjekSt3 = parseFloat($('#nilaiProjekSt3').val()) || 0;
 
 	var st2B = st2A - st1A;
-	var result = st2A * nilaiProjek;
+	var result = 0; result = st2B * nilaiProjek;
 	$('#nilaiProjekSt2').val(result.toFixed(0));
 	$('#st2B').val(st2B.toFixed(4));
 });
