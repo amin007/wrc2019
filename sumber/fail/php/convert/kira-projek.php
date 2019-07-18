@@ -58,7 +58,7 @@ table.excel tbody td
 	<div class="form-group col-md-1"><label for="inputZip">nilai projek</label></div>
 	<div class="form-group col-md-3"><input type="text" class="form-control form-control-sm" readonly></div>
 	<div class="form-group col-md-3"><input type="text" class="form-control form-control-sm" id="nilaiProjek" placeholder="nilai projek"></div>
-	<div class="form-group col-md-3"><input type="text" class="form-control form-control-sm" readonly></div>
+	<div class="form-group col-md-3"><input type="text" class="form-control form-control-sm" id="kiraNilai" readonly></div>
 </div>
 <div class="form-row">
 	<div class="form-group col-md-1"><label for="inputZip">st3</label></div>
@@ -134,6 +134,12 @@ function numberWithCommas(number) {
 	parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 	return parts.join(".");
 }*/
+
+$('#kiraNilai').keyup(function(){
+	var nilaiProjekDaa = parseFloat($('#nilaiProjek').val()) || 0;
+
+	$('#nilaiProjekDaa').val(nilaiProjekDaa.toFixed(2));
+});
 
 $('#st3B').keyup(function(){
 	var st3A = parseFloat($('#st3A').val()) || 0;
