@@ -161,19 +161,20 @@ $('#st4B').keyup(function(){
 	$('#st4B').val(st4B.toFixed(4));
 });
 ////////////////////////////////////////////////////////////////////////////////////////////////////
-$('#IO2017').keyup(function(){
+$('#bezaRM').keyup(function(){
 	//var F1318xa = parseFloat($('#F1318xa').val()) || 0;
-	//var F1418xb = parseFloat($('#F1418xb').val()) || 0;
-	var outputA = parseFloat($('#F1317xa').val()) || 0;
-	var inputA = parseFloat($('#F1417xb').val()) || 0;
-	var outputB = parseFloat($('#F1318xa').val()) || 0;
-	var inputB = parseFloat($('#F1418xb').val()) || 0;
+	var nilaiProjek = parseFloat($('#nilaiProjek').val()) || 0;
+	var nilaiProjekSt3 = parseFloat($('#nilaiProjekSt3').val()) || 0;
+	var nilaiProjekSt4 = parseFloat($('#nilaiProjekSt4').val()) || 0;
+	var nilaiProjekSt1 = parseFloat($('#nilaiProjekSt1').val()) || 0;
+	var nilaiProjekSt2 = parseFloat($('#nilaiProjekSt2').val()) || 0;
 	//var io00 = (5 / 45);
 	//var io01 = (F1318xa / F1418xb);
-	var ioA = (inputA / outputA);
-	var ioB = (inputB / outputB);
-	$('#IO2017').val(ioA.toFixed(2));
-	$('#IO2018').val(ioB.toFixed(2));
+	var jumRM = (nilaiProjekSt3 + nilaiProjekSt4 + nilaiProjekSt1 + nilaiProjekSt2);
+	var bezaRM = nilaiProjek - jumRM;
+	$('#nilaiProjek').val(nilaiProjek.toFixed(2));
+	$('#jumRM').val(jumRM.toFixed(2));
+	$('#bezaRM').val(bezaRM.toFixed(2));
 });
 </script>
 
