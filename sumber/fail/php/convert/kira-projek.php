@@ -201,10 +201,12 @@ $('#bezaRM').keyup(function(){
 	//var io00 = (5 / 45);
 	//var io01 = (F1318xa / F1418xb);
 	var jumRM = (T19St3 + T19St4 + T19St1 + T19St2);
+	var jumPeratus = jumRM / nilaiBesar;
 	var bezaRM = nilaiBesar - jumRM;
 
 	//$('#nilaiProjekDaa').val(nilaiProjek.toFixed(2));
 	$('#jumRM').val(jumRM.toFixed(2));
+	$('#jumPeratus').val(jumPeratus.toFixed(2));
 	$('#bezaRM').val(bezaRM.toFixed(2));
 });
 </script>
