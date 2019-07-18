@@ -56,39 +56,40 @@ table.excel tbody td
 <form>
 <div class="form-row">
 	<div class="form-group col-md-1"><label for="inputZip">nilai projek</label></div>
-	<div class="form-group col-md-3"><input type="text" class="form-control form-control-sm" readonly></div>
-	<div class="form-group col-md-3"><input type="text" class="form-control form-control-sm" id="nilaiProjek" placeholder="nilai projek"></div>
-	<div class="form-group col-md-3"><input type="text" class="form-control form-control-sm" id="kiraNilai" readonly></div>
+	<div class="form-group col-md-2"><input type="text" class="form-control form-control-sm" readonly></div>
+	<div class="form-group col-md-2"><input type="text" class="form-control form-control-sm" id="nilaiProjek" placeholder="nilai projek"></div>
+	<div class="form-group col-md-2"><input type="text" class="form-control form-control-sm" id="kiraNilai" readonly></div>
 </div>
 <div class="form-row">
 	<div class="form-group col-md-1"><label for="inputZip">st3</label></div>
-	<div class="form-group col-md-3"><input type="text" class="form-control form-control-sm" value="0.05" id="st3A" placeholder="st3A"></div>
-	<div class="form-group col-md-3"><input type="text" class="form-control form-control-sm" id="nilaiProjekSt3" placeholder="nilai projek suku 3"></div>
-	<div class="form-group col-md-3"><input type="text" class="form-control form-control-sm" id="st3B" readonly></div>
+	<div class="form-group col-md-2"><input type="text" class="form-control form-control-sm" value="0.05" id="st3A" placeholder="st3A"></div>
+	<div class="form-group col-md-2"><input type="text" class="form-control form-control-sm" id="nilaiProjekSt3" placeholder="nilai projek suku 3"></div>
+	<div class="form-group col-md-2"><input type="text" class="form-control form-control-sm" id="st3B" readonly></div>
 </div>
 <div class="form-row">
 	<div class="form-group col-md-1"><label for="inputZip">st4</label></div>
-	<div class="form-group col-md-3"><input type="text" class="form-control form-control-sm" value="0.15" id="st4A" placeholder="st4A"></div>
-	<div class="form-group col-md-3"><input type="text" class="form-control form-control-sm" id="nilaiProjekSt4" placeholder="nilai projek suku 4"></div>
-	<div class="form-group col-md-3"><input type="text" class="form-control form-control-sm" id="st4B" readonly></div>
+	<div class="form-group col-md-2"><input type="text" class="form-control form-control-sm" value="0.15" id="st4A" placeholder="st4A"></div>
+	<div class="form-group col-md-2"><input type="text" class="form-control form-control-sm" id="nilaiProjekSt4" placeholder="nilai projek suku 4"></div>
+	<div class="form-group col-md-2"><input type="text" class="form-control form-control-sm" id="st4B" readonly></div>
 </div>
 <div class="form-row">
 	<div class="form-group col-md-1"><label for="inputZip">st1</label></div>
-	<div class="form-group col-md-3"><input type="text" class="form-control form-control-sm" value="0.24" id="st1A" placeholder="st1A"></div>
-	<div class="form-group col-md-3"><input type="text" class="form-control form-control-sm" id="nilaiProjekSt1" placeholder="nilai projek suku 1"></div>
-	<div class="form-group col-md-3"><input type="text" class="form-control form-control-sm" id="st1B" readonly></div>
+	<div class="form-group col-md-2"><input type="text" class="form-control form-control-sm" value="0.24" id="st1A" placeholder="st1A"></div>
+	<div class="form-group col-md-2"><input type="text" class="form-control form-control-sm" id="nilaiProjekSt1" placeholder="nilai projek suku 1"></div>
+	<div class="form-group col-md-2"><input type="text" class="form-control form-control-sm" id="st1B" readonly></div>
 </div>
 <div class="form-row">
 	<div class="form-group col-md-1"><label for="inputZip">st2</label></div>
-	<div class="form-group col-md-3"><input type="text" class="form-control form-control-sm" value="0.36" id="st2A" placeholder="st2A"></div>
-	<div class="form-group col-md-3"><input type="text" class="form-control form-control-sm" id="nilaiProjekSt2" placeholder="nilai projek suku 2"></div>
-	<div class="form-group col-md-3"><input type="text" class="form-control form-control-sm" id="st2B" readonly></div>
+	<div class="form-group col-md-2"><input type="text" class="form-control form-control-sm" value="0.36" id="st2A" placeholder="st2A"></div>
+	<div class="form-group col-md-2"><input type="text" class="form-control form-control-sm" id="nilaiProjekSt2" placeholder="nilai projek suku 2"></div>
+	<div class="form-group col-md-2"><input type="text" class="form-control form-control-sm" id="st2B" readonly></div>
 </div>
 <div class="form-row">
 	<div class="form-group col-md-1"><label for="inputZip">jumlah</label></div>
-	<div class="form-group col-md-3"><input type="text" class="form-control form-control-sm" id="nilaiProjekDaa" readonly></div>
-	<div class="form-group col-md-3"><input type="text" class="form-control form-control-sm" id="jumRM" readonly></div>
-	<div class="form-group col-md-3"><input type="text" class="form-control form-control-sm" id="bezaRM" readonly></div>
+	<div class="form-group col-md-2"><input type="text" class="form-control form-control-sm" id="nilaiProjekDaa" readonly></div>
+	<div class="form-group col-md-2"><input type="text" class="form-control form-control-sm" id="jumRM" readonly></div>
+	<div class="form-group col-md-2"><input type="text" class="form-control form-control-sm" id="jumPeratus" readonly></div>
+	<div class="form-group col-md-2"><input type="text" class="form-control form-control-sm" id="bezaRM" readonly></div>
 </div>
 </form>
 </div><!-- / class="container" -->
