@@ -116,9 +116,6 @@ $(document).ready(function() {
 		$(this).format({format:"#,###", locale:"us"});
 	});
 });
-</script>
-
-<script>
 /*$.fn.digits = function(){
 	return this.each(function(){
 		$(this).text( $(this).text().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,") );
@@ -130,7 +127,9 @@ function numberWithCommas(number) {
 	parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 	return parts.join(".");
 }*/
+</script>
 
+<script>
 $('#kiraNilai').keyup(function(){
 	var nilaiProjekDaa = parseFloat($('#nilaiProjek').val()) || 0;
 
