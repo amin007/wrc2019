@@ -151,8 +151,8 @@ $('#st3B').keyup(function(){
 $('#st4B').keyup(function(){
 	var st3A = parseFloat($('#st3A').val()) || 0;
 	//var st3B = parseFloat($('#st3B').val()) || 0;
-	var st4A = parseFloat($('#st3A').val()) || 0;
-	//var st4B = parseFloat($('#st3B').val()) || 0;
+	var st4A = parseFloat($('#st4A').val()) || 0;
+	//var st4B = parseFloat($('#st4B').val()) || 0;
 	var nilaiProjek = parseFloat($('#nilaiProjek').val()) || 0;
 	//var nilaiProjekSt3 = parseFloat($('#nilaiProjekSt3').val()) || 0;
 
@@ -163,10 +163,10 @@ $('#st4B').keyup(function(){
 });
 
 $('#st1B').keyup(function(){
-	var st4A = parseFloat($('#st3A').val()) || 0;
-	//var st4B = parseFloat($('#st3B').val()) || 0;
-	var st1A = parseFloat($('#st3A').val()) || 0;
-	//var st1B = parseFloat($('#st3B').val()) || 0;
+	var st4A = parseFloat($('#st4A').val()) || 0;
+	//var st4B = parseFloat($('#st4B').val()) || 0;
+	var st1A = parseFloat($('#st1A').val()) || 0;
+	//var st1B = parseFloat($('#st1B').val()) || 0;
 	var nilaiProjek = parseFloat($('#nilaiProjek').val()) || 0;
 	//var nilaiProjekSt3 = parseFloat($('#nilaiProjekSt3').val()) || 0;
 
@@ -177,16 +177,16 @@ $('#st1B').keyup(function(){
 });
 
 $('#st2B').keyup(function(){
-	var st1A = parseFloat($('#st3A').val()) || 0;
-	//var st1B = parseFloat($('#st3B').val()) || 0;
-	var st2A = parseFloat($('#st3A').val()) || 0;
-	//var st2B = parseFloat($('#st3B').val()) || 0;
+	var st1A = parseFloat($('#st1A').val()) || 0;
+	//var st1B = parseFloat($('#st1B').val()) || 0;
+	var st2A = parseFloat($('#st2A').val()) || 0;
+	//var st2B = parseFloat($('#st2B').val()) || 0;
 	var nilaiProjek = parseFloat($('#nilaiProjek').val()) || 0;
 	//var nilaiProjekSt3 = parseFloat($('#nilaiProjekSt3').val()) || 0;
 
 	var st2B = st2A - st1A;
 	var result = st2A * nilaiProjek;
-	$('#nilaiProjekSt1').val(result.toFixed(0));
+	$('#nilaiProjekSt2').val(result.toFixed(0));
 	$('#st2B').val(st2B.toFixed(4));
 });
 ////////////////////////////////////////////////////////////////////////////////////////////////////
