@@ -56,7 +56,7 @@ table.excel tbody td
 <form>
 <div class="form-row">
 	<div class="form-group col-md-1"><label for="inputZip">nilai projek</label></div>
-	<div class="form-group col-md-2"><input type="text" class="form-control form-control-sm" readonly></div>
+	<div class="form-group col-md-2"><button class="form-control form-control-sm">test</button></div>
 	<div class="form-group col-md-2"><input type="text" class="form-control form-control-sm" id="nilaiProjek" placeholder="nilai projek"></div>
 	<div class="form-group col-md-2"><input type="text" class="form-control form-control-sm" id="kiraNilai" readonly></div>
 </div>
@@ -137,6 +137,11 @@ function CommaNumber(numbering) {
 	}
 	return str.join('.');
 }
+
+var number = 199300422234.56;
+$('button').on('click', function(){
+	alert(CommaNumber(number));
+});
 </script>
 
 <script>
@@ -209,7 +214,8 @@ $('#bezaRM').keyup(function(){
 	var T19St2 = parseFloat($('#nilaiProjekSt2').val()) || 0;
 	//var io00 = (5 / 45);
 	//var io01 = (F1318xa / F1418xb);
-	var jumRM = (T19St3 + T19St4 + T19St1 + T19St2);
+	var jumlahDuit = (T19St3 + T19St4 + T19St1 + T19St2);
+	var jumRM = CommaNumber(jumRM);
 	var jumPeratus = jumRM / nilaiBesar;
 	var bezaRM = nilaiBesar - jumRM;
 
