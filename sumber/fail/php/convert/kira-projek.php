@@ -109,6 +109,12 @@ $.fn.digits = function(){
 	})
 }
 
+function numberWithCommas(number) {
+	var parts = number.toString().split(".");
+	parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+	return parts.join(".");
+}
+
 $('#st3B').keyup(function(){
 	var st3A = parseFloat($('#st3A').val()) || 0;
 	//var st3B = parseFloat($('#st3B').val()) || 0;
