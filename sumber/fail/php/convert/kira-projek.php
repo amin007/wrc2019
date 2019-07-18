@@ -115,23 +115,18 @@ $('#st3B').keyup(function(){
 	$('#st3B').val(st3B.toFixed(4));
 });
 
-$('#F1318xa').keyup(function(){
-	var F131801 = parseFloat($('#F131801').val()) || 0;
-	var F131802 = parseFloat($('#F131802').val()) || 0;
-	var F131803 = parseFloat($('#F131803').val()) || 0;
-	var F131804 = parseFloat($('#F131804').val()) || 0;
-	var F131805 = parseFloat($('#F131805').val()) || 0;
-	var F131806 = parseFloat($('#F131806').val()) || 0;
-	var F131807 = parseFloat($('#F131807').val()) || 0;
-	var F131811 = parseFloat($('#F131811').val()) || 0;
-	var F131812 = parseFloat($('#F131812').val()) || 0;
-	var F880499; F880499 = parseFloat($('#F880499').val()) || 0;
-	var F141801; F141801 = parseFloat($('#F141801').val()) || 0;
+$('#st4B').keyup(function(){
+	var st3A = parseFloat($('#st3A').val()) || 0;
+	//var st3B = parseFloat($('#st3B').val()) || 0;
+	var st4A = parseFloat($('#st3A').val()) || 0;
+	//var st4B = parseFloat($('#st3B').val()) || 0;
+	var nilaiProjek = parseFloat($('#nilaiProjek').val()) || 0;
+	//var nilaiProjekSt3 = parseFloat($('#nilaiProjekSt3').val()) || 0;
 
-	var resultT = F131801 + F131802 + F131803 + F131804 + F131805 + F131806 + F131807
-		+ F131811 + F131812 + F880499;
-	var result = resultT - F141801;
-	$('#F1318xa').val(result.toFixed(0));
+	var st4B = st4A - st3A;
+	var result = st4B * nilaiProjek;
+	//$('#nilaiProjekSt4').val(result.toFixed(0));
+	$('#st4B').val(st4B.toFixed(4));
 });
 
 $('#F1417xb').keyup(function(){
