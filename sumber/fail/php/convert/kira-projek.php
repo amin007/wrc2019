@@ -93,10 +93,6 @@ table.excel tbody td
 </form>
 </div><!-- / class="container" -->
 <hr>
-<div class="container">
-	<div class="numbers">1000</div>
-	<div class="numbers">2000000</div>
-</div><!-- / class="container" -->
 
 <!-- menu tengah bawah -->
 <!-- Footer
