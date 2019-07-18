@@ -103,6 +103,12 @@ table.excel tbody td
 <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
 
 <script>
+$.fn.digits = function(){
+	return this.each(function(){
+		$(this).text( $(this).text().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,") );
+	})
+}
+
 $('#st3B').keyup(function(){
 	var st3A = parseFloat($('#st3A').val()) || 0;
 	//var st3B = parseFloat($('#st3B').val()) || 0;
@@ -111,7 +117,7 @@ $('#st3B').keyup(function(){
 
 	var st3B = st3A;
 	var result = st3B * nilaiProjek;
-	$('#nilaiProjekSt3').val(result.toFixed(0)).digits(3);
+	$('#nilaiProjekSt3').val(result.toFixed(0)).digits();
 	$('#st3B').val(st3B.toFixed(4));
 });
 
