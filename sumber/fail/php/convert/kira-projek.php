@@ -154,53 +154,7 @@ $('#st4B').keyup(function(){
 	$('#nilaiProjekSt4').val(result.toFixed(0));
 	$('#st4B').val(st4B.toFixed(4));
 });
-
-$('#F1417xb').keyup(function(){
-	var F141702 = parseFloat($('#F141702').val()) || 0;
-	var F141703 = parseFloat($('#F141703').val()) || 0;
-	var F141704 = parseFloat($('#F141704').val()) || 0;
-	var F141705 = parseFloat($('#F141705').val()) || 0;
-	var F141706 = parseFloat($('#F141706').val()) || 0;
-	var F141707 = parseFloat($('#F141707').val()) || 0;
-	var F141718 = parseFloat($('#F141718').val()) || 0;
-	var F141723 = parseFloat($('#F141723').val()) || 0;
-	var F141725 = parseFloat($('#F141725').val()) || 0;
-	var F141730 = parseFloat($('#F141730').val()) || 0;
-	var F141732 = parseFloat($('#F141732').val()) || 0;
-	var F141733 = parseFloat($('#F141733').val()) || 0;
-	var F141737 = parseFloat($('#F141737').val()) || 0;
-	var F141750 = parseFloat($('#F141750').val()) || 0;
-	var F141751 = parseFloat($('#F141751').val()) || 0;
-	var F141752 = parseFloat($('#F141752').val()) || 0;
-
-	var result = F141702 + F141703 + F141704 + F141705 + F141706 + F141707 + F141718 + F141723 + F141725
-	+ F141730 + F141732 + F141733 + F141737 + F141750 + F141751 + F141752;
-	$('#F1417xb').val(result.toFixed(0));
-});
-
-$('#F1418xb').keyup(function(){
-	var F141802 = parseFloat($('#F141802').val()) || 0;
-	var F141803 = parseFloat($('#F141803').val()) || 0;
-	var F141804 = parseFloat($('#F141804').val()) || 0;
-	var F141805 = parseFloat($('#F141805').val()) || 0;
-	var F141806 = parseFloat($('#F141806').val()) || 0;
-	var F141807 = parseFloat($('#F141807').val()) || 0;
-	var F141818 = parseFloat($('#F141818').val()) || 0;
-	var F141823 = parseFloat($('#F141823').val()) || 0;
-	var F141825 = parseFloat($('#F141825').val()) || 0;
-	var F141830 = parseFloat($('#F141830').val()) || 0;
-	var F141832 = parseFloat($('#F141832').val()) || 0;
-	var F141833 = parseFloat($('#F141833').val()) || 0;
-	var F141837 = parseFloat($('#F141837').val()) || 0;
-	var F141850 = parseFloat($('#F141850').val()) || 0;
-	var F141851 = parseFloat($('#F141851').val()) || 0;
-	var F141852 = parseFloat($('#F141852').val()) || 0;
-
-	var result = F141802 + F141803 + F141804 + F141805 + F141806 + F141807 + F141818 + F141823 + F141825
-	+ F141830 + F141832 + F141833 + F141837 + F141850 + F141851 + F141852;
-	$('#F1418xb').val(result.toFixed(0));
-});
-
+////////////////////////////////////////////////////////////////////////////////////////////////////
 $('#IO2017').keyup(function(){
 	//var F1318xa = parseFloat($('#F1318xa').val()) || 0;
 	//var F1418xb = parseFloat($('#F1418xb').val()) || 0;
