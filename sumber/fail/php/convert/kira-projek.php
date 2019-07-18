@@ -128,6 +128,15 @@ function numberWithCommas(number) {
 	parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 	return parts.join(".");
 }*/
+
+function CommaNumber(numbering) {
+	//https://jsfiddle.net/8cro9y5g/1/?fbclid=IwAR2BLbfSRoPhybVh5mD-20-fCmhpdfKjUitxL_NX4rxeC9wWNn3VE37HLxo
+	var str = numbering.toString().split('.');
+	if (str[0].length >= 4) {
+		str[0] = str[0].replace(/(\d)(?=(\d{3})+$)/g, '$1,');
+	}
+	return str.join('.');
+}
 </script>
 
 <script>
