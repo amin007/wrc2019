@@ -84,6 +84,12 @@ table.excel tbody td
 	<div class="form-group col-md-3"><input type="text" class="form-control form-control-sm" id="nilaiProjekSt2" placeholder="nilai projek suku 2"></div>
 	<div class="form-group col-md-3"><input type="text" class="form-control form-control-sm" id="st2B" readonly></div>
 </div>
+<div class="form-row">
+	<div class="form-group col-md-1"><label for="inputZip">jumlah</label></div>
+	<div class="form-group col-md-3"><input type="text" class="form-control form-control-sm" id="nilaiProjek" readonly></div>
+	<div class="form-group col-md-3"><input type="text" class="form-control form-control-sm" id="jumRM" readonly></div>
+	<div class="form-group col-md-3"><input type="text" class="form-control form-control-sm" id="bezaRM" readonly></div>
+</div>
 </form>
 </div><!-- / class="container" -->
 <hr>
