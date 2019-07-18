@@ -111,7 +111,7 @@ $('#st3B').keyup(function(){
 
 	var st3B = st3A;
 	var result = st3B * nilaiProjek;
-	$('#nilaiProjekSt3').val(result.toFixed(0));
+	$('#nilaiProjekSt3').val(result.toFixed(0)).digits(3);
 	$('#st3B').val(st3B.toFixed(4));
 });
 
