@@ -86,7 +86,7 @@ table.excel tbody td
 </div>
 <div class="form-row">
 	<div class="form-group col-md-1"><label for="inputZip">jumlah</label></div>
-	<div class="form-group col-md-3"><input type="text" class="form-control form-control-sm" id="nilaiProjek" readonly></div>
+	<div class="form-group col-md-3"><input type="text" class="form-control form-control-sm" id="nilaiProjekDaa" readonly></div>
 	<div class="form-group col-md-3"><input type="text" class="form-control form-control-sm" id="jumRM" readonly></div>
 	<div class="form-group col-md-3"><input type="text" class="form-control form-control-sm" id="bezaRM" readonly></div>
 </div>
@@ -163,7 +163,7 @@ $('#st4B').keyup(function(){
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 $('#bezaRM').keyup(function(){
 	//var F1318xa = parseFloat($('#F1318xa').val()) || 0;
-	var nilaiProjek = parseFloat($('#nilaiProjek').val()) || 0;
+	//var nilaiProjekDaa = parseFloat($('#nilaiProjek').val()) || 0;
 	var nilaiProjekSt3 = parseFloat($('#nilaiProjekSt3').val()) || 0;
 	var nilaiProjekSt4 = parseFloat($('#nilaiProjekSt4').val()) || 0;
 	var nilaiProjekSt1 = parseFloat($('#nilaiProjekSt1').val()) || 0;
@@ -172,7 +172,7 @@ $('#bezaRM').keyup(function(){
 	//var io01 = (F1318xa / F1418xb);
 	var jumRM = (nilaiProjekSt3 + nilaiProjekSt4 + nilaiProjekSt1 + nilaiProjekSt2);
 	var bezaRM = nilaiProjek - jumRM;
-	$('#nilaiProjek').val(nilaiProjek.toFixed(2));
+	$('#nilaiProjekDaa').val(nilaiProjek.toFixed(2));
 	$('#jumRM').val(jumRM.toFixed(2));
 	$('#bezaRM').val(bezaRM.toFixed(2));
 });
