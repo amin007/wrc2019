@@ -56,7 +56,7 @@ table.excel tbody td
 <form>
 <div class="form-row">
 	<div class="form-group col-md-1"><label for="inputZip">nilai projek</label></div>
-	<div class="form-group col-md-2"><button class="form-control form-control-sm">test</button></div>
+	<div class="form-group col-md-2"><button class="form-control form-control-sm btn-primary">test</button></div>
 	<div class="form-group col-md-2"><input type="text" class="form-control form-control-sm" id="nilaiProjek" placeholder="nilai projek"></div>
 	<div class="form-group col-md-2"><input type="text" class="form-control form-control-sm" id="kiraNilai" readonly></div>
 </div>
