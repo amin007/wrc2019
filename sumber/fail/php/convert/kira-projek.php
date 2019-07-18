@@ -135,7 +135,7 @@ $('#kiraNilai').keyup(function(){
 
 	$('#nilaiProjekDaa').val(nilaiProjekDaa.toFixed(2));
 });
-
+////////////////////////////////////////////////////////////////////////////////////////////////////
 $('#st3B').keyup(function(){
 	var st3A = parseFloat($('#st3A').val()) || 0;
 	//var st3B = parseFloat($('#st3B').val()) || 0;
