@@ -117,13 +117,8 @@ $(document).ready(function() {
 		$(this).format({format:"#,###", locale:"us"});
 	});
 });
-/*$.fn.digits = function(){
-	return this.each(function(){
-		$(this).text( $(this).text().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,") );
-	})
-}
 
-function numberWithCommas(number) {
+/*function numberWithCommas(number) {
 	var parts = number.toString().split(".");
 	parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 	return parts.join(".");
@@ -145,6 +140,12 @@ $('button').on('click', function(){
 </script>
 
 <script>
+$.fn.digits = function(){
+	return this.each(function(){
+		$(this).text( $(this).text().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,") );
+	})
+}
+
 $('#kiraNilai').keyup(function(){
 	var nilaiProjekDaa = parseFloat($('#nilaiProjek').val()) || 0;
 
@@ -214,13 +215,12 @@ $('#bezaRM').keyup(function(){
 	var T19St2 = parseFloat($('#nilaiProjekSt2').val()) || 0;
 	//var io00 = (5 / 45);
 	//var io01 = (F1318xa / F1418xb);
-	var jumlahDuit = (T19St3 + T19St4 + T19St1 + T19St2);
-	var jumRM = CommaNumber(jumRM);
-	var jumPeratus = jumRM / nilaiBesar;
-	var bezaRM = nilaiBesar - jumRM;
+	var jumDuit = (T19St3 + T19St4 + T19St1 + T19St2);
+	var jumPeratus = jumDuit / nilaiBesar;
+	var bezaRM = nilaiBesar - jumDuit;
 
 	//$('#nilaiProjekDaa').val(nilaiProjek.toFixed(2));
-	$('#jumRM').val(jumRM.toFixed(2));
+	$('#jumRM').val(jumDuit.toFixed(2));
 	$('#jumPeratus').val(jumPeratus.toFixed(2));
 	$('#bezaRM').val(bezaRM.toFixed(2));
 });
