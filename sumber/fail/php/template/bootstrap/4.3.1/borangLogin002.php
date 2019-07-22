@@ -1,7 +1,7 @@
 <form>
 	<div class="form-group">
 		<div class="bg-secondary text-white"><label for="contohNama">Nama</label></div>
-		<input type="email" class="form-control" placeholder="Siapa Nama">
+		<input type="email" class="form-control" placeholder="Masukkan Nama Gelaran">
 		<div class="bg-secondary text-white"><label for="contohEmail">Email</label></div>
 		<input type="email" class="form-control" placeholder="Masukkan Email">
 		<div class="bg-secondary text-white"><label for="contohPassword">Rahsia Antara Kita</label></div>
