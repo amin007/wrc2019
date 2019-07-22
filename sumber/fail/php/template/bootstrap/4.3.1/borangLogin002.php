@@ -1,4 +1,4 @@
-<br><form>
+<form>
 	<div class="form-group">
 		<div class="bg-secondary text-white"><label for="contohNama">Nama</label></div>
 		<input type="email" class="form-control" placeholder="Siapa Nama">

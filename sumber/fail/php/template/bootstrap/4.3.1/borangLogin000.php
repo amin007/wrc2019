@@ -1,4 +1,4 @@
-<br><form>
+<form>
 	<div class="form-group">
 		<label for="a">Selamat datang ke halaman kami</label>
 	</div>
