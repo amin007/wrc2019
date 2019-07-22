@@ -12,5 +12,5 @@
 		<input type="checkbox" class="form-check-input" id="exampleCheck1">
 		<label class="form-check-label" for="exampleCheck1">Kenang daku dalam doamu</label>
 	</div>
-	<input type="submit" class="btn btn-primary" value="Hantar">
+	<input type="submit" class="btn btn-primary btn-block" value="Hantar">
 </form>
