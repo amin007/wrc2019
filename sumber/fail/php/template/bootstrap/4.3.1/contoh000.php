@@ -1,5 +1,4 @@
 <?php include '../diatas.php'; ?>
-
 <div class="kotakAtas">
 <div class="kotakTengah">
 	<ul class="nav nav-tabs" id="myTab" role="tablist">
@@ -40,5 +39,4 @@
 	</div>
 </div><!-- / class="kotakTengah" -->
 </div><!-- / class="kotakAtas" -->
-
 <?php include '../dibawah.php'; ?>
