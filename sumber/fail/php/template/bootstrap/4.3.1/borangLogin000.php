@@ -1,4 +1,4 @@
-<form>
+<form class="bg-dark">
 	<div class="form-group">
 		<label for="a" class="text-info">Selamat datang ke halaman kami</label>
 	</div>
