@@ -30,6 +30,10 @@ body {
 	text-align: center;
 	display: inline-block;
 }
+.kotakLabel {
+	margin: .4rem;
+}
+/*label { margin: .4rem; }*/
 </style>
 <style type="text/css">
 table.excel {
