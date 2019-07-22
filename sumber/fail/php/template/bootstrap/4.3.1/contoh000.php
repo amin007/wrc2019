@@ -13,7 +13,7 @@
 		<a class="nav-link" id="login-tab" data-toggle="tab" href="#login" role="tab" aria-controls="login" aria-selected="false">Login</a>
 	</li>
 	<li class="nav-item">
-		<a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Contact</a>
+		<a class="nav-link" id="daftar-tab" data-toggle="tab" href="#daftar" role="tab" aria-controls="daftar" aria-selected="false">Daftar</a>
 	</li>
 	</ul>
 	<div class="tab-content" id="myTabContent">
@@ -32,7 +32,7 @@
 <br><?php include 'borangLogin001.php'; ?>
 <!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
 		</div>
-		<div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+		<div class="tab-pane fade" id="daftar" role="tabpanel" aria-labelledby="daftar-tab">
 <!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
 <br><?php include 'borangLogin002.php'; ?>
 <!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
