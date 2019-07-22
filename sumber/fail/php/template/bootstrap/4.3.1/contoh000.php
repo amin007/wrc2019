@@ -7,6 +7,9 @@
 		<a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Home</a>
 	</li>
 	<li class="nav-item">
+		<a class="nav-link" id="warna-tab" data-toggle="tab" href="#warna" role="tab" aria-controls="warna" aria-selected="false">Warna</a>
+	</li>
+	<li class="nav-item">
 		<a class="nav-link" id="login-tab" data-toggle="tab" href="#login" role="tab" aria-controls="login" aria-selected="false">Login</a>
 	</li>
 	<li class="nav-item">
@@ -17,6 +20,11 @@
 		<div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
 <!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
 <?php include 'borangLogin000.php'; ?>
+<!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+		</div>
+		<div class="tab-pane fade" id="warna" role="tabpanel" aria-labelledby="warna-tab">
+<!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+<br><?php include 'borangWarna.php'; ?>
 <!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
 		</div>
 		<div class="tab-pane fade" id="login" role="tabpanel" aria-labelledby="login-tab">
