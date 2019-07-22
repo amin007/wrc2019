@@ -6,6 +6,6 @@
 		<label for="b" class="text-dark">Macam mana kehidupan anda pada hari ini</label>
 	</div>
 	<div class="form-group">
-		<label for="c" class="text-success">Semua anda ceria sepanjang masa</label>
+		<label for="c" class="text-success">Semoga anda ceria sepanjang masa</label>
 	</div>
 </form>
