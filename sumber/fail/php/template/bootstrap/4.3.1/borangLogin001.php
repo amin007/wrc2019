@@ -1,7 +1,7 @@
 <form>
 	<div class="form-group">
 		<label for="exampleInputEmail1">Email</label>
-		<input type="email" class="form-control form-control-lg" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+		<input type="email" class="form-control form-control-lg" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Masukkan Email">
 		<small id="emailHelp" class="form-text text-muted">Kita berjanji tidak akan berkongsi kasih<br>
 		eh salah berkongsi email dengan orang lain.</small>
 	</div>
