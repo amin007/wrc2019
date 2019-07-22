@@ -3,10 +3,10 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="">
 <meta name="author" content="">
 <title>Contoh Borang Login</title>
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <link href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" rel="stylesheet" type="text/css">
 <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" type="text/css">
 
@@ -53,7 +53,6 @@ table.excel tbody td
 	padding: 0 3px; border: 1px solid #aaaaaa;
 	background:#ffffff;
 }
-.fa-input {font-family: FontAwesome}
 </style>
 </head>
 <body>
