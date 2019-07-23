@@ -207,15 +207,15 @@ $senarai = array(
 	'tr19_st1','tr19_st2','tr19_st3','tr19_st4'
 );
 foreach ($senarai as $key => $suku): ?>
-$('#st4B').keyup(function(){
-	var st3A = parseFloat($('#st3A').val()) || 0;
-	var st4A = parseFloat($('#st4A').val()) || 0;
+$('#<?php echo $suku ?>B').keyup(function(){
+	var <?php echo $suku ?>A = parseFloat($('#<?php echo $suku ?>A').val()) || 0;
+	var <?php echo $suku ?>A = parseFloat($('#<?php echo $suku ?>A').val()) || 0;
 	var nilaiProjek = parseFloat($('#nilaiProjek').val()) || 0;
 
-	var st4B = st4A - st3A;
-	var result = 0; result = st4B * nilaiProjek;
-	$('#nilaiProjekSt4').val(result.toFixed(0));
-	$('#st4B').val(st4B.toFixed(4));
+	var <?php echo $suku ?>B = <?php echo $suku ?>A - <?php echo $suku ?>A;
+	var result = 0; result = <?php echo $suku ?>B * nilaiProjek;
+	$('#nilaiProjek<?php echo $suku ?>4').val(result.toFixed(0));
+	$('#<?php echo $suku ?>B').val(st4B.toFixed(4));
 });
 <?php endforeach; ?>
 /*$('#st3B').keyup(function(){
