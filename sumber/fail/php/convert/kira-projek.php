@@ -61,28 +61,76 @@ table.excel tbody td
 	<div class="form-group col-md-2"><input type="text" class="form-control form-control-sm" id="kiraNilai" readonly></div>
 </div>
 <div class="form-row">
-	<div class="form-group col-md-1"><label for="inputZip">st3</label></div>
-	<div class="form-group col-md-2"><input type="text" class="form-control form-control-sm" value="0.05" id="st3A" placeholder="st3A"></div>
-	<div class="form-group col-md-2"><input type="text" class="form-control form-control-sm" id="nilaiProjekSt3" placeholder="nilai projek suku 3"></div>
-	<div class="form-group col-md-2"><input type="text" class="form-control form-control-sm" id="st3B" readonly></div>
+	<div class="form-group col-md-1"><label for="inputZip">tr17_st1</label></div>
+	<div class="form-group col-md-2"><input type="text" class="form-control form-control-sm" value="0.24" id="tr17_st1A" placeholder="tr17_st1A"></div>
+	<div class="form-group col-md-2"><input type="text" class="form-control form-control-sm" id="nilaiProjekTr17_St1" placeholder="nilai projek suku 1"></div>
+	<div class="form-group col-md-2"><input type="text" class="form-control form-control-sm" id="tr17_st1B" readonly></div>
 </div>
 <div class="form-row">
-	<div class="form-group col-md-1"><label for="inputZip">st4</label></div>
-	<div class="form-group col-md-2"><input type="text" class="form-control form-control-sm" value="0.15" id="st4A" placeholder="st4A"></div>
-	<div class="form-group col-md-2"><input type="text" class="form-control form-control-sm" id="nilaiProjekSt4" placeholder="nilai projek suku 4"></div>
-	<div class="form-group col-md-2"><input type="text" class="form-control form-control-sm" id="st4B" readonly></div>
+	<div class="form-group col-md-1"><label for="inputZip">tr17_st2</label></div>
+	<div class="form-group col-md-2"><input type="text" class="form-control form-control-sm" value="0.36" id="tr17_st2A" placeholder="st2A"></div>
+	<div class="form-group col-md-2"><input type="text" class="form-control form-control-sm" id="nilaiProjekTr17_St2" placeholder="nilai projek suku 2"></div>
+	<div class="form-group col-md-2"><input type="text" class="form-control form-control-sm" id="tr17_st2B" readonly></div>
 </div>
 <div class="form-row">
-	<div class="form-group col-md-1"><label for="inputZip">st1</label></div>
-	<div class="form-group col-md-2"><input type="text" class="form-control form-control-sm" value="0.24" id="st1A" placeholder="st1A"></div>
-	<div class="form-group col-md-2"><input type="text" class="form-control form-control-sm" id="nilaiProjekSt1" placeholder="nilai projek suku 1"></div>
-	<div class="form-group col-md-2"><input type="text" class="form-control form-control-sm" id="st1B" readonly></div>
+	<div class="form-group col-md-1"><label for="inputZip">tr17_st3</label></div>
+	<div class="form-group col-md-2"><input type="text" class="form-control form-control-sm" value="0.05" id="tr17_st3A" placeholder="st3A"></div>
+	<div class="form-group col-md-2"><input type="text" class="form-control form-control-sm" id="nilaiProjekTr17_St3" placeholder="nilai projek suku 3"></div>
+	<div class="form-group col-md-2"><input type="text" class="form-control form-control-sm" id="tr17_st3B" readonly></div>
 </div>
 <div class="form-row">
-	<div class="form-group col-md-1"><label for="inputZip">st2</label></div>
-	<div class="form-group col-md-2"><input type="text" class="form-control form-control-sm" value="0.36" id="st2A" placeholder="st2A"></div>
-	<div class="form-group col-md-2"><input type="text" class="form-control form-control-sm" id="nilaiProjekSt2" placeholder="nilai projek suku 2"></div>
-	<div class="form-group col-md-2"><input type="text" class="form-control form-control-sm" id="st2B" readonly></div>
+	<div class="form-group col-md-1"><label for="inputZip">tr17_st4</label></div>
+	<div class="form-group col-md-2"><input type="text" class="form-control form-control-sm" value="0.15" id="tr17_st4A" placeholder="st4A"></div>
+	<div class="form-group col-md-2"><input type="text" class="form-control form-control-sm" id="nilaiProjekTr17_St4" placeholder="nilai projek suku 4"></div>
+	<div class="form-group col-md-2"><input type="text" class="form-control form-control-sm" id="tr17_st4B" readonly></div>
+</div>
+<div class="form-row">
+	<div class="form-group col-md-1"><label for="inputZip">tr18_st1</label></div>
+	<div class="form-group col-md-2"><input type="text" class="form-control form-control-sm" value="0.24" id="tr18_st1A" placeholder="tr18_st1A"></div>
+	<div class="form-group col-md-2"><input type="text" class="form-control form-control-sm" id="nilaiProjekTr18_St1" placeholder="nilai projek suku 1"></div>
+	<div class="form-group col-md-2"><input type="text" class="form-control form-control-sm" id="tr18_st1B" readonly></div>
+</div>
+<div class="form-row">
+	<div class="form-group col-md-1"><label for="inputZip">tr18_st2</label></div>
+	<div class="form-group col-md-2"><input type="text" class="form-control form-control-sm" value="0.36" id="tr18_st2A" placeholder="st2A"></div>
+	<div class="form-group col-md-2"><input type="text" class="form-control form-control-sm" id="nilaiProjekTr18_St2" placeholder="nilai projek suku 2"></div>
+	<div class="form-group col-md-2"><input type="text" class="form-control form-control-sm" id="tr18_st2B" readonly></div>
+</div>
+<div class="form-row">
+	<div class="form-group col-md-1"><label for="inputZip">tr18_st3</label></div>
+	<div class="form-group col-md-2"><input type="text" class="form-control form-control-sm" value="0.05" id="tr18_st3A" placeholder="st3A"></div>
+	<div class="form-group col-md-2"><input type="text" class="form-control form-control-sm" id="nilaiProjekTr18_St3" placeholder="nilai projek suku 3"></div>
+	<div class="form-group col-md-2"><input type="text" class="form-control form-control-sm" id="tr18_st3B" readonly></div>
+</div>
+<div class="form-row">
+	<div class="form-group col-md-1"><label for="inputZip">tr18_st4</label></div>
+	<div class="form-group col-md-2"><input type="text" class="form-control form-control-sm" value="0.15" id="tr18_st4A" placeholder="st4A"></div>
+	<div class="form-group col-md-2"><input type="text" class="form-control form-control-sm" id="nilaiProjekTr18_St4" placeholder="nilai projek suku 4"></div>
+	<div class="form-group col-md-2"><input type="text" class="form-control form-control-sm" id="tr18_st4B" readonly></div>
+</div>
+<div class="form-row">
+	<div class="form-group col-md-1"><label for="inputZip">tr19_st1</label></div>
+	<div class="form-group col-md-2"><input type="text" class="form-control form-control-sm" value="0.24" id="tr19_st1A" placeholder="tr19_st1A"></div>
+	<div class="form-group col-md-2"><input type="text" class="form-control form-control-sm" id="nilaiProjekTr19_St1" placeholder="nilai projek suku 1"></div>
+	<div class="form-group col-md-2"><input type="text" class="form-control form-control-sm" id="tr19_st1B" readonly></div>
+</div>
+<div class="form-row">
+	<div class="form-group col-md-1"><label for="inputZip">tr19_st2</label></div>
+	<div class="form-group col-md-2"><input type="text" class="form-control form-control-sm" value="0.36" id="tr19_st2A" placeholder="st2A"></div>
+	<div class="form-group col-md-2"><input type="text" class="form-control form-control-sm" id="nilaiProjekTr19_St2" placeholder="nilai projek suku 2"></div>
+	<div class="form-group col-md-2"><input type="text" class="form-control form-control-sm" id="tr19_st2B" readonly></div>
+</div>
+<div class="form-row">
+	<div class="form-group col-md-1"><label for="inputZip">tr19_st3</label></div>
+	<div class="form-group col-md-2"><input type="text" class="form-control form-control-sm" value="0.05" id="tr19_st3A" placeholder="st3A"></div>
+	<div class="form-group col-md-2"><input type="text" class="form-control form-control-sm" id="nilaiProjekTr19_St3" placeholder="nilai projek suku 3"></div>
+	<div class="form-group col-md-2"><input type="text" class="form-control form-control-sm" id="tr19_st3B" readonly></div>
+</div>
+<div class="form-row">
+	<div class="form-group col-md-1"><label for="inputZip">tr19_st4</label></div>
+	<div class="form-group col-md-2"><input type="text" class="form-control form-control-sm" value="0.15" id="tr19_st4A" placeholder="st4A"></div>
+	<div class="form-group col-md-2"><input type="text" class="form-control form-control-sm" id="nilaiProjekTr19_St4" placeholder="nilai projek suku 4"></div>
+	<div class="form-group col-md-2"><input type="text" class="form-control form-control-sm" id="tr19_st4B" readonly></div>
 </div>
 <div class="form-row">
 	<div class="form-group col-md-1"><label for="inputZip">jumlah</label></div>
@@ -209,10 +257,10 @@ $('#st2B').keyup(function(){
 $('#bezaRM').keyup(function(){
 	//var F1318xa = parseFloat($('#F1318xa').val()) || 0;
 	var nilaiBesar = parseFloat($('#nilaiProjekDaa').val()) || 0;
-	var T19St3 = parseFloat($('#nilaiProjekSt3').val()) || 0;
-	var T19St4 = parseFloat($('#nilaiProjekSt4').val()) || 0;
-	var T19St1 = parseFloat($('#nilaiProjekSt1').val()) || 0;
-	var T19St2 = parseFloat($('#nilaiProjekSt2').val()) || 0;
+	var T19St3 = parseFloat($('#nilaiProjekTr18St3').val()) || 0;
+	var T19St4 = parseFloat($('#nilaiProjekTr18St4').val()) || 0;
+	var T19St1 = parseFloat($('#nilaiProjekTr19St1').val()) || 0;
+	var T19St2 = parseFloat($('#nilaiProjekTr19St2').val()) || 0;
 	//var io00 = (5 / 45);
 	//var io01 = (F1318xa / F1418xb);
 	var jumDuit = (T19St3 + T19St4 + T19St1 + T19St2);
