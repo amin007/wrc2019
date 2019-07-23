@@ -200,7 +200,7 @@ $('#kiraNilai').keyup(function(){
 	$('#nilaiProjekDaa').val(nilaiProjekDaa.toFixed(2));
 });
 ////////////////////////////////////////////////////////////////////////////////////////////////////
-$('#st3B').keyup(function(){
+/*$('#st3B').keyup(function(){
 	var st3A = parseFloat($('#st3A').val()) || 0;
 	//var st3B = parseFloat($('#st3B').val()) || 0;
 	var nilaiProjek = parseFloat($('#nilaiProjek').val()) || 0;
@@ -252,7 +252,7 @@ $('#st2B').keyup(function(){
 	var result = 0; result = st2B * nilaiProjek;
 	$('#nilaiProjekSt2').val(result.toFixed(0));
 	$('#st2B').val(st2B.toFixed(4));
-});
+});*/
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 $('#bezaRM').keyup(function(){
 	//var F1318xa = parseFloat($('#F1318xa').val()) || 0;
