@@ -200,6 +200,24 @@ $('#kiraNilai').keyup(function(){
 	$('#nilaiProjekDaa').val(nilaiProjekDaa.toFixed(2));
 });
 ////////////////////////////////////////////////////////////////////////////////////////////////////
+<?php
+$senarai = array(
+	'tr17_st1','tr17_st2','tr17_st3','tr17_st4',
+	'tr18_st1','tr18_st2','tr18_st3','tr18_st4',
+	'tr19_st1','tr19_st2','tr19_st3','tr19_st4'
+);
+foreach ($senarai as $key => $suku): ?>
+$('#st4B').keyup(function(){
+	var st3A = parseFloat($('#st3A').val()) || 0;
+	var st4A = parseFloat($('#st4A').val()) || 0;
+	var nilaiProjek = parseFloat($('#nilaiProjek').val()) || 0;
+
+	var st4B = st4A - st3A;
+	var result = 0; result = st4B * nilaiProjek;
+	$('#nilaiProjekSt4').val(result.toFixed(0));
+	$('#st4B').val(st4B.toFixed(4));
+});
+<?php endforeach; ?>
 /*$('#st3B').keyup(function(){
 	var st3A = parseFloat($('#st3A').val()) || 0;
 	//var st3B = parseFloat($('#st3B').val()) || 0;
