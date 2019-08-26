@@ -78,7 +78,11 @@ $(document).ready(function()
 					}
 					else
 					{
-						table_data += '<td>'+cell_data[cell_count]+'</td>';
+						if(cell_count == 0)
+							table_data += '<td><a href="#" class="bg-primary text-white">'
+								+ cell_data[cell_count] + '</a></td>';
+						else
+							table_data += '<td>' + cell_data[cell_count] + '</td>';
 					}
 				}
 				table_data += '</tr>';
