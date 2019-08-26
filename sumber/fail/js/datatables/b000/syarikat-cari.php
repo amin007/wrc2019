@@ -46,6 +46,7 @@ include '../dibawah.php';
 <script type="text/javascript">
 $(document).ready(function()
 {
+//////////////////////////////////////////////////////////////////////////////////////////////
 	/*https://www.js-tutorials.com/jquery-tutorials/reading-csv-file-using-jquery */
 	var data;
 	$.ajax({
@@ -59,7 +60,7 @@ $(document).ready(function()
 			generateHtmlTable(data);
 		}
 	});
-	
+//////////////////////////////////////////////////////////////////////////////////////////////
 	function generateHtmlTable(data) 
 	{
 		var html = '<table class="table table-condensed table-hover table-striped">';
@@ -102,6 +103,7 @@ $(document).ready(function()
 		}
 	}
 });
+//////////////////////////////////////////////////////////////////////////////////////////////
 </script>
 </body>
 </html>
