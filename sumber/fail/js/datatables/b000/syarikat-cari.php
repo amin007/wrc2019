@@ -24,6 +24,7 @@ else
 	id="inputString" onkeyup="lookup(this.value);" onblur="fill();">
 	<div class="input-group-append">
 		<input type="submit" value="Kemaskini" class="btn btn-outline-secondary">
+		<a href="../../../pxls/contoh_laporan.csv" class="btn btn-outline-info">Muat Turun</a>
 	</div>
 </div></div>
 <div class="suggestionsBox" id="suggestions" style="display: none; " >
