@@ -78,9 +78,7 @@ $(document).ready(function()
 					html += '<tr>';
 					$.each(row, function( index, colData ) 
 					{
-						html += '<th>';
-						html += colData;
-						html += '</th>';
+						html += '<th>' + colData + '</th>';
 					});
 					html += '</tr>';
 					html += '</thead>';
@@ -89,9 +87,7 @@ $(document).ready(function()
 				html += '<tr>';
 				$.each(row, function( index, colData )
 				{
-					html += '<td>';
-					html += colData;
-					html += '</td>';
+					html += '<td>' + colData + '</td>';
 				});
 				html += '</tr>';
 				}
