@@ -87,7 +87,10 @@ $(document).ready(function()
 				html += '<tr>';
 				$.each(row, function( index, colData )
 				{
-					html += '<td>' + colData + '</td>';
+					if(index == 0)
+						html += '<td class="bg-primary">' + colData + '</td>';
+					else
+						html += '<td>' + colData + '</td>';
 				});
 				html += '</tr>';
 				}
