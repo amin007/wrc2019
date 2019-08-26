@@ -60,15 +60,16 @@ $(document).ready(function()
 	{
 		$.ajax({
 		/*url:"../../../pxls/employee.csv",*/
-		url:"../../../pxls/contoh_laporan.csv",
+		/*url:"../../../pxls/contoh_laporan.csv",*/
+		url:"../../../pxls/contoh-laporan-000.csv",
 		dataType:"text",
 		success:function(data)
 		{
 			var employee_data = data.split(/\r?\n|\r/);
-			var table_data = '<table class="table table-bordered table-striped">';
+			var table_data = '<table id="myTable" class="table table-sm table-bordered table-striped">';
 			for(var count = 0; count<employee_data.length; count++)
 			{
-				var cell_data = employee_data[count].split('","');
+				var cell_data = employee_data[count].split(';');
 				table_data += '<tr>';
 				for(var cell_count=0; cell_count<cell_data.length; cell_count++)
 				{
@@ -92,6 +93,8 @@ $(document).ready(function()
 		}
 		});
 	});
+	/////////////////////////////////////////////////////////////////////////////////////////////////
+	$('#myTable').DataTable();
 });
 </script>
 
