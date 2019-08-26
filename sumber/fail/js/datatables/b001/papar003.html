@@ -65,6 +65,12 @@ $(document).ready(function()
 	dataType:"text",
 	success:function(data)
 	{
+		generateHtmlTable(data);
+	}
+	});
+	/////////////////////////////////////////////////////////////////////////////////////////////////
+	function generateHtmlTable(data)
+	{
 		var employee_data = data.split(/\r?\n|\r/);
 		var table_data = '<table id="myTable" class="table table-sm table-bordered table-striped">';
 		for(var count = 0; count<employee_data.length; count++)
@@ -92,7 +98,6 @@ $(document).ready(function()
 		$('#myTable').DataTable();
 		$('#employee_table').html(table_data);
 	}
-	});
 	/////////////////////////////////////////////////////////////////////////////////////////////////
 	/////////////////////////////////////////////////////////////////////////////////////////////////
 });
