@@ -24,7 +24,7 @@ $(document).ready(function()
 	var data;
 	$.ajax({
 	type: "GET",  
-	url: "../../../pxls/contoh-laporan.csv",
+	url: "../../../pxls/contoh_laporan.csv",
 	/*url: "../../../pxls/js-tutorials.com_sample_file.csv",*/
 	dataType: "text",
 		success: function(response)  
