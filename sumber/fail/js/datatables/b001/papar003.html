@@ -168,7 +168,15 @@ jQuery.fn.highlight = function (words, options)
 };
 /////////////////////////////////////////////////////////////
 	/*$('#myTable').DataTable();*/
-	var t = $('#myTable').DataTable();
+	var t = $('#myTable').DataTable({
+	searchHighlight: true,
+	"columnDefs": [{
+		"searchable": false,
+		"orderable": false,
+		"targets": 0
+	}],
+	"order": [[ 1, 'asc' ]]
+    });
 
 	t.on( 'order.dt search.dt', function (){
 		t.column(0, {search:'applied', order:'applied'}).nodes().
