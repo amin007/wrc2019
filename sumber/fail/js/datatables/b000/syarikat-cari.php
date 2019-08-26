@@ -88,7 +88,8 @@ $(document).ready(function()
 				$.each(row, function( index, colData )
 				{
 					if(index == 0)
-						html += '<td class="bg-primary">' + colData + '</td>';
+						html += '<td><a href="#" class="bg-primary text-white">'
+							+ colData + '</a></td>';
 					else
 						html += '<td>' + colData + '</td>';
 				});
