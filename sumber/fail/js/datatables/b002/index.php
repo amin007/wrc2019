@@ -46,7 +46,7 @@ function pautan($name,$web)
 function list_files()
 {
 	$dirlist = getFileList("./");
-	//echo "<pre>",print_r($dirlist),"</pre>";
+	//echo '<pre>',print_r($dirlist),'</pre>';
 	//echo '<tr><td> name</td><td> type</td><td> size</td><td> lastmod</td></tr>';
 	foreach($dirlist as $key02 => $value):
 		if ($value['type'] != 'dir'):
