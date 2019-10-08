@@ -83,6 +83,8 @@ function dpt_senarai($pilih)
 	elseif ($pilih == 'staf_biasa') :
 		$jadual = unserialize(PEGAWAI);
 	# kod untuk prosesan
+	elseif ($pilih == 'jadual_json') :
+		$jadual = unserialize(JADUAL_JSON);
 	elseif ($pilih == 'jadual_msic') :
 		$jadual = unserialize(JADUAL_MSIC);
 	elseif ($pilih == 'msicbaru') :
