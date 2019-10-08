@@ -587,7 +587,7 @@ class Cari extends \Aplikasi\Kitab\Kawal
 	{
 		//echo '<hr> Nama class : ' . __METHOD__ . '<hr>';
 		//concat_ws("-",m6,kod_commodity,x,kod_kuantiti) as kodx
-		$myTable = dpt_senarai('mcpabaru');
+		$myTable = dpt_senarai('jadual_json');
 		$medan = '"" as no,msic,xx,'
 			. 'keterangan,concat_ws("|","aup=",`aup-rm`,`min-rm`,`max-rm`) as harga';
 		$carian[] = $t = null;
@@ -602,7 +602,7 @@ class Cari extends \Aplikasi\Kitab\Kawal
 	public function mascojson()
 	{
 		//echo '<hr> Nama class : ' . __METHOD__ . '<hr>';
-		$myTable = dpt_senarai('masco');
+		$myTable = dpt_senarai('jadual_json');
 		$medan = '*';
 		$carian[] = $t = null;
 		$susun[0]['max'] = 5500;//702-5500
@@ -617,15 +617,15 @@ class Cari extends \Aplikasi\Kitab\Kawal
 	public function coicopjson()
 	{
 		//echo '<hr> Nama class : ' . __METHOD__ . '<hr>';
-		$myTable = dpt_senarai('masco');
+		$myTable = dpt_senarai('jadual_json');
 		$medan = '*';
 		$carian[] = $t = null;
 		$susun[0]['max'] = 2000;//702-5500
 		//$susun[0]['susun'] = '';
 
-		list($kira,$json) =//$this->tanya->cariSql($myTable[4], $medan, $carian, $susun);
-		$this->tanya->cariDataJson($myTable[4], $medan, $carian, $susun);
-		//$this->tanya->cariDataJson2($myTable[4], $medan, $carian, $susun);
+		list($kira,$json) =//$this->tanya->cariSql($myTable[2], $medan, $carian, $susun);
+		$this->tanya->cariDataJson($myTable[2], $medan, $carian, $susun);
+		//$this->tanya->cariDataJson2($myTable[2], $medan, $carian, $susun);
 
 		$this->paparJsondaa($json,$kira,$t);
 	}
