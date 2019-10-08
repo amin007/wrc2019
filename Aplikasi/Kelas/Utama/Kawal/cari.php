@@ -634,7 +634,7 @@ class Cari extends \Aplikasi\Kitab\Kawal
 	{
 		//echo '<hr> Nama class : ' . __METHOD__ . '<hr>';
 		$myTable = dpt_senarai('jadual_json');
-		$medan = '*';
+		$medan = '"" as no,kod,keterangan,nota01';
 		$carian[] = $t = null;
 		$susun[0]['max'] = 2000;//702-5500
 		//$susun[0]['susun'] = '';
