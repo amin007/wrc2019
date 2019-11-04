@@ -493,7 +493,7 @@ class Borang extends \Aplikasi\Kitab\Kawal
 		$this->paparKandungan($this->_folder, $fail[1], $noInclude=1);//*/
 	}
 #-------------------------------------------------------------------------------------------
-	function ubahsuaiKhas02()
+	function ubahsuaiKhas02()//ok01
 	{
 		//echo '<hr> Nama class : ' . __METHOD__ . '<hr>';
 		$medanID = 'msic2008';
@@ -540,7 +540,7 @@ class Borang extends \Aplikasi\Kitab\Kawal
 		$this->paparKandungan($this->_folder, $fail[3], $noInclude=1);
 	}
 #-------------------------------------------------------------------------------------------
-	public function soalanhasil($myJadual = null,$idBorang = null)
+	/*public function soalanhasil($myJadual = null,$idBorang = null)
 	{
 		# Set pembolehubah utama
 		//echo '<hr> Nama class : ' . __METHOD__ . '<hr>';
@@ -555,9 +555,9 @@ class Borang extends \Aplikasi\Kitab\Kawal
 		//$this->semakPembolehubah($this->papar->senarai,'senarai',0);# Semak data dulu
 		$fail = array('index','b_ubah','b_ubah_kawalan','soalan4');
 		$this->paparKandungan($this->_folder, $fail[0], $noInclude=1);
-	}
+	}*/
 #-------------------------------------------------------------------------------------------
-	public function be($kp = null,$idBorang = null,$peratus = 0)
+	/*public function be($kp = null,$idBorang = null,$peratus = 0)
 	{
 		# Set pembolehubah utama
 		//echo '<hr> Nama class : ' . __METHOD__ . '<hr>';
@@ -567,25 +567,25 @@ class Borang extends \Aplikasi\Kitab\Kawal
 		$this->panggilDB('pertubuhan',$db . 'pertubuhan',$idBorang);
 		$this->panggilDBKhas01('hasilBE',$db . 'be2016_hasil_servis',$idBorang);
 		$this->panggilDBKhas01('belanjaBE',$db . 'be2016_belanja_servis',$idBorang);
-		//$this->panggilDB('stafBE',$db . 'be2016_staf_servis02',$idBorang);//*/
+		//$this->panggilDB('stafBE',$db . 'be2016_staf_servis02',$idBorang);//
 		$this->setPembolehubah($kp,$idBorang,$peratus);
 		//$this->kiraNisbah($peratus); // rand(-30, 30)
-		//$this->debugKandunganPaparan();//*/
+		//$this->debugKandunganPaparan();//
 
 		# Pergi papar kandungan
 		$fail = array('index','index2','b_ubah','b_ubah_kawalan');
 		//echo '<br>$fail = ' . $fail[3] . '<hr>';
-		$this->paparKandungan($this->_folder, $fail[1], $noInclude=1);//*/
-	}
+		$this->paparKandungan($this->_folder, $fail[1], $noInclude=1);
+	}//*/
 #-------------------------------------------------------------------------------------------
-	function setPembolehubah($kp, $idBorang, $peratus)
+	/*function setPembolehubah($kp, $idBorang, $peratus)
 	{
 		$this->papar->_5p['kp'] = $this->papar->senarai['limaPerangkaan'][0]['kodbanci'];
 		$this->papar->_5p['peratus'] = $nisbah = $this->kiraNisbah($peratus);
 		$this->papar->_5p['idBorang'] = ($idBorang == null) ? 'Kod007JamesBond' : $idBorang;
 		/*if(isset($this->papar->senarai['pertubuhan'][0]['NaPer'])):
 			$nama = $this->papar->senarai['pertubuhan'][0]['NaPer'];
-			$this->papar->_5p['nama'] = $nama;//*/
+			$this->papar->_5p['nama'] = $nama;//
 		$this->papar->_5p['nama'] = 'Biarlah Rahsia';
 		# semak sama ada nilai wujud atau tidak
 		/*
@@ -607,7 +607,7 @@ class Borang extends \Aplikasi\Kitab\Kawal
 		$this->papar->senarai['limaPerangkaan'][0]['stafP']
 		$this->papar->senarai['limaPerangkaan'][0]['gajiP']
 		$this->papar->senarai['limaPerangkaan'][0]['sijilP']
-		*/
+		
 		$hasil = $this->papar->senarai['limaPerangkaan'][0]['hasil'];
 		$belanja = $this->papar->senarai['limaPerangkaan'][0]['belanja'];
 		$gaji = $this->papar->senarai['limaPerangkaan'][0]['gajiL']
@@ -633,7 +633,7 @@ class Borang extends \Aplikasi\Kitab\Kawal
 		$this->papar->_5p['susut_kini'] = truncate_number($nisbah * $susut);
 		$this->papar->_5p['aset_kini'] = truncate_number($nisbah * $aset);
 		$this->papar->_5p['asetsewa_kini'] = truncate_number($nisbah * $asetsewa);
-		//*/
+		//
 	}
 #-------------------------------------------------------------------------------------------
 	function kiraNisbah($peratus)
@@ -659,7 +659,7 @@ class Borang extends \Aplikasi\Kitab\Kawal
 			//$sql[] = $this->tanya->soalanGaji($md,$db.$jadual . 'a');
 			$sql[] = $this->tanya->soalanGaji02($md,$db.$jadual . 'a');
 			//$this->panggilDB2('semuaBE',$db.$jadual . 'a',$idBorang);
-		endforeach;//*/
+		endforeach;//
 		$sqlAll = "CREATE TABLE be2016_staf_servis02 AS \r" . implode(" UNION \r",$sql);
 		//$this->debugKandunganPaparan();
 
@@ -682,7 +682,7 @@ class Borang extends \Aplikasi\Kitab\Kawal
 			$this->panggilDB2('semuaBE',$db.$jadual . 'a',$idBorang);
 			//$this->panggilDB2('hasilBE',$db.$jadual . 'a',$idBorang);
 			//$this->panggilDB2('belanjaBE',$db.$jadual . 'a',$idBorang);
-		endforeach;//*/
+		endforeach;//
 		$this->debugKandunganPaparan();
 		$this->_folder = 'borang';
 
@@ -707,7 +707,7 @@ class Borang extends \Aplikasi\Kitab\Kawal
 		foreach($this->tanya->jawatanStaf() as $key):
 			$sql[] = "SELECT `L$key`,`F49$key`,`F50$key`,`F14$key`,`F18$key`,`F51$key` "
 				. "FROM $myTable$where";
-		endforeach;//*/
+		endforeach;//
 		//return $sqlAll = implode(" UNION \r",$sql);
 		//$this->debugKandunganPaparan();
 
@@ -721,5 +721,6 @@ class Borang extends \Aplikasi\Kitab\Kawal
 		//$this->paparKandungan($this->_folder, $fail[0], $noInclude=1);
 	}
 #-------------------------------------------------------------------------------------------
+//*/
 #==========================================================================================
 }
