@@ -540,7 +540,7 @@ class Borang extends \Aplikasi\Kitab\Kawal
 		$this->paparKandungan($this->_folder, $fail[3], $noInclude=1);
 	}
 #-------------------------------------------------------------------------------------------
-	/*public function soalanhasil($myJadual = null,$idBorang = null)
+	public function soalanhasil($myJadual = null,$idBorang = null)
 	{
 		# Set pembolehubah utama
 		//echo '<hr> Nama class : ' . __METHOD__ . '<hr>';
@@ -555,9 +555,9 @@ class Borang extends \Aplikasi\Kitab\Kawal
 		//$this->semakPembolehubah($this->papar->senarai,'senarai',0);# Semak data dulu
 		$fail = array('index','b_ubah','b_ubah_kawalan','soalan4');
 		$this->paparKandungan($this->_folder, $fail[0], $noInclude=1);
-	}*/
+	}
 #-------------------------------------------------------------------------------------------
-	/*public function be($kp = null,$idBorang = null,$peratus = 0)
+	public function be($kp = null,$idBorang = null,$peratus = 0)
 	{
 		# Set pembolehubah utama
 		//echo '<hr> Nama class : ' . __METHOD__ . '<hr>';
@@ -569,44 +569,25 @@ class Borang extends \Aplikasi\Kitab\Kawal
 		$this->panggilDBKhas01('belanjaBE',$db . 'be2016_belanja_servis',$idBorang);
 		//$this->panggilDB('stafBE',$db . 'be2016_staf_servis02',$idBorang);//
 		$this->setPembolehubah($kp,$idBorang,$peratus);
-		//$this->kiraNisbah($peratus); // rand(-30, 30)
+		//$this->kiraNisbah($peratus); //rand(-30, 30)
 		//$this->debugKandunganPaparan();//
 
 		# Pergi papar kandungan
 		$fail = array('index','index2','b_ubah','b_ubah_kawalan');
 		//echo '<br>$fail = ' . $fail[3] . '<hr>';
 		$this->paparKandungan($this->_folder, $fail[1], $noInclude=1);
-	}//*/
+	}
 #-------------------------------------------------------------------------------------------
-	/*function setPembolehubah($kp, $idBorang, $peratus)
+	function setPembolehubah($kp, $idBorang, $peratus)
 	{
 		$this->papar->_5p['kp'] = $this->papar->senarai['limaPerangkaan'][0]['kodbanci'];
 		$this->papar->_5p['peratus'] = $nisbah = $this->kiraNisbah($peratus);
 		$this->papar->_5p['idBorang'] = ($idBorang == null) ? 'Kod007JamesBond' : $idBorang;
 		/*if(isset($this->papar->senarai['pertubuhan'][0]['NaPer'])):
 			$nama = $this->papar->senarai['pertubuhan'][0]['NaPer'];
-			$this->papar->_5p['nama'] = $nama;//
+			$this->papar->_5p['nama'] = $nama;//*/
 		$this->papar->_5p['nama'] = 'Biarlah Rahsia';
 		# semak sama ada nilai wujud atau tidak
-		/*
-		$this->papar->senarai['limaPerangkaan'][0]['kodbanci']
-		$this->papar->senarai['limaPerangkaan'][0]['nosiri']
-		$this->papar->senarai['limaPerangkaan'][0]['F0002']
-		$this->papar->senarai['limaPerangkaan'][0]['F0014']
-		$this->papar->senarai['limaPerangkaan'][0]['F0015']
-		$this->papar->senarai['limaPerangkaan'][0]['hasil']
-		$this->papar->senarai['limaPerangkaan'][0]['belanja']
-		$this->papar->senarai['limaPerangkaan'][0]['susut']
-		$this->papar->senarai['limaPerangkaan'][0]['harta']
-		$this->papar->senarai['limaPerangkaan'][0]['sewatanah']
-		$this->papar->senarai['limaPerangkaan'][0]['sewalain']
-		$this->papar->senarai['limaPerangkaan'][0]['sewaharta']
-		$this->papar->senarai['limaPerangkaan'][0]['stafL']
-		$this->papar->senarai['limaPerangkaan'][0]['gajiL']
-		$this->papar->senarai['limaPerangkaan'][0]['sijilL']
-		$this->papar->senarai['limaPerangkaan'][0]['stafP']
-		$this->papar->senarai['limaPerangkaan'][0]['gajiP']
-		$this->papar->senarai['limaPerangkaan'][0]['sijilP']
 		
 		$hasil = $this->papar->senarai['limaPerangkaan'][0]['hasil'];
 		$belanja = $this->papar->senarai['limaPerangkaan'][0]['belanja'];
@@ -633,7 +614,7 @@ class Borang extends \Aplikasi\Kitab\Kawal
 		$this->papar->_5p['susut_kini'] = truncate_number($nisbah * $susut);
 		$this->papar->_5p['aset_kini'] = truncate_number($nisbah * $aset);
 		$this->papar->_5p['asetsewa_kini'] = truncate_number($nisbah * $asetsewa);
-		//
+		#
 	}
 #-------------------------------------------------------------------------------------------
 	function kiraNisbah($peratus)
