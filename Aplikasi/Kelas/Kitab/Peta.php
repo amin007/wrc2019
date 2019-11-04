@@ -25,7 +25,7 @@ class Peta
 		 */
 		$failKawal = GetMatchingFiles(GetContents(KAWAL),$url[0] . '.php');
 		$fail = $failKawal[0];
-		$this->debugPembolehubah($failKawal, $fail, $url, $Url);
+		//$this->debugPembolehubah($failKawal, $fail, $url, $Url);
 
 		/* 4. semak sama ada dalam folder KAWAL $fail benar2 wujud
 		 * jika ya : masukkan $fail dan isytihar class tersebut
@@ -52,10 +52,10 @@ class Peta
 #------------------------------------------------------------------------------------------------------------------
 	private function debugPembolehubah($failKawal, $fail, $url, $Url)
 	{
-		//echo '<hr>KAWAL=' . KAWAL . '<br>';
-		//echo '<pre>$failKawal='; print_r($failKawal) . '</pre>';
-		//echo '<hr>$fail->' . $fail . '<br>';
-		//echo '<hr>$url[0]->' . $Url[0] . '<br>';
+		echo '<hr>KAWAL=' . KAWAL . '<br>';
+		echo '<pre>$failKawal='; print_r($failKawal) . '</pre>';
+		echo '<hr>$fail->' . $fail . '<br>';
+		echo '<hr>$url[0]->' . $Url[0] . '<br>';
 	}
 #------------------------------------------------------------------------------------------------------------------
 	/**
@@ -71,6 +71,7 @@ class Peta
 	 */
 	private function cari_pengawal($kawal, $url)
 	{
+		//echo '<hr> 01: Nama class : ' . __METHOD__ . '<hr>';
 		$panjang = count($url); //echo '$panjang = ' . $panjang . '<br>';
 
 		# Pastikan kaedah yang kita panggil wujud
@@ -84,6 +85,7 @@ class Peta
 #------------------------------------------------------------------------------------------------------------------
 	private function muatkanKawal($kawal, $panjang, $url)
 	{
+		//echo '<hr> 02 : Nama class : ' . __METHOD__ . '<hr>';
 			# Tentukan apa yang dimuatkan
 			switch ($panjang)
 			{
@@ -122,6 +124,7 @@ class Peta
 #--- masuk fungsi campak ke pangkal jalan jika sesat
 	function sesat()
 	{
+		//echo '<hr> Nama class : ' . __METHOD__ . '<hr>';
 		require KAWAL . '/sesat.php';
 		$kawal = new \Aplikasi\Kawal\Sesat();
 		$kawal->index();
