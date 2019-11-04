@@ -663,7 +663,7 @@ class Borang extends \Aplikasi\Kitab\Kawal
 			$this->panggilDB2('semuaBE',$db.$jadual . 'a',$idBorang);
 			//$this->panggilDB2('hasilBE',$db.$jadual . 'a',$idBorang);
 			//$this->panggilDB2('belanjaBE',$db.$jadual . 'a',$idBorang);
-		endforeach;//
+		endforeach;//*/
 		$this->debugKandunganPaparan();
 		$this->_folder = 'borang';
 
@@ -688,8 +688,8 @@ class Borang extends \Aplikasi\Kitab\Kawal
 		foreach($this->tanya->jawatanStaf() as $key):
 			$sql[] = "SELECT `L$key`,`F49$key`,`F50$key`,`F14$key`,`F18$key`,`F51$key` "
 				. "FROM $myTable$where";
-		endforeach;//
-		//return $sqlAll = implode(" UNION \r",$sql);
+		endforeach;
+		return $sqlAll = implode(" UNION \r",$sql);//*/
 		//$this->debugKandunganPaparan();
 
 
@@ -702,6 +702,5 @@ class Borang extends \Aplikasi\Kitab\Kawal
 		//$this->paparKandungan($this->_folder, $fail[0], $noInclude=1);
 	}
 #-------------------------------------------------------------------------------------------
-//*/
 #==========================================================================================
 }
