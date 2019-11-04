@@ -446,7 +446,7 @@ function GetMatchingFiles($files, $search)
 function GetContents($dir,$files=array())
 {
 	//if(!($res=opendir($dir))): exit("folder $dir tidak wujud!!!");
-	if(!($res=@opendir($dir))): exit(\Aplikasi\Kelas\Kitab\Peta::folderPaparTidakWujud());
+	if(!($res=@opendir($dir))): exit(\Aplikasi\Kitab\Peta::folderPaparTidakWujud());
 	else:
 		while(($file=readdir($res))==TRUE)
 		if($file!="." && $file!="..")
