@@ -103,7 +103,7 @@ class Sesat extends \Aplikasi\Kitab\Kawal
 		$this->paparKandungan($this->_folder, 'index');
 	}
 #-------------------------------------------------------------------------------------------
-	function failTidakWujud()
+	function failPaparTidakWujud()
 	{
 		//echo '<hr>Nama class :' . __METHOD__ . '<hr>';
 		# Set pemboleubah utama

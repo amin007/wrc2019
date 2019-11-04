@@ -197,7 +197,7 @@ class Peta
 	{
 		require KAWAL . '/sesat.php';
 		$kawal = new \Aplikasi\Kawal\Sesat();
-		$kawal->failTidakWujud();
+		$kawal->failPaparTidakWujud()();
 		return false;
 	}
 #------------------------------------------------------------------------------------------------------------------
