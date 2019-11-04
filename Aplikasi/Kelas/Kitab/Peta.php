@@ -185,6 +185,8 @@ class Peta
 #------------------------------------------------------------------------------------------------------------------
 	public static function folderPaparTidakWujud()
 	{
+		# rujuk fungsi function GetContents($dir,$files=array()) line 449
+		//echo '<hr> Nama class : ' . __METHOD__ . '<hr>';
 		require KAWAL . '/sesat.php';
 		$kawal = new \Aplikasi\Kawal\Sesat();
 		$kawal->folderPaparTidakWujud();
