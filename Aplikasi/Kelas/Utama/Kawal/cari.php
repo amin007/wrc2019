@@ -540,6 +540,12 @@ class Cari extends \Aplikasi\Kitab\Kawal
 #------------------------------------------------------------------------------------------
 ###########################################################################################
 #------------------------------------------------------------------------------------------
+	function debugJsondaa($kira,$json)
+	{
+		$this->semakPembolehubah($kira,'kira');
+		$this->semakPembolehubah($json,'json');
+	}
+#------------------------------------------------------------------------------------------
 	function paparJsondaa($json, $kira = 0,$t = null)
 	{
 		$json = $this->buangdata($json);
@@ -605,15 +611,17 @@ class Cari extends \Aplikasi\Kitab\Kawal
 	{
 		//echo '<hr> Nama class : ' . __METHOD__ . '<hr>';
 		$myTable = dpt_senarai('jadual_json');
-		$medan = '*';
+		$medan = '"" as no,versi,msic,xx,kod2,'
+		. 'trim(keterangan_melayu) as keterangan_melayu,'
+		. 'trim(keterangan_inggeris) as keterangan_inggeris';
 		$carian[] = $t = null;
 		$susun[0]['max'] = 8000;
 
 		list($kira,$json) =//$this->tanya->cariSql($myTable[6], $medan, $carian, $susun);
 		$this->tanya->cariDataJson($myTable[6], $medan, $carian, $susun);
-		$this->debugJsondaa($kira,$json);
+		//$this->debugJsondaa($kira,$json);
 
-		//$this->paparJsondaa($json,$kira,$t);
+		$this->paparJsondaa($json,$kira,$t);
 	}
 #------------------------------------------------------------------------------------------
 	public function mascojson()
