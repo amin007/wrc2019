@@ -611,8 +611,9 @@ class Cari extends \Aplikasi\Kitab\Kawal
 
 		list($kira,$json) =//$this->tanya->cariSql($myTable[6], $medan, $carian, $susun);
 		$this->tanya->cariDataJson($myTable[6], $medan, $carian, $susun);
+		$this->debugJsondaa($kira,$json);
 
-		$this->paparJsondaa($json,$kira,$t);
+		//$this->paparJsondaa($json,$kira,$t);
 	}
 #------------------------------------------------------------------------------------------
 	public function mascojson()
