@@ -18,6 +18,7 @@ date_default_timezone_set('Asia/Kuala_Lumpur');
 # rujuk fail i-tatarajah.php untuk
 # define nilai konstan yang perlu dalam framework ini
 # i-tatarajah.php boleh ditukar kepada tatarajah.php
+set_time_limit(0);# no limit execution time.
 require 'tatarajah.php';
 
 /* 4. masukkan semua fail class dari folder Aplikasi/Class
