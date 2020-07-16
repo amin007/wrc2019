@@ -560,6 +560,7 @@ class Cari extends \Aplikasi\Kitab\Kawal
 		$json = str_replace('{', '[', $json);
 		$json = str_replace('}', ']', $json);
 		$json = str_replace('\n', '<br>', $json);
+		$json = str_replace('null', '""', $json);
 		//$json = str_replace('null', '&nbsp;', $json);
 		$buang = array(/*"\t","\n",*/
 		'"no":','"s":','"msic":','"keterangan":','"msic2000":','"nota01":','"nota02":',
@@ -567,6 +568,8 @@ class Cari extends \Aplikasi\Kitab\Kawal
 		'"xx":','"harga":','"notakaki":','"versi":','"v2013":','"v2008":','"jawatan":',
 		'"kumpulan":','"pecahan":','"kod_masco":','"nama jawatan":',
 		'"keterangan_melayu":','"keterangan_inggeris":',
+		'"NGDBBP":','"TK":','"ADDR_UNIT":','"ADDR_LEVEL":','"ADDR_BLOK":','"ADDR_BUILDING":',
+		'"ADDR_STREET":','"ADDR_SECTION":','"POSKOD":','"ADDR_CITY":','"ADDR_STATE":',
 		);
 		$json = str_replace($buang, '', $json);//*/
 
