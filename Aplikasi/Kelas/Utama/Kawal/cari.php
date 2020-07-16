@@ -707,13 +707,13 @@ class Cari extends \Aplikasi\Kitab\Kawal
 	{
 		//echo '<hr> Nama class : ' . __METHOD__ . '<hr>';
 		$myTable = dpt_senarai('jadual_json');
-		$medan = '"" as no,kod,keterangan,nota01';
+		$medan = '"" as no,NGDBBP,TK,ADDR_UNIT,ADDR_LEVEL,ADDR_BLOK,ADDR_BUILDING,ADDR_STREET,ADDR_SECTION,POSKOD,ADDR_CITY,ADDR_STATE';
 		$carian[] = $t = null;
 		$susun[0]['max'] = 1272815;
 		//$susun[0]['susun'] = '';
 
 		list($kira,$json) =//$this->tanya->cariSql($myTable[5], $medan, $carian, $susun);
-		$this->tanya->cariDataJson($myTable[5], $medan, $carian, $susun);
+		$this->tanya->cariDataJson($myTable[7], $medan, $carian, $susun);
 		//$this->tanya->cariDataJson2($myTable[5], $medan, $carian, $susun);
 
 		$this->paparJsondaa($json,$kira,$t);
