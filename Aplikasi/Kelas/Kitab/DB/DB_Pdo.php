@@ -63,6 +63,30 @@ class DB_Pdo extends \PDO
 	}
 #------------------------------------------------------------------------------------------------------------------
 	/**
+	 * selectAllNum
+	 * @param string $sql An SQL string
+	 * @param array $array Paramters to bind
+	 * @param constant $fetchMode A PDO Fetch mode : https://www.php.net/manual/en/pdostatement.fetch.php
+	 * @return mixed
+	 */
+	public function selectAllNum($sql, $array = array(), $fetchMode = \PDO::FETCH_NUM)
+	{
+		//echo '<hr><pre>'; print_r($sql) . '</pre><hr>';
+		$sth = $this->prepare($sql);
+		foreach ($array as $key => $value)
+		{
+			$sth->bindValue("$key", $value);
+		}
+
+		$sth->execute();
+		$problem = $sth->errorInfo(); # semak jika ada error
+		if($problem[0]=='00000')# pulangkan pembolehubah
+			return $sth->fetchAll($fetchMode);
+		else
+			$this->bigError($sth,$problem);//*/
+	}
+#------------------------------------------------------------------------------------------------------------------
+	/**
 	 * select
 	 * @param string $sql An SQL string
 	 * @param array $array Paramters to bind

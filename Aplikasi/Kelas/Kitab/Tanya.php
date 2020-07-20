@@ -232,7 +232,8 @@ class Tanya
 	{
 		//echo '<hr> Nama class : ' . __METHOD__ . '<hr>';
 		$sql = $this->sql->bentukSqlSelect($myTable, $medan, $carian, $susun);
-		$result = $this->db->selectAll($sql);
+		//$result = $this->db->selectAll($sql);
+		$result = $this->db->selectAllNum($sql);
 		echo '<pre>$result::'; print_r($result); echo '</pre><br>';
 		$json = null;
 		$kira = count($result);
