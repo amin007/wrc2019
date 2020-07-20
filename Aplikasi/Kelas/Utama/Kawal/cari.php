@@ -710,7 +710,7 @@ class Cari extends \Aplikasi\Kitab\Kawal
 	{
 		//echo '<hr> Nama class : ' . __METHOD__ . '<hr>';
 		$myTable = dpt_senarai('jadual_json');
-		$medan = '"" as no,NGDBBP,TK,ADDR_UNIT,ADDR_LEVEL,ADDR_BLOK,ADDR_BUILDING,ADDR_STREET,ADDR_SECTION,POSKOD,ADDR_CITY,ADDR_STATE';
+		$medan = '"" as no,NGDBBP,TK,Alamat,ADDR_CITY,ADDR_STATE';
 		$carian[] = $t = null;
 		$susun[0]['max'] = 490000;//1272815;
 		//$susun[0]['susun'] = '';
