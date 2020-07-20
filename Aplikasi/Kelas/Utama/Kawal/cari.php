@@ -709,10 +709,11 @@ class Cari extends \Aplikasi\Kitab\Kawal
 	public function alamatjson()
 	{
 		//echo '<hr> Nama class : ' . __METHOD__ . '<hr>';
+		//https://phpdelusions.net/pdo/fetch_modes
 		$myTable = dpt_senarai('jadual_json');
 		$medan = '"" as no,NGDBBP,TK,Alamat,ADDR_CITY,ADDR_STATE';
 		$carian[] = $t = null;
-		$susun[0]['max'] = 100;//1272815-490000;
+		$susun[0]['max'] = 500000;//1272815-490000;
 		//$susun[0]['susun'] = '';
 
 		list($kira,$json) =//$this->tanya->cariSql($myTable[7], $medan, $carian, $susun);
