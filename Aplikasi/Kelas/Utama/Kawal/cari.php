@@ -712,14 +712,14 @@ class Cari extends \Aplikasi\Kitab\Kawal
 		$myTable = dpt_senarai('jadual_json');
 		$medan = '"" as no,NGDBBP,TK,Alamat,ADDR_CITY,ADDR_STATE';
 		$carian[] = $t = null;
-		$susun[0]['max'] = 490000;//1272815;
+		$susun[0]['max'] = 100;//1272815-490000;
 		//$susun[0]['susun'] = '';
 
 		list($kira,$json) =//$this->tanya->cariSql($myTable[7], $medan, $carian, $susun);
-		//$this->tanya->cariDataJson($myTable[7], $medan, $carian, $susun);
-		$this->tanya->cariDataJson2($myTable[7], $medan, $carian, $susun);
+		$this->tanya->cariDataJson($myTable[7], $medan, $carian, $susun);
+		//$this->tanya->cariDataJson2($myTable[7], $medan, $carian, $susun);
 
-		//$this->paparJsondaa($json,$kira,$t);
+		$this->paparJsondaa($json,$kira,$t);
 	}
 #------------------------------------------------------------------------------------------
 #==========================================================================================
