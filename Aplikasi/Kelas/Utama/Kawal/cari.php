@@ -715,11 +715,11 @@ class Cari extends \Aplikasi\Kitab\Kawal
 		$susun[0]['max'] = 490000;//1272815;
 		//$susun[0]['susun'] = '';
 
-		list($kira,$json) =//$this->tanya->cariSql($myTable[5], $medan, $carian, $susun);
-		$this->tanya->cariDataJson($myTable[7], $medan, $carian, $susun);
-		//$this->tanya->cariDataJson2($myTable[5], $medan, $carian, $susun);
+		list($kira,$json) =//$this->tanya->cariSql($myTable[7], $medan, $carian, $susun);
+		//$this->tanya->cariDataJson($myTable[7], $medan, $carian, $susun);
+		$this->tanya->cariDataJson2($myTable[7], $medan, $carian, $susun);
 
-		$this->paparJsondaa($json,$kira,$t);
+		//$this->paparJsondaa($json,$kira,$t);
 	}
 #------------------------------------------------------------------------------------------
 #==========================================================================================
