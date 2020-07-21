@@ -7,12 +7,12 @@ $pilihJadual = 'jadual_am';
 # untuk kod baru
 //echo '<pre>$carian='; print_r($this->carian); echo '</pre>';
 //echo '<pre>$senarai='; print_r($this->senarai); echo '</pre>';
-//echo '<pre>$_cariIndustri='; print_r($this->_cariIndustri); echo '</pre>';
+//echo '<pre>$this->template='; print_r($this->template); echo '</pre>';
 
 # papar hasil carian
 if(!isset($this->carian))
 	echo '<h1>data kosong daa</h1>';
-else # jenis template
+else
 {
 	$cari1 = '&nbsp;|&nbsp;'; $cari2 = '';
 	foreach ($this->carian as $kunci => $nilai)
