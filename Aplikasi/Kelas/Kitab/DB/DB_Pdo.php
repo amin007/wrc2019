@@ -8,8 +8,8 @@ class DB_Pdo extends \PDO
 	{
 		try
 		{
-			parent::__construct($DB_TYPE . ':host=' . $DB_HOST . ';dbname=' . $DB_NAME
-			. ';charset=utf8', $DB_USER, $DB_PASS);
+			$dsn = $DB_TYPE . ':host=' . $DB_HOST . ';dbname=' . $DB_NAME . ';charset=utf8';
+			parent::__construct($dsn, $DB_USER, $DB_PASS);
 			//parent::setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTIONS);
 			//https://www.barberriley.com/web-development/php/solved-pdo-message-malformed-utf-8-characters-possibly-incorrectly-encoded
 		}
@@ -20,24 +20,6 @@ class DB_Pdo extends \PDO
 			echo '</pre><br><a href="' . URL . 'ruangtamu/logout">Keluar</a>';
 			exit;
 		}
-		##---------------------------------------------------------------------------------------------------------
-		/*if (!self::$db):
-			try
-			{
-				$dsn = $DB_TYPE . ':host=' . $DB_HOST . ';dbname=' . $DB_NAME . ';charset=utf8';
-				self::$db = new PDO($dsn, $DB_USER, $DB_PASS);
-				self::$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-				self::$db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
-			} catch (PDOException $e)
-			{
-				echo '<pre>';
-				echo $e->getMessage();
-				echo '</pre><br><a href="' . URL . 'ruangtamu/logout">Keluar</a>';
-				exit;
-			}
-		endif;
-		return self::$db;//*/
-		##---------------------------------------------------------------------------------------------------------
 	}
 #------------------------------------------------------------------------------------------------------------------
 	/**
