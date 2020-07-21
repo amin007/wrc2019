@@ -10,9 +10,8 @@ class DB_Pdo extends \PDO
 		{
 			$dsn = $DB_TYPE . ':host=' . $DB_HOST . ';dbname=' . $DB_NAME . ';charset=utf8';
 			parent::__construct($dsn, $DB_USER, $DB_PASS);
-			parent::setAttribute(\PDO::ATTR_ERRMODE, false);
+			parent::setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION);
 			parent::setAttribute(\PDO::MYSQL_ATTR_USE_BUFFERED_QUERY, false);
-			//parent::setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTIONS);
 			//https://www.barberriley.com/web-development/php/solved-pdo-message-malformed-utf-8-characters-possibly-incorrectly-encoded
 		}
 		catch (PDOException $e)
