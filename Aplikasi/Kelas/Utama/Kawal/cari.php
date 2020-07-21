@@ -558,11 +558,12 @@ class Cari extends \Aplikasi\Kitab\Kawal
 	function simpanJsondaa($json, $kira = 0,$t = null)
 	{
 		$json = $this->buangdata($json);
-
 		$t = '"draw":1,"recordsTotal":' . $kira . ',"recordsFiltered":' . $kira . ',';
-		$result = "{ $t \"data\":$json }";
+
 		header("Content-Type: application/json;charset=utf-8");
-		file_put_contents(URL . 'sumber/fail/json/datajson.json', $result);
+		$result = "{ $t \"data\":$json }";
+		echo $result;
+		//file_put_contents(URL . 'sumber/fail/json/datajson.json', $result);
 		#
 	}
 #------------------------------------------------------------------------------------------
