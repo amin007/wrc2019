@@ -22,6 +22,25 @@ class DB_Pdo extends \PDO
 		}
 	}
 #------------------------------------------------------------------------------------------------------------------
+	public static function init()
+	{
+		if (!self::$db):
+			try
+			{
+				$dsn = DB_TYPE . ':host=' . DB_HOST . ';dbname=' . DB_NAME . ';charset=utf8';
+				self::$db = new PDO($dsn, DB_USER, DB_PASS);
+				self::$db->setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION);
+				//self::$db->setAttribute(\PDO::ATTR_DEFAULT_FETCH_MODE, \PDO::FETCH_ASSOC);
+			} catch (PDOException $e) {
+				echo '<pre>';
+				echo $e->getMessage();
+				echo '</pre><br><a href="' . URL . 'ruangtamu/logout">Keluar</a>';
+				exit;
+			}
+		endif;
+		return self::$db;
+	}
+#------------------------------------------------------------------------------------------------------------------
 	/**
 	 * bigError
 	 * @param papar $problem yang dialami
