@@ -562,8 +562,7 @@ class Cari extends \Aplikasi\Kitab\Kawal
 
 		header("Content-Type: application/json;charset=utf-8");
 		$result = "{ $t \"data\":$json }";
-		echo $result;
-		//file_put_contents(URL . 'sumber/fail/json/datajson.json', $result);
+		file_put_contents('./sumber/fail/datajson.json', $result);
 		#
 	}
 #------------------------------------------------------------------------------------------
@@ -725,15 +724,15 @@ class Cari extends \Aplikasi\Kitab\Kawal
 		$myTable = dpt_senarai('jadual_json');
 		$medan = '"" as no,NGDBBP,TK,Alamat,ADDR_CITY,ADDR_STATE';
 		$carian[] = $t = null;
-		$susun[0]['max'] = 500000;//1272815-490000;
+		$susun[0]['max'] = 100000;//1272815-490000;
 		//$susun[0]['susun'] = '';
 
 		list($kira,$json) =//$this->tanya->cariSql($myTable[7], $medan, $carian, $susun);
 		$this->tanya->cariDataJson($myTable[7], $medan, $carian, $susun);
 		//$this->tanya->cariDataJson2($myTable[7], $medan, $carian, $susun);
 
-		$this->paparJsondaa($json,$kira,$t);
-		//$this->simpanJsondaa($json,$kira,$t);
+		//$this->paparJsondaa($json,$kira,$t);
+		$this->simpanJsondaa($json,$kira,$t);
 	}
 #------------------------------------------------------------------------------------------
 #==========================================================================================
