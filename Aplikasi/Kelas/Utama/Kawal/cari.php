@@ -2,7 +2,7 @@
 namespace Aplikasi\Kawal; //echo __NAMESPACE__;
 class Cari extends \Aplikasi\Kitab\Kawal
 {
-#==========================================================================================
+#==================================================================================================
 	function __construct()
 	{
 		parent::__construct();
@@ -12,7 +12,7 @@ class Cari extends \Aplikasi\Kitab\Kawal
 		//echo '<hr>Nama class :' . __METHOD__ . '<hr>';
 		//echo '<hr>Nama function :' .__FUNCTION__ . '<hr>';
 	}
-##------------------------------------------------------------------------------------------
+##-------------------------------------------------------------------------------------------------
 	public function index()
 	{
 		# Set pemboleubah utama
@@ -23,7 +23,7 @@ class Cari extends \Aplikasi\Kitab\Kawal
 		//$this->semakPembolehubah($this->papar->senarai); # Semak data dulu
 		$this->paparKandungan($this->_folder, 'index', $noInclude=0);
 	}
-##------------------------------------------------------------------------------------------
+##-------------------------------------------------------------------------------------------------
 	public function paparKandungan($folder, $fail, $noInclude)
 	{	# Pergi papar kandungan
 		$jenis = $this->papar->pilihTemplate($template=0);
@@ -33,7 +33,7 @@ class Cari extends \Aplikasi\Kitab\Kawal
 			//'mobile/mobile',$jenis,0); # $noInclude=0
 		//*/
 	}
-##------------------------------------------------------------------------------------------
+##-------------------------------------------------------------------------------------------------
 	function logout()
 	{
 		//echo '<pre>sebelum:'; print_r($_SESSION); echo '</pre>';
@@ -41,8 +41,8 @@ class Cari extends \Aplikasi\Kitab\Kawal
 		header('location: ' . URL);
 		//exit;
 	}
-#==========================================================================================
-#------------------------------------------------------------------------------------------
+#==================================================================================================
+#--------------------------------------------------------------------------------------------------
 	public function menyusun($kumpulSusun, $bilSemua = 20, $item = 10)
 	{
 		$ms = 1; ## set pembolehubah utama
@@ -53,7 +53,7 @@ class Cari extends \Aplikasi\Kitab\Kawal
 
 		return $susun;
 	}
-#------------------------------------------------------------------------------------------
+#--------------------------------------------------------------------------------------------------
 	public function pembolehubah()
 	{
 		//echo '<pre>$_POST=>'; print_r($_POST); echo '</pre>';
@@ -68,7 +68,7 @@ class Cari extends \Aplikasi\Kitab\Kawal
 		$susun = $this->menyusun($kumpulSusun);
 		return array($myJadual, $medan, $cariID, $susun); //*/
 	}
-#------------------------------------------------------------------------------------------
+#--------------------------------------------------------------------------------------------------
 	public function idnama()
 	{
 		//echo '<hr>Nama class :' . __METHOD__ . '<hr>';
@@ -88,7 +88,7 @@ class Cari extends \Aplikasi\Kitab\Kawal
 		//$this->semakPembolehubah($this->papar->senarai,'senarai',0);# Semak data dulu
 		$this->paparKandungan($this->_folder, $fail[0], $noInclude=0); //*/
     }
-#------------------------------------------------------------------------------------------
+#--------------------------------------------------------------------------------------------------
 	function cariSyarikat($jadual, $medan, $susun, $cariID)
 	{
 		$carian[] = array('fix'=>'z%like%', # cari = atau %%
@@ -106,9 +106,9 @@ class Cari extends \Aplikasi\Kitab\Kawal
 		$this->papar->primaryKey = 'newss';
 		$this->papar->cariID = $this->papar->carian[] = $cariID;
 	}
-#------------------------------------------------------------------------------------------
-###########################################################################################
-#------------------------------------------------------------------------------------------
+#--------------------------------------------------------------------------------------------------
+###################################################################################################
+#--------------------------------------------------------------------------------------------------
 	public function tentang($apa, $bil=1, $mesej=null)
 	{
 		# Fungsi ini memaparkan borang
@@ -133,7 +133,7 @@ class Cari extends \Aplikasi\Kitab\Kawal
 		//$this->semakPembolehubah($this->papar->url,'url',0); # Semak data dulu
 		$this->paparKandungan($this->_folder, $fail[1], $noInclude=0); //*/
 	}
-#------------------------------------------------------------------------------------------
+#--------------------------------------------------------------------------------------------------
 	function semakOutput($mesej, $lokasi, $namajadual)
 	{
 		echo '<pre>'; # semak output
@@ -143,7 +143,7 @@ class Cari extends \Aplikasi\Kitab\Kawal
 		$this->semakPembolehubah($this->papar->senarai,'senarai',0);
 		echo '</pre>';
 	}
-#------------------------------------------------------------------------------------------
+#--------------------------------------------------------------------------------------------------
 	function pada($bil = 400, $muka = 1)
 	{	//echo '<hr>Nama class :' . __METHOD__ . '()<hr>';
 		/* fungsi ini memaparkan hasil carian
@@ -166,7 +166,7 @@ class Cari extends \Aplikasi\Kitab\Kawal
 		else# Pergi papar kandungan
 			$this->paparKandungan($this->_folder, $fail[0], $noInclude=0); //*/
 	}
-#------------------------------------------------------------------------------------------
+#--------------------------------------------------------------------------------------------------
 	function susunPembolehubah($bil, $muka)
 	{	//echo '<hr>Nama class :' . __METHOD__ . '()<hr>';
 		//echo '$post:' . $this->semakPembolehubah($_POST);
@@ -191,7 +191,7 @@ class Cari extends \Aplikasi\Kitab\Kawal
 
 		return array($jadual,$susun,$pilih,$semak,$semak2,$cari,$atau,$limit);
 	}
-#------------------------------------------------------------------------------------------
+#--------------------------------------------------------------------------------------------------
 	function sayaPilih($bil, $muka)
 	{
 		//echo '<hr>Nama class :' . __METHOD__ . '()<hr>';
@@ -216,7 +216,7 @@ class Cari extends \Aplikasi\Kitab\Kawal
 
 		return array($mesej,$lokasi,$jadual);
 	}
-#------------------------------------------------------------------------------------------
+#--------------------------------------------------------------------------------------------------
 	function pilihYangWujud($jadual, $cari, $susun, $limit)
 	{
 		//echo '<br>jadual:' . $jadual . '<br>';
@@ -237,7 +237,7 @@ class Cari extends \Aplikasi\Kitab\Kawal
 		else
 			$this->sayaTidakWujud($cari, $susun, $limit);
 	}
-#------------------------------------------------------------------------------------------
+#--------------------------------------------------------------------------------------------------
 	function sayaPilihMsic($cari, $susun, $limit)
 	{	//echo '<hr>Nama class : ' . __METHOD__ . '()<hr>';
 		$jadual = dpt_senarai('msicbaru'); //echo '<pre>';
@@ -258,7 +258,7 @@ class Cari extends \Aplikasi\Kitab\Kawal
 		$this->papar->carian = $cari;
 		$this->papar->cariID = $cariID;
 	}
-#------------------------------------------------------------------------------------------
+#--------------------------------------------------------------------------------------------------
 	function sayaPilihProduk($cari, $susun, $limit)
 	{
 		$jadual = dpt_senarai('produk');
@@ -288,7 +288,7 @@ class Cari extends \Aplikasi\Kitab\Kawal
 		$this->papar->carian = $cari;
 		$this->papar->cariID = $cariID;
 	}
-#------------------------------------------------------------------------------------------
+#--------------------------------------------------------------------------------------------------
 	function sayaPilihJohor($cari, $susun, $limit)
 	{
 		list($namaPanjang,$semak,$medanAsal,$medanBaru) = dpt_senarai('jadual_peta');
@@ -309,7 +309,7 @@ class Cari extends \Aplikasi\Kitab\Kawal
 		$this->papar->carian = $cari;
 		$this->papar->cariID = $cariID;
 	}
-#------------------------------------------------------------------------------------------
+#--------------------------------------------------------------------------------------------------
 	function sayaPilihMalaysia($cari, $susun, $limit)
 	{
 		list($namaPanjang,$ngbesar,$medan) = dpt_senarai('jadual_peta2');
@@ -327,7 +327,7 @@ class Cari extends \Aplikasi\Kitab\Kawal
 		$this->papar->carian = $cari;
 		$this->papar->cariID = $cariID;
 	}
-#------------------------------------------------------------------------------------------
+#--------------------------------------------------------------------------------------------------
 	function sayaPilihSyarikat($cari, $susun, $limit)
 	{
 		//echo '<hr>Nama class : ' . __METHOD__ . '()<hr>';
@@ -343,7 +343,7 @@ class Cari extends \Aplikasi\Kitab\Kawal
 		$this->papar->carian = $cari;
 		$this->papar->cariID = $cariID;
 	}
-#------------------------------------------------------------------------------------------
+#--------------------------------------------------------------------------------------------------
 	function sayaPilihDataMM($cari, $susun, $limit)
 	{
 		$jadual = dpt_senarai('***');
@@ -361,7 +361,7 @@ class Cari extends \Aplikasi\Kitab\Kawal
 		$this->papar->carian = $cari;
 		$this->papar->cariID = $cariID;
 	}
-#------------------------------------------------------------------------------------------
+#--------------------------------------------------------------------------------------------------
 	function sayaPilihOperasi($cari, $susun, $limit)
 	{
 		$jadual = array('kawalan_aes');
@@ -380,7 +380,7 @@ class Cari extends \Aplikasi\Kitab\Kawal
 		$this->papar->carian = $cari;
 		$this->papar->cariID = $cariID;
 	}
-#------------------------------------------------------------------------------------------
+#--------------------------------------------------------------------------------------------------
 	function sayaTidakWujud($cari, $susun, $limit)
 	{
 		$medan = $myTable = 'jadual-tidak-wujud';
@@ -392,9 +392,9 @@ class Cari extends \Aplikasi\Kitab\Kawal
 		$this->papar->carian = $cari;
 		$this->papar->cariID = null;
 	}
-#------------------------------------------------------------------------------------------
-###########################################################################################
-#------------------------------------------------------------------------------------------
+#--------------------------------------------------------------------------------------------------
+###################################################################################################
+#--------------------------------------------------------------------------------------------------
 	public function syarikat($carilah = null)
 	{
 		$cari = isset($_GET['cari']) ? bersih($_GET['cari']) : '';
@@ -409,7 +409,7 @@ class Cari extends \Aplikasi\Kitab\Kawal
 			}# tamat - strlen($cari) > 0
 		}# tamat - isset($cari)//*/
 	}
-#------------------------------------------------------------------------------------------
+#--------------------------------------------------------------------------------------------------
 	function syarikatPapar($paparKes, $bilKes)
 	{
 		if($bilKes==0) {echo '<li>Takde Laa</li>';}
@@ -424,7 +424,7 @@ class Cari extends \Aplikasi\Kitab\Kawal
 			}# tamat - foreach($paparKes as $key => $data)
 		}# tamat - $bilKes ==0
 	}
-#------------------------------------------------------------------------------------------
+#--------------------------------------------------------------------------------------------------
 	function syarikatDB($cari)
 	{
 		list($myTable, $medan01) = dpt_senarai('jadual_kawalan');
@@ -439,9 +439,9 @@ class Cari extends \Aplikasi\Kitab\Kawal
 
 		return array($paparKes, $bilKes);
 	}
-#------------------------------------------------------------------------------------------
-###########################################################################################
-#------------------------------------------------------------------------------------------
+#--------------------------------------------------------------------------------------------------
+###################################################################################################
+#--------------------------------------------------------------------------------------------------
 	public function msic($carilah = null)
 	{
 		$cari = isset($_GET['cari']) ? bersih($_GET['cari']) : '';
@@ -456,7 +456,7 @@ class Cari extends \Aplikasi\Kitab\Kawal
 			}# tamat - strlen($cari) > 0
 		}# tamat - isset($cari)//*/
 	}
-#------------------------------------------------------------------------------------------
+#--------------------------------------------------------------------------------------------------
 	function msicPapar($paparKes, $bilKes)
 	{
 		if($bilKes==0) {echo '<li>Takde Laa</li>';}
@@ -471,7 +471,7 @@ class Cari extends \Aplikasi\Kitab\Kawal
 			}# tamat - foreach($paparKes as $key => $data)
 		}# tamat - $bilKes ==0
 	}
-#------------------------------------------------------------------------------------------
+#--------------------------------------------------------------------------------------------------
 	function msicDB($cari)
 	{
 		$myTable = dpt_senarai('msicbaru');
@@ -487,9 +487,9 @@ class Cari extends \Aplikasi\Kitab\Kawal
 
 		return array($paparKes, $bilKes);
 	}
-#------------------------------------------------------------------------------------------
-###########################################################################################
-#------------------------------------------------------------------------------------------
+#--------------------------------------------------------------------------------------------------
+###################################################################################################
+#--------------------------------------------------------------------------------------------------
 	public function kodprodukmm($carilah = null)
 	{
 		$cari = isset($_GET['cari']) ? bersih($_GET['cari']) : '';
@@ -504,7 +504,7 @@ class Cari extends \Aplikasi\Kitab\Kawal
 			}# tamat - strlen($cari) > 0
 		}# tamat - isset($cari)//*/
 	}
-#------------------------------------------------------------------------------------------
+#--------------------------------------------------------------------------------------------------
 	function produkMmPapar($paparKes, $bilKes)
 	{
 		if($bilKes==0) {echo '<li>Takde Laa</li>';}
@@ -522,7 +522,7 @@ class Cari extends \Aplikasi\Kitab\Kawal
 			}# tamat - foreach($paparKes as $key => $data)
 		}# tamat - $bilKes ==0
 	}
-#------------------------------------------------------------------------------------------
+#--------------------------------------------------------------------------------------------------
 	function produkMmDB($cari)
 	{
 		$myTable = dpt_senarai('mcpabaru');
@@ -537,15 +537,15 @@ class Cari extends \Aplikasi\Kitab\Kawal
 
 		return array($paparKes, $bilKes);
 	}
-#------------------------------------------------------------------------------------------
-###########################################################################################
-#------------------------------------------------------------------------------------------
+#--------------------------------------------------------------------------------------------------
+###################################################################################################
+#--------------------------------------------------------------------------------------------------
 	function debugJsondaa($kira,$json)
 	{
 		$this->semakPembolehubah($kira,'kira');
 		$this->semakPembolehubah($json,'json');
 	}
-#------------------------------------------------------------------------------------------
+#--------------------------------------------------------------------------------------------------
 	function paparJsondaa($json, $kira = 0,$t = null)
 	{
 		$json = $this->buangdata($json);
@@ -554,7 +554,7 @@ class Cari extends \Aplikasi\Kitab\Kawal
 		header("Content-Type: application/json;charset=utf-8");
 		echo "{ $t \"data\":$json }";
 	}
-#------------------------------------------------------------------------------------------
+#--------------------------------------------------------------------------------------------------
 	function simpanJsondaa($json, $kira = 0,$t = null)
 	{
 		$json = $this->buangdata($json);
@@ -565,7 +565,7 @@ class Cari extends \Aplikasi\Kitab\Kawal
 		file_put_contents('./sumber/fail/datajson.json', $result);
 		#
 	}
-#------------------------------------------------------------------------------------------
+#--------------------------------------------------------------------------------------------------
 	function buangdata($json)
 	{
 		$json = str_replace('{', '[', $json);
@@ -586,7 +586,7 @@ class Cari extends \Aplikasi\Kitab\Kawal
 
 		return $json;
 	}
-#------------------------------------------------------------------------------------------
+#--------------------------------------------------------------------------------------------------
 	public function msicjson()
 	{
 		//echo '<hr> Nama class : ' . __METHOD__ . '<hr>';
@@ -604,7 +604,7 @@ class Cari extends \Aplikasi\Kitab\Kawal
 
 		$this->paparJsondaa($json,$kira,$t);
 	}
-#------------------------------------------------------------------------------------------
+#--------------------------------------------------------------------------------------------------
 	public function produkmmjson()
 	{
 		//echo '<hr> Nama class : ' . __METHOD__ . '<hr>';
@@ -620,7 +620,7 @@ class Cari extends \Aplikasi\Kitab\Kawal
 
 		$this->paparJsondaa($json,$kira,$t);
 	}
-#------------------------------------------------------------------------------------------
+#--------------------------------------------------------------------------------------------------
 	public function komunitijson()
 	{
 		//echo '<hr> Nama class : ' . __METHOD__ . '<hr>';
@@ -637,7 +637,7 @@ class Cari extends \Aplikasi\Kitab\Kawal
 
 		$this->paparJsondaa($json,$kira,$t);
 	}
-#------------------------------------------------------------------------------------------
+#--------------------------------------------------------------------------------------------------
 	public function mascojson()
 	{
 		//echo '<hr> Nama class : ' . __METHOD__ . '<hr>';
@@ -652,7 +652,7 @@ class Cari extends \Aplikasi\Kitab\Kawal
 
 		$this->paparJsondaa($json,$kira,$t);
 	}
-#------------------------------------------------------------------------------------------
+#--------------------------------------------------------------------------------------------------
 	public function coicopjson()
 	{
 		//echo '<hr> Nama class : ' . __METHOD__ . '<hr>';
@@ -668,7 +668,7 @@ class Cari extends \Aplikasi\Kitab\Kawal
 
 		$this->paparJsondaa($json,$kira,$t);
 	}
-#------------------------------------------------------------------------------------------
+#--------------------------------------------------------------------------------------------------
 	public function negarajson()
 	{
 		//echo '<hr> Nama class : ' . __METHOD__ . '<hr>';
@@ -684,7 +684,7 @@ class Cari extends \Aplikasi\Kitab\Kawal
 
 		$this->paparJsondaa($json,$kira,$t);
 	}
-#------------------------------------------------------------------------------------------
+#--------------------------------------------------------------------------------------------------
 	public function pendidikanjson()
 	{
 		//echo '<hr> Nama class : ' . __METHOD__ . '<hr>';
@@ -700,7 +700,7 @@ class Cari extends \Aplikasi\Kitab\Kawal
 
 		$this->paparJsondaa($json,$kira,$t);
 	}
-#------------------------------------------------------------------------------------------
+#--------------------------------------------------------------------------------------------------
 	public function institutjson()
 	{
 		//echo '<hr> Nama class : ' . __METHOD__ . '<hr>';
@@ -716,7 +716,7 @@ class Cari extends \Aplikasi\Kitab\Kawal
 
 		$this->paparJsondaa($json,$kira,$t);
 	}
-#------------------------------------------------------------------------------------------
+#--------------------------------------------------------------------------------------------------
 	public function alamatjson()
 	{
 		//echo '<hr> Nama class : ' . __METHOD__ . '<hr>';
@@ -734,6 +734,6 @@ class Cari extends \Aplikasi\Kitab\Kawal
 		//$this->paparJsondaa($json,$kira,$t);
 		$this->simpanJsondaa($json,$kira,$t);
 	}
-#------------------------------------------------------------------------------------------
-#==========================================================================================
+#--------------------------------------------------------------------------------------------------
+#==================================================================================================
 }
