@@ -546,7 +546,7 @@ class Cari extends \Aplikasi\Kitab\Kawal
 		$this->semakPembolehubah($json,'json');
 	}
 #--------------------------------------------------------------------------------------------------
-	function paparJsondaa($json, $kira = 0,$t = null)
+	function paparJsondaa($json, $kira = 0, $t = null)
 	{
 		$json = $this->buangdata($json);
 
@@ -555,7 +555,7 @@ class Cari extends \Aplikasi\Kitab\Kawal
 		echo "{ $t \"data\":$json }";
 	}
 #--------------------------------------------------------------------------------------------------
-	function simpanJsondaa($json, $kira = 0,$t = null)
+	function simpanJsondaa($json, $kira = 0, $t = null)
 	{
 		$json = $this->buangdata($json);
 		$t = '"draw":1,"recordsTotal":' . $kira . ',"recordsFiltered":' . $kira . ',';
