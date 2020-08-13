@@ -1,6 +1,5 @@
 <!-- khas untuk jquery dan js2 lain
-================================================== -->
-<?php
+=============================================================================================== --><?php
 if (isset($this->js))
 {
     foreach ($this->js as $js)
@@ -10,6 +9,7 @@ if (isset($this->js))
 		?><script type="text/javascript" src="<?php echo $js ?>"></script><?php
     }
 }
+echo "\n";
 ?><?php
 $dataURL = dpt_url();
 //echo '<pre>'; echo '<br>$dataURL:<br>'; print_r($dataURL); echo '</pre>';
