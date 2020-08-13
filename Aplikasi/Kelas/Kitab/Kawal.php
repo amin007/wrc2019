@@ -7,6 +7,8 @@ class Kawal
 	{
 		//echo '<br>class Kawal';
 		$this->papar = new \Aplikasi\Kitab\Papar();
+		$this->papar->css = CSS_ARRAY;
+		$this->papar->js = JS_ARRAY;
 	}
 #==========================================================================================
 	public function jemaahTaskil($nama)
