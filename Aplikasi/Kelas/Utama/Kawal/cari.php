@@ -579,8 +579,6 @@ class Cari extends \Aplikasi\Kitab\Kawal
 		'"xx":','"harga":','"notakaki":','"versi":','"v2013":','"v2008":','"jawatan":',
 		'"kumpulan":','"pecahan":','"kod_masco":','"nama jawatan":',
 		'"keterangan_melayu":','"keterangan_inggeris":',
-		//'"NGDBBP":','"TK":','"ADDR_UNIT":','"ADDR_LEVEL":','"ADDR_BLOK":','"ADDR_BUILDING":',
-		//'"ADDR_STREET":','"ADDR_SECTION":','"POSKOD":','"ADDR_CITY":','"ADDR_STATE":',
 		);
 		$json = str_replace($buang, '', $json);//*/
 
