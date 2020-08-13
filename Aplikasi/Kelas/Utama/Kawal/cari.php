@@ -735,5 +735,23 @@ class Cari extends \Aplikasi\Kitab\Kawal
 		$this->simpanJsondaa($json,$kira,$t);
 	}
 #--------------------------------------------------------------------------------------------------
+	public function alamat2json()
+	{
+		//echo '<hr> Nama class : ' . __METHOD__ . '<hr>';
+		$myTable = dpt_senarai('jadual_json');
+		$medan = '"" as no,bp2010,bp2020,`Daerah Pentadbiran` as DP,`Kod DP`,Mukim,`Kod Mukim`,'
+		. 'PBT,`Kod PBT`,Bandar,`Kod Bandar`,tk2010,pen2010,tk2020,pen2020';
+		$carian[] = $t = null;
+		$susun[0]['max'] = 20000;//1272815-490000;
+		//$susun[0]['susun'] = '';
+
+		list($kira,$json) =//$this->tanya->cariSql($myTable[8], $medan, $carian, $susun);
+		$this->tanya->cariDataJson($myTable[8], $medan, $carian, $susun);
+		//$this->tanya->cariDataJson2($myTable[8], $medan, $carian, $susun);
+
+		$this->paparJsondaa($json,$kira,$t);
+		//$this->simpanJsondaa($json,$kira,$t);
+	}
+#--------------------------------------------------------------------------------------------------
 #==================================================================================================
 }
