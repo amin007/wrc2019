@@ -75,16 +75,6 @@ class Tanya
 		//return $this->db->selectAll($sql);
 	}
 #-------------------------------------------------------------------------------------------------
-	public function cariArahanSimpanFailSql($backupFile, $myTable)
-	{#--- mula - contoh cari dan simpan ---#
-		$sql = "SELECT * INTO OUTFILE '$backupFile' FROM $myTable";
-
-		echo 'Class Tanya.php |<br>' . htmlentities($sql) . '<br>';
-		$result = $this->db->selectAll($sql);
-		//echo json_encode($result);
-
-		return $result;	
-	}#--- tamat - contoh cari dan simpan ---#
 #-------------------------------------------------------------------------------------------------
 ##################################################################################################
 ## mula - untuk create sql
@@ -292,6 +282,17 @@ class Tanya
 
 		echo '<pre>$sql->' . htmlentities($sql) . '</pre><br>';
 	}
+	#---------------------------------------------------------------------------------------------
+	public function cariArahanSimpanFailSql($backupFile, $myTable)
+	{#--- mula - contoh cari dan simpan ---#
+		$sql = "SELECT * INTO OUTFILE '$backupFile' FROM $myTable";
+
+		echo 'Class Tanya.php |<br>' . htmlentities($sql) . '<br>';
+		$result = $this->db->selectAll($sql);
+		//echo json_encode($result);
+
+		return $result;
+	}#--- tamat - contoh cari dan simpan ---#
 	#---------------------------------------------------------------------------------------------
 ## tamat - untuk select sql
 ##################################################################################################
