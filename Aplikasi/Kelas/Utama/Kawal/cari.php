@@ -756,6 +756,7 @@ class Cari extends \Aplikasi\Kitab\Kawal
 		//echo '<hr> Nama class : ' . __METHOD__ . '<hr>';
 		$myTable = dpt_senarai('jadual_json');
 		$pilihMedan = $this->tanya->pilihMedan02($myTable[9]);# semak nama medan
+		//echo '' . implode(',', $pilihMedan) . '';
 		$medan = '"" as no,`' . implode('`,`', $pilihMedan) . '`';
 		$carian[] = $t = null;
 		$susun[0]['max'] = 15000;//1272815-490000;
