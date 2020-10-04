@@ -48,6 +48,18 @@ class Tanya
 		return $this->db->selectAll($sql);
 	}
 #-------------------------------------------------------------------------------------------------
+	public function pilihMedan01($myTable)
+	{
+		$database = DB_NAME;
+		$sql = ' SELECT concat_ws("","`",`COLUMN_NAME`, "`," ) as medan' . "\r"
+		. ' FROM INFORMATION_SCHEMA.COLUMNS' . "\r"
+		. ' WHERE table_schema = "' . $database . '"' . "\r"
+		. ' AND table_name = "' . $myTable . '"';
+
+		echo htmlentities($sql) . '<br>';
+		return $this->db->selectAll($sql);
+	}
+#-------------------------------------------------------------------------------------------------
 	public function pilihMedan02($myTable, $database = DB_NAME)
 	{
 		//echo '<br>return $this->db->getColumnNames('.$myTable.');';
